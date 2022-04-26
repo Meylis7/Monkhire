@@ -1,0 +1,17 @@
+
+
+// 1-main components
+@import "./components/1-main/variables.scss";
+@import "./components/1-main/nulifier.scss";
+@import "./components/1-main/mixin.scss";
+
+// 2-layout components
+@import "./components/2-layout/header.scss";
+@import "./components/2-layout/footer.scss";
+
+// 3-page components
+@import "./components/3-page/home.scss";
+
+@import "./components/2-layout/slick.scss";
+@import "./components/2-layout/slick-theme.scss";
+@import "./components/2-layout/responsive.scss";

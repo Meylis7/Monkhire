@@ -1,0 +1,35 @@
+// Header ====================================
+
+.header {
+    padding: 30px 0;
+    background: var(--bg-section);
+    box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+
+    &_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 150px;
+        height: 27px;
+
+        img {
+            @include ImgCon;
+        }
+
+        &-dark {
+            display: var(--logo-dark);
+            object-position: left;
+        }
+
+        &-light {
+            display: var(--logo-light);
+        }
+    }
+
+}
+
+
+// Header end ================================

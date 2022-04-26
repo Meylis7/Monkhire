@@ -1,0 +1,22 @@
+@include xlg-xxlg {}
+
+@include lg-xxlg {}
+
+@include lg-xlg {
+
+    .auto_container {
+        padding: 0 35px;
+    }
+}
+
+@include lg-lg {}
+
+@include md-xsm {}
+
+@include md-sm {
+    .auto_container {
+        padding: 0 20px;
+    }
+
+
+}

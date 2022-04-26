@@ -1,0 +1,25 @@
+/* Root ===================
+========================= */
+:root {
+    --bg-body: #E5E5E5;
+    --bg-section: #fff;
+    --logo-light: block;
+    --logo-dark: none;
+
+    --red: #F85052;
+    --pink: #455a64;
+    --white: #fff;
+    --gray: #455A64;
+    --dark-blue: #19324E;
+    --light-gray: #F0F0F0;
+
+}
+
+[data-theme="dark"] {
+    --bg-body: #19324E;
+    --bg-section: #162B43;
+
+    --logo-light: none;
+    --logo-dark: block;
+
+}
