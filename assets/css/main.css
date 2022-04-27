@@ -11,6 +11,8 @@
   --theme-bg: #e7e7e7;
   --hire-bg: #19324E;
   --hire-shadow: rgba(248, 80, 82, 0.22);
+  --hero-title-color: #19324E;
+  --hero-text-color: #455A64;
   --red: #F85052;
   --pink: #FEEEEE;
   --white: #fff;
@@ -27,6 +29,8 @@
   --theme-bg: #fff;
   --hire-bg: #455A64;
   --hire-shadow: rgba(48, 80, 82, 0.22);
+  --hero-title-color: #fff;
+  --hero-text-color: #fff;
   --logo-light: none;
   --logo-dark: block;
 }
@@ -435,6 +439,92 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 60%;
+  z-index: 3;
+}
+.hero_info-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: var(--hero-title-color);
+}
+.hero_info-title span {
+  color: var(--red);
+}
+.hero_info-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--hero-title-color);
+  margin: 30px 0 40px;
+}
+.hero_info-subtitle a {
+  font-weight: 700;
+  color: var(--red);
+  display: inline-block;
+  margin-left: 10px;
+}
+.hero_info-txt {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: var(--hero-text-color);
+  margin-bottom: 30px;
+}
+.hero_info-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero_info-comp {
+  margin-right: 40px;
+  display: block;
+}
+.hero .group_title {
+  margin-bottom: 80px;
+}
+.hero_svg {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  -moz-ransform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  right: 0;
+  max-width: 700px;
+  width: 100%;
+  height: 460px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: var(--red);
+}
+
+.title-arrow {
+  position: relative;
+}
+.title-arrow::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 10%;
+  width: 140px;
+  height: 50px;
+  background: url("../images/svg/bg_arrow.svg") no-repeat center;
 }
 
 /* Slider */
