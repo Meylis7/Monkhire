@@ -1,0 +1,18 @@
+
+// Hero ====================================
+
+.hero {
+    padding: 60px 0 75px;
+    &_box {
+        display: flex;
+        align-items: center;
+    }
+
+    &_info {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+// Hero end ================================

@@ -1,13 +1,18 @@
 /* Root ===================
 ========================= */
 :root {
-    --bg-body: #E5E5E5;
+    --bg-body: #fff;
     --bg-section: #fff;
     --logo-light: block;
     --logo-dark: none;
+    --txt-color: #455A64;
+    --nav-bg-color: #fff;
+    --theme-bg: #e7e7e7;
+    --hire-bg: #19324E;
+    --hire-shadow: rgba(248, 80, 82, 0.22);
 
     --red: #F85052;
-    --pink: #455a64;
+    --pink: #FEEEEE;
     --white: #fff;
     --gray: #455A64;
     --dark-blue: #19324E;
@@ -18,6 +23,12 @@
 [data-theme="dark"] {
     --bg-body: #19324E;
     --bg-section: #162B43;
+    --txt-color: #fff;
+    --nav-bg-color: #162B43;
+    --theme-bg: #fff;
+    --hire-bg: #455A64;
+    --hire-shadow: rgba(48, 80, 82, 0.22);
+
 
     --logo-light: none;
     --logo-dark: block;

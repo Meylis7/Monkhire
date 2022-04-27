@@ -1,7 +1,7 @@
 
 // var ==========================
-let btn = document.querySelector('.btn');
-let video = document.querySelector('.video');
+let nav_box_title = document.querySelectorAll('.nav_box-title');
+let nav_box_outer = document.querySelectorAll('.nav_box-outer');
 let vid = document.getElementById("about_video");
 
 
@@ -11,7 +11,7 @@ function sleep(time) {
 
 // Theme Change ====================================
 
-const toggleSwitch = document.querySelector('#check');
+const toggleSwitch = document.querySelector('#theme-check');
 
 function switchTheme(e) {
     if (e.target.checked) {
@@ -42,13 +42,13 @@ window.onscroll = function () {
 
 window.onclick = function (e) {
 
-    // drop_lang.forEach(drop_lang => {
-    //     if (drop_lang != undefined) {
-    //         drop_lang.classList.contains('active') && !e.target.closest('.nav_inner');
-    //         drop_lang.classList.remove('active')
-    //     }
-    // }
-    // );
+    nav_box_outer.forEach(nav_box_outer => {
+        if (nav_box_outer != undefined) {
+            nav_box_outer.classList.contains('active') && e.target.closest('.nav_box-title');
+            nav_box_outer.classList.remove('active')
+        }
+    }
+    );
 
     // if (drop_lang.classList.contains('active') && !e.target.closest('.lang_box')) {
     //     drop_lang.classList.remove('active')
@@ -61,7 +61,20 @@ window.onclick = function (e) {
 
 // Clicks ======================================================
 
+if (nav_box_title != undefined) {
+    nav_box_title.forEach(r => {
+        r.addEventListener('click', function () {
+            sleep(2).then(() => {
+                nav_box_outer.forEach(p => {
+                    p.classList.remove('active');
+                })
 
+
+                this.nextElementSibling.classList.add("active");
+            })
+        });
+    });
+}
 
 // if (btn != undefined) {
 //     btn.addEventListener('click', function () {
