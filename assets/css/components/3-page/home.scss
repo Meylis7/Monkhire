@@ -111,6 +111,150 @@
     }
 }
 
+.main_title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: var(--hero-title-color);
+    text-align: center;
+
+    span {
+        color: var(--red);
+    }
+}
+
 // Hero end ================================
 
+// Remote ====================================
 
+.remote {
+    padding: 70px 0;
+
+    &_subtitle {
+        margin: 10px 0 60px;
+        color: var(--hero-text-color);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    &_box {
+        display: flex;
+        align-items: center;
+        max-width: 925px;
+        margin: 0 auto;
+    }
+
+    &_item {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &-icon {
+            background: var(--remote-icon-bg);
+            box-shadow: 0px 12px 14px var(hire-shadow);
+            border-radius: 8px;
+            margin-right: 15px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 50%;
+                height: 50%;
+                margin: auto;
+                object-fit: contain;
+                -o-object-fit: contain;
+                fill: none;
+            }
+        }
+
+        &-title {
+            width: calc(100% - 75px);
+            color: var(--hero-title-color);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: .4px;
+        }
+    }
+}
+
+// Remote end ================================
+
+// Advantage ====================================
+.advantage {
+    padding: 70px 0;
+    margin-top: var(--section-margin-top);
+    background-color: var(--bg-section);
+
+    &_box {
+        display: flex;
+        max-width: 980px;
+        margin: 60px auto 0;
+    }
+
+    &_item {
+        width: calc(33.33% - 70px);
+        margin: 0 20px;
+        padding: 30px;
+        background: var(--bg-body);
+        box-shadow: 0px 4px 120px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        position: relative;
+
+        &-icon {
+            width: 40px;
+            height: 40px;
+
+            svg {
+                fill: none;
+                @include ImgCon;
+            }
+        }
+
+        &-title {
+            color: var(--hero-title-color);
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+            margin: 20px 0;
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: var(--hero-title-color);
+
+            span {
+                font-weight: 700;
+                color: var(--advantage-txt-color);
+            }
+        }
+
+        .bg_svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: var(--svg-opacity);
+
+            svg {
+                @include ImgCon;
+                fill: none;
+            }
+        }
+    }
+}
+
+
+// Advantage end ================================
