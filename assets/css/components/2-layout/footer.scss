@@ -1,0 +1,202 @@
+// Footer ===========================
+.footer {
+    overflow: hidden;
+
+    .logo {
+        img {
+            @include ImgCon;
+        }
+
+        &-dark {
+            display: var(--logo-dark);
+            object-position: left;
+            width: 130px !important;
+            height: 40px !important;
+        }
+
+        &-light {
+            display: var(--logo-light);
+            width: 150px !important;
+            height: 26px !important;
+        }
+    }
+
+    &_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_nav {
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                margin-right: 50px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    display: block;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.02em;
+                    color: var(--txt-color);
+                    @include transition;
+
+                    &:hover {
+                        color: var(--red);
+                    }
+                }
+            }
+        }
+    }
+
+    &_tags {
+        margin: 40px 0;
+
+        &-title {
+            color: var(--hero-title-color);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 12px;
+        }
+
+        &-box {
+            display: flex;
+            align-items: center;
+
+            a {
+                display: inline-block;
+                background: var(--tag-bg);
+                color: var(--hero-text-color);
+
+                border-radius: 19px;
+                padding: 10px 15px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.02em;
+                margin-right: 10px;
+                @include transition;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    background: var(--red);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 30px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -4000px;
+            width: calc(100% + 8000px);
+            height: 1px;
+            background: #f0f0f0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -4000px;
+            width: calc(100% + 8000px);
+            height: 1px;
+            background: #f0f0f0;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            &-icon {
+                width: 60px;
+                height: 60px;
+                margin-right: 15px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        stroke: var(--svg);
+                    }
+                }
+            }
+
+            &-txt {
+                color: var(--txt-color);
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 5px;
+            }
+
+            &-link {
+                color: var(--hero-title-color);
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                display: inline-block;
+            }
+        }
+
+    }
+
+    &_end {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0;
+    }
+
+    .copyright {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--txt-color);
+
+        a {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+
+    &_media {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            svg {
+                @include ImgCon;
+            }
+        }
+    }
+}

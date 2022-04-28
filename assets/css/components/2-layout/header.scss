@@ -5,6 +5,14 @@
     background: var(--bg-section);
     box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
 
+    &.stick {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+    }
+
     &_row {
         display: flex;
         align-items: center;
