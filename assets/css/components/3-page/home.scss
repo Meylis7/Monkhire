@@ -2,10 +2,16 @@
 
 .hero {
     padding: 60px 0 75px;
+    position: relative;
+
+    &_wrap {
+        position: relative;
+    }
 
     &_box {
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     &_info {
@@ -73,9 +79,25 @@
         top: 35%;
         @include transformY;
         right: 0;
-        max-width: 700px;
-        width: 100%;
+        width: 700px;
         height: 460px;
+
+        svg {
+            @include ImgCon;
+        }
+    }
+
+    .rec_svg {
+        position: absolute;
+        top: 50%;
+        @include transformY;
+        right: 0;
+        width: 580px;
+        height: 380px;
+
+        svg {
+            @include ImgCon;
+        }
     }
 }
 
