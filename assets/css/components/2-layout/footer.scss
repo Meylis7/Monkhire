@@ -178,6 +178,7 @@
         a {
             display: inline-block;
             margin-left: 20px;
+            color: var(--txt-color);
         }
     }
 
@@ -196,6 +197,10 @@
 
             svg {
                 @include ImgCon;
+
+                path {
+                    fill: var(--media-svg);
+                }
             }
         }
     }

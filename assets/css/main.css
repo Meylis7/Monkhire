@@ -22,6 +22,7 @@
   --banner-bg: #FEDCDC;
   --tag-bg: #F0F0F0;
   --svg: #F85052;
+  --media-svg: #19324E;
   --red: #F85052;
   --pink: #FEEEEE;
   --white: #fff;
@@ -49,6 +50,7 @@
   --banner-bg: #162B43;
   --tag-bg: #162B43;
   --svg: #19324E;
+  --media-svg: #fff;
   --logo-light: none;
   --logo-dark: block;
 }
@@ -630,6 +632,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer .copyright a {
   display: inline-block;
   margin-left: 20px;
+  color: var(--txt-color);
 }
 .footer_media {
   display: -webkit-box;
@@ -652,6 +655,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 100%;
   object-fit: contain;
   -o-object-fit: contain;
+}
+.footer_media-item svg path {
+  fill: var(--media-svg);
 }
 
 .hero {
