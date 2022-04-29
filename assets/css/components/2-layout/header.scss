@@ -94,15 +94,13 @@
                 top: calc(100% + 35px);
                 left: 50%;
                 @include transformX;
-                // min-width: 100px;
-                // width: 100%;
                 white-space: nowrap;
                 background: var(--nav-bg-color);
                 padding: 20px;
                 border-radius: 10px;
                 @include transition;
+                z-index: 10;
 
-                // display: none;
                 opacity: 0;
                 pointer-events: none;
 

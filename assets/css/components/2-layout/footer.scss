@@ -179,6 +179,10 @@
             display: inline-block;
             margin-left: 20px;
             color: var(--txt-color);
+
+            &:hover {
+                color: var(--red);
+            }
         }
     }
 
@@ -200,6 +204,13 @@
 
                 path {
                     fill: var(--media-svg);
+                    @include transition;
+                }
+
+                &:hover {
+                    path {
+                        fill: var(--red);
+                    }
                 }
             }
         }
