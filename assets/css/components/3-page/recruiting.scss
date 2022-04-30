@@ -196,9 +196,9 @@
 .vet {
     padding: 70px 0;
 
-    &-txt {
+    &_txt {
         margin: 10px auto 60px;
-        max-width: 775px;
+        max-width: 800px;
         font-weight: 400;
         font-size: 16px;
         line-height: 30px;
@@ -218,8 +218,299 @@
         width: calc(50% - 80px);
         margin: 20px;
         background: var(--bg-section);
-        padding: 20px;
+        padding: 80px 20px 20px 20px;
+
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 12px;
+        position: relative;
+        counter-increment: listCounter;
+
+        &::before {
+            content: counter(listCounter);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--red);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 115%;
+            color: #fff;
+
+        }
+
+    }
+
+    .col-3 {
+        width: calc(33.33% - 80px);
+        margin: 20px;
+        background: var(--bg-section);
+        padding: 80px 20px 20px 20px;
+
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 12px;
+        position: relative;
+        counter-increment: listCounter;
+
+        &::before {
+            content: counter(listCounter);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--red);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 115%;
+            color: #fff;
+
+        }
+
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+        text-transform: capitalize;
+        color: var(--hero-title-color);
+        margin-bottom: 20px;
+    }
+
+    &-txt {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--hero-text-color);
     }
 }
 
 // Vet end ======================
+
+// Role tabs ==========================
+.role {
+    padding: 70px 0;
+
+    &_tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #F0F0F0;
+
+        &-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: capitalize;
+            color: var(--hero-title-color);
+            padding: 0 20px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: var(--advantage-txt-color);
+                z-index: 1;
+                opacity: 0;
+                @include transition;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                color: var(--red);
+                font-weight: 600;
+
+                &::before {
+                    opacity: 1;
+                    bottom: -21px;
+                }
+            }
+        }
+
+        &-info {
+            display: none;
+
+            &.active {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        &-item {
+            padding: 20px 35px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: var(--hero-title-color);
+            border: 1px solid var(--tag-bg);
+            border-radius: 12px;
+            margin: 0 20px 20px 0;
+            display: block;
+            position: relative;
+            @include transition;
+
+            background: var(--bg-section);
+
+            &:hover {
+                color: #fff;
+                background: var(--red);
+            }
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+
+            a {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 0.02em;
+                color: #fff;
+                background: var(--red);
+                @include transition;
+                padding: 10px 37px;
+                box-shadow: 0px 12px 14px var(--hire-shadow);
+                border-radius: 8px;
+
+                &:hover {
+                    background: var(--hire-bg);
+                    box-shadow: 0px 12px 14px rgb(25 50 78 / 22%);
+                }
+            }
+        }
+    }
+
+}
+
+// Role tabs end ======================
+
+// Testimonials ==========================
+.testimonial {
+    padding: 70px 0;
+    background: var(--bg-section);
+    margin: var(--section-margin-top) 0 var(--section-margin-top) 0;
+
+    &_slider {
+        max-width: 850px;
+        margin: 0 auto;
+
+        .slick {
+            &-prev {
+                left: 43%;
+                z-index: 2;
+                top: unset;
+                bottom: -40px;
+                width: 60px;
+                height: 60px;
+                @include transition;
+                transform: unset;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
+
+                svg {
+                    @include ImgCon;
+                }
+            }
+
+            &-next {
+                right: 43%;
+                top: unset;
+                bottom: -40px;
+                width: 60px;
+                height: 60px;
+                @include transition;
+                transform: unset;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
+
+                svg {
+                    @include ImgCon;
+                }
+            }
+        }
+    }
+
+    &_item {
+        box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.03), 0px 0px 46.8519px rgba(0, 0, 0, 0.0227778);
+        border-radius: 10px;
+        background: var(--bg-body);
+        margin: 50px;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px 90px 50px;
+
+        &-img {
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+
+            img {
+                @include ImgCov;
+                border-radius: 50%;
+            }
+        }
+
+        &-name {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            color: var(--hero-title-color);
+            margin: 10px 0 6px;
+        }
+
+        &-prof {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 13px;
+            color: var(--hero-text-color);
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            color: var(--hero-text-color);
+            margin-top: 40px;
+        }
+    }
+}
+
+// Testimonials end ======================

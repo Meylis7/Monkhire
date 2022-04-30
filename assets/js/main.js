@@ -112,9 +112,29 @@ window.onclick = function (e) {
     //     drop_lang.classList.remove('active')
     // }
 
-
-
 }
+
+// Accord ===================================
+
+let accordion = document.getElementsByClassName("accord");
+// let i;
+// let e;
+
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("active")
+        } else {
+            panel.style.maxHeight = "500px";
+            panel.classList.add("active")
+        }
+    });
+}
+
+// Accord end ===============================
 
 
 // Clicks ======================================================
