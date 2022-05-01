@@ -280,6 +280,43 @@
 
     }
 
+    .col-small {
+        width: calc(50% - 80px);
+        max-width: 380px;
+        margin: 20px;
+        background: var(--bg-section);
+        padding: 80px 20px 20px 20px;
+
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 12px;
+        position: relative;
+        counter-increment: listCounter;
+
+        &::before {
+            content: counter(listCounter);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--red);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 115%;
+            color: #fff;
+        }
+
+        &:nth-child(3) {
+            margin-left: 180px;
+        }
+
+    }
+
     &-title {
         font-weight: 500;
         font-size: 24px;
@@ -297,6 +334,10 @@
         text-transform: capitalize;
         color: var(--hero-text-color);
     }
+}
+
+.al-start {
+    align-items: flex-start;
 }
 
 // Vet end ======================
@@ -514,3 +555,185 @@
 }
 
 // Testimonials end ======================
+
+
+
+
+// ============ Passive Search Page ===============
+// Eliminate ======================================
+.eliminate {
+    padding: 150px 0 70px;
+    position: relative;
+    overflow: hidden;
+
+    .main_title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &_box {
+        display: flex;
+        position: relative;
+    }
+
+    &_col {
+        width: calc(50% - 15px);
+        margin-right: 15px;
+
+        &-txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: var(--hero-text-color);
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &_info {
+        width: calc(50% - 15px);
+        margin-left: 15px;
+        padding: 40px;
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 20px;
+        background: var(--bg-section);
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -70px;
+            right: -170px;
+            width: 380px;
+            height: 380px;
+            background: #FFF3F3;
+            z-index: -1;
+            border-radius: 5px;
+            opacity: var(--svg-opacity);
+        }
+    }
+
+}
+
+// Eliminate end ==================================
+
+
+
+
+// ============ Contractor Network Page ===============
+// Network ==================================
+.network {
+    padding: 70px 0;
+    padding-bottom: var(--extra-padding-bottom);
+    margin: var(--section-margin-top) 0 var(--section-margin-top) 0;
+    background: var(--bg-section);
+    overflow: hidden;
+
+    .main_title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &_box {
+        display: flex;
+        position: relative;
+    }
+
+    &_photo {
+        width: 440px;
+        height: 520px;
+        margin-right: 50px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: -100px;
+            width: 380px;
+            height: 380px;
+            background: #FFF3F3;
+            border-radius: 10px;
+            opacity: var(--svg-opacity);
+        }
+
+        img {
+            @include ImgCon;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &_info {
+        width: calc(100% - 490px);
+
+        &-txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: var(--hero-text-color);
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Network end ==================================
+
+// Work ======================================
+.work {
+    padding: 70px 0;
+
+    &_box {
+        display: flex;
+    }
+
+    &_item {
+        width: calc(50% - 120px);
+        margin: 0 20px;
+        padding: 40px;
+
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 20px;
+        background: var(--bg-section);
+
+        &-title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 40px;
+            text-transform: capitalize;
+            color: var(--hero-title-color);
+            margin-bottom: 20px;
+
+            span {
+                color: var(--red);
+            }
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: var(--hero-text-color);
+
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Work end ==================================

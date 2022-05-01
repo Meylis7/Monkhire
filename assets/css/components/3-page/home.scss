@@ -141,9 +141,11 @@
     text-align: center;
     position: relative;
     z-index: 1;
+    text-transform: capitalize;
 
     span {
         color: var(--red);
+        text-transform: capitalize;
     }
 }
 

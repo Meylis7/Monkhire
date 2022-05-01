@@ -4,12 +4,14 @@
 
     &_box {
         display: flex;
+        justify-content: center;
         margin: 0 auto;
         max-width: 900px;
     }
 
     &_item {
         width: calc(50% - 120px);
+        max-width: 320px;
         margin: 0 20px;
 
         box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);

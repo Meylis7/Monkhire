@@ -13,7 +13,7 @@ $(".about_block-slider").slick({
 
     infinite: true,
     speed: 800,
-    fade: true,
+    fade: false,
     adaptiveHeight: true,
     lazyLoad: 'ondemand',
 
