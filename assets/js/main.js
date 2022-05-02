@@ -4,6 +4,10 @@ let nav_box_title = document.querySelectorAll('.nav_box-title');
 let nav_box_outer = document.querySelectorAll('.nav_box-outer');
 let vid = document.getElementById("about_video");
 
+let vouch_btn = document.querySelector('.vouch-link');
+let vouch_modal = document.querySelector('.vouch-modal');
+
+
 
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -108,6 +112,13 @@ window.onclick = function (e) {
     }
     );
 
+    if (vouch_modal != undefined) {
+        if (vouch_modal.classList.contains('active') && !e.target.closest('.modal_inner')) {
+            vouch_modal.classList.remove('active')
+        }
+    }
+
+
     // if (drop_lang.classList.contains('active') && !e.target.closest('.lang_box')) {
     //     drop_lang.classList.remove('active')
     // }
@@ -154,9 +165,19 @@ if (nav_box_title != undefined) {
     });
 }
 
+if (vouch_btn != undefined) {
+    vouch_btn.addEventListener('click', function () {
+        sleep(2).then(() => {
+            vouch_modal.classList.add('active');
+        });
+    });
+}
+
+
+
 // if (btn != undefined) {
 //     btn.addEventListener('click', function () {
-//         btn.classList.add('remove');
+//         btn.classList.add('active');
 //     });
 // }
 

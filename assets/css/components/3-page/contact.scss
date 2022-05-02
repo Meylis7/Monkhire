@@ -140,8 +140,14 @@
         }
 
         &-items {
+            max-height: 120px;
+            overflow-y: auto;
             background: transparent;
+            padding-right: 5px;
 
+            ::-webkit-scrollbar {
+                width: 3px;
+            }
 
             div {
                 background: #f0f0f0;

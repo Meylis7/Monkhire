@@ -195,6 +195,10 @@
         &-group {
             overflow: hidden;
             max-height: 0;
+            transition: .4s linear;
+            -ms-transition: .4s linear;
+            -moz-transition: .4s linear;
+            -webkit-transition: .4s linear;
 
             p {
                 font-weight: 400;
@@ -421,7 +425,10 @@
         &-group {
             max-height: 0;
             overflow: hidden;
-            @include transition;
+            transition: .4s linear;
+            -ms-transition: .4s linear;
+            -moz-transition: .4s linear;
+            -webkit-transition: .4s linear;
         }
 
         &-txt {
