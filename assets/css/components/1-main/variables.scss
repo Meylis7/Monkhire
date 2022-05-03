@@ -3,6 +3,7 @@
 :root {
     --bg-body: #fff;
     --bg-section: #fff;
+    --pink-bg-section: #FEEEEE;
     --logo-light: block;
     --logo-dark: none;
     --txt-color: #455A64;
@@ -25,6 +26,7 @@
     --svg-path: #EBEBEB;
     --member-svg: #1F6A58;
     --extra-padding-bottom: 70px;
+    --pink-section-txt: #F85052;
 
     --red: #F85052;
     --pink: #FEEEEE;
@@ -38,6 +40,7 @@
 [data-theme="dark"] {
     --bg-body: #19324E;
     --bg-section: #162B43;
+    --pink-bg-section: #162B43;
     --txt-color: #fff;
     --nav-bg-color: #162B43;
     --theme-bg: #fff;
@@ -58,6 +61,7 @@
     --svg-path: #2C547C;
     --member-svg: #fff;
     --extra-padding-bottom: 130px;
+    --pink-section-txt: #F85052;
 
 
 

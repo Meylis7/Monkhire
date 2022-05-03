@@ -3,9 +3,28 @@
 .hero {
     padding: 60px 0 75px;
     position: relative;
+    overflow: hidden;
 
     &_wrap {
         position: relative;
+    }
+
+    &.pink-rgb {
+        &::after {
+            content: '';
+            position: absolute;
+            top: -310px;
+            left: -310px;
+            width: 50%;
+            height: 50%;
+            background: #F85052;
+            opacity: 0.2;
+            filter: blur(320px);
+        }
+
+        .group_title {
+            margin-bottom: 20px;
+        }
     }
 
     &_box {
@@ -37,7 +56,7 @@
             font-size: 20px;
             line-height: 30px;
             color: var(--hero-title-color);
-            margin: 30px 0 40px;
+            margin: 30px 0 0;
 
             a {
                 font-weight: 700;
@@ -54,7 +73,8 @@
             letter-spacing: .2px;
             color: var(--hero-text-color);
 
-            margin-bottom: 30px;
+            margin: 40px 0 30px;
+            max-width: 520px;
         }
 
         &-row {
@@ -219,6 +239,16 @@
     padding: 70px 0;
     margin-top: var(--section-margin-top);
     background-color: var(--bg-section);
+
+    &.pink-bg {
+        margin-top: 50px;
+        background-color: var(--pink-bg-section);
+
+        .advantage_item-title,
+        .advantage_item-txt span {
+            color: var(--pink-section-txt);
+        }
+    }
 
     &_box {
         display: flex;
@@ -458,9 +488,10 @@
 
 // About block ====================================
 .about_block {
-    &-slider {
-        margin-top: 60px;
+    padding: 70px 0 40px;
+    display: block;
 
+    &-slider {
         .slick {
             &-track {
                 padding: 60px 0;

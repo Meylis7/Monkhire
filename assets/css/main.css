@@ -4,6 +4,7 @@
 :root {
   --bg-body: #fff;
   --bg-section: #fff;
+  --pink-bg-section: #FEEEEE;
   --logo-light: block;
   --logo-dark: none;
   --txt-color: #455A64;
@@ -26,6 +27,7 @@
   --svg-path: #EBEBEB;
   --member-svg: #1F6A58;
   --extra-padding-bottom: 70px;
+  --pink-section-txt: #F85052;
   --red: #F85052;
   --pink: #FEEEEE;
   --white: #fff;
@@ -37,6 +39,7 @@
 [data-theme=dark] {
   --bg-body: #19324E;
   --bg-section: #162B43;
+  --pink-bg-section: #162B43;
   --txt-color: #fff;
   --nav-bg-color: #162B43;
   --theme-bg: #fff;
@@ -57,6 +60,7 @@
   --svg-path: #2C547C;
   --member-svg: #fff;
   --extra-padding-bottom: 130px;
+  --pink-section-txt: #F85052;
   --logo-light: none;
   --logo-dark: block;
 }
@@ -797,6 +801,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .modal.hire-modal .modal_inner {
   max-width: 610px;
 }
+.modal.thanks-modal .modal_inner {
+  max-width: 800px;
+}
 .modal_inner {
   position: absolute;
   top: 60%;
@@ -1104,13 +1111,58 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
   box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
 }
+.modal .thanks {
+  width: 100%;
+}
+.modal .thanks .title-arrow::before {
+  left: 60%;
+  bottom: -20px;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+.modal .thanks_txt {
+  margin: 30px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--txt-color);
+}
+.modal .thanks_svg {
+  width: 100%;
+  height: 400px;
+}
+.modal .thanks_svg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+}
 
 .hero {
   padding: 60px 0 75px;
   position: relative;
+  overflow: hidden;
 }
 .hero_wrap {
   position: relative;
+}
+.hero.pink-rgb::after {
+  content: "";
+  position: absolute;
+  top: -310px;
+  left: -310px;
+  width: 50%;
+  height: 50%;
+  background: #F85052;
+  opacity: 0.2;
+  -webkit-filter: blur(320px);
+          filter: blur(320px);
+}
+.hero.pink-rgb .group_title {
+  margin-bottom: 20px;
 }
 .hero_box {
   display: -webkit-box;
@@ -1149,7 +1201,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   line-height: 30px;
   color: var(--hero-title-color);
-  margin: 30px 0 40px;
+  margin: 30px 0 0;
 }
 .hero_info-subtitle a {
   font-weight: 700;
@@ -1163,7 +1215,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 30px;
   letter-spacing: 0.2px;
   color: var(--hero-text-color);
-  margin-bottom: 30px;
+  margin: 40px 0 30px;
+  max-width: 520px;
 }
 .hero_info-row {
   display: -webkit-box;
@@ -1330,6 +1383,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 70px 0;
   margin-top: var(--section-margin-top);
   background-color: var(--bg-section);
+}
+.advantage.pink-bg {
+  margin-top: 50px;
+  background-color: var(--pink-bg-section);
+}
+.advantage.pink-bg .advantage_item-title,
+.advantage.pink-bg .advantage_item-txt span {
+  color: var(--pink-section-txt);
 }
 .advantage_box {
   display: -webkit-box;
@@ -1536,8 +1597,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-bottom: none;
 }
 
-.about_block-slider {
-  margin-top: 60px;
+.about_block {
+  padding: 70px 0 40px;
+  display: block;
 }
 .about_block-slider .slick-track {
   padding: 60px 0;
