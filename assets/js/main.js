@@ -36,7 +36,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 // Switch Text =================================
 // function([string1, string2],target id,[color1,color2])    
 if (document.getElementById("console") != undefined) {
-    consoleText(['React Developer', 'Vue Developer', 'Angular Developer'], 'text', ['#F85052', '#F85052', '#F85052']);
+    consoleText(['React Developer', 'Vue Developer', 'Angular Developer','PHP Developer'], 'text', ['#F85052', '#F85052', '#F85052']);
 
     function consoleText(words, id, colors) {
         if (colors === undefined) colors = ['#fff'];

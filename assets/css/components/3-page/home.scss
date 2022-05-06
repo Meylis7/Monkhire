@@ -31,6 +31,8 @@
         display: flex;
         align-items: center;
         position: relative;
+
+
     }
 
     &_info {
@@ -89,10 +91,16 @@
         }
     }
 
+    &.hero_dev {
+        .hero_info {
+            width: calc(50% - 25px);
+            margin-right: 25px;
+        }
+    }
+
     .group_title {
         margin-bottom: 80px;
     }
-
 
     &_svg {
         position: absolute;
@@ -119,6 +127,79 @@
             @include ImgCon;
         }
     }
+
+    &_sign {
+        display: flex;
+
+        &-input {
+            width: calc(50% - 5px);
+            display: block;
+            margin-right: 5px;
+
+            input {
+                width: calc(100% - 40px);
+                padding: 10px 20px;
+                box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+                border-radius: 8px;
+                background: var(--bg-section);
+
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 0.02em;
+                color: var(--hero-text-color);
+                border: 1px solid transparent;
+
+                &:active,
+                &:focus {
+                    border: 1px solid var(--red);
+                }
+
+                &::placeholder {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+
+            width: calc(50% - 40px);
+            max-width: 200px;
+            padding: 10px 20px;
+
+            background: var(--red);
+            border-radius: 8px;
+            cursor: pointer;
+            color: #fff;
+            @include transition;
+
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+
+            &:hover {
+                background: var(--hire-bg);
+                -webkit-box-shadow: 0px 12px 14px rgb(25 50 78 / 22%);
+                box-shadow: 0px 12px 14px rgb(25 50 78 / 22%);
+            }
+
+            span {
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-left: 15px;
+
+                svg {
+                    @include ImgCon;
+                }
+            }
+        }
+    }
+
+
 }
 
 .hidden {
@@ -344,6 +425,7 @@
 
         &-list {
             max-width: 470px;
+            margin-bottom: 60px;
 
             li {
                 display: flex;
