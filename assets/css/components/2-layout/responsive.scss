@@ -170,11 +170,20 @@
     .hero {
         &_box {
             flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        &.hero_dev {
+            .hero_info {
+                width: 100%;
+                margin-right: 0;
+            }
         }
 
         &_info {
-            max-width: 100%;
-            width: 80%;
+            width: 100%;
+            margin-right: 0;
 
             &-title {
                 font-size: 38px;
@@ -190,6 +199,12 @@
             margin-top: 50px;
         }
 
+    }
+
+    // Dev Form ================
+    .dev_form {
+        width: 100%;
+        margin-left: 0;
     }
 
     .title_arrow {
@@ -303,6 +318,65 @@
 
         &_item {
             margin: 0 0 30px;
+        }
+    }
+
+    // Company Block ===================
+    .company_block {
+        &-box {
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            margin: 0 30px 30px;
+        }
+    }
+
+    // Video Block =====================
+    .video_block {
+        padding: 40px 0;
+
+        &-box {
+            height: 430px;
+        }
+    }
+
+    // Vet =========================
+    .vet {
+        padding: 40px 0;
+    }
+
+    .info_box {
+        flex-wrap: wrap;
+
+        .col-3 {
+            width: calc(50% - 80px);
+
+        }
+    }
+
+    // Employee ==================
+    .employee {
+        padding: 40px 0;
+
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: 100%;
+
+            display: flex;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &_item {
+            width: calc(50% - 40px);
+            margin: 0 20px;
         }
     }
 
@@ -536,6 +610,47 @@
         }
     }
 
+    // Employee ==================
+    .employee {
+        padding: 40px 0;
+
+        &_col {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &_item {
+            width: calc(100% - 40px);
+            margin: 0 20px 30px;
+        }
+    }
+
+    // Testimonials =========================
+    .testimonial {
+        &_slider {
+            .slick-prev,
+            .slick-next {
+                display: none !important;
+            }
+        }
+
+        &_item {
+            margin: 30px 25px 25px;
+            padding: 0 30px 80px 30px;
+        }
+    }
+
 }
 
 // 660 ====================================================
@@ -561,6 +676,16 @@
                 line-height: 26px;
             }
         }
+
+        &_dev {
+            &-avatars {
+                width: 100%;
+
+                img {
+                    @include ImgCon;
+                }
+            }
+        }
     }
 
     .title-arrow {
@@ -579,6 +704,31 @@
         span {
             width: 20px;
             height: 20px;
+        }
+    }
+
+    .main_link {
+        a {
+            font-size: 14px;
+            padding: 8px 20px;
+        }
+    }
+
+    // Dev Form =========================
+    .dev_form {
+        margin-top: 30px;
+        padding: 40px 20px;
+
+        &-input {
+            width: calc(100% - 20px);
+        }
+
+        &-txt {
+            text-align: center;
+        }
+
+        .btn {
+            justify-content: center;
         }
     }
 
@@ -733,6 +883,32 @@
         }
     }
 
+    // Vet =========================
+    .info_box {
+        flex-wrap: wrap;
+
+        &-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        &-txt {
+            font-size: 14px;
+        }
+
+        .col-3 {
+            width: calc(100% - 80px);
+        }
+    }
+
+    // Video Block =================
+    .video_block {
+        &-box {
+            height: 350px;
+        }
+    }
+
+
 }
 
 // 400 =======================================
@@ -754,6 +930,7 @@
     .banner {
         .main_title {
             font-size: 16px;
+            line-height: 32px;
         }
     }
 
@@ -761,6 +938,27 @@
     .footer {
         &_row {
             align-items: unset;
+        }
+    }
+
+    // Employee ==========================
+    .employee {
+        &_box {
+            margin-top: 35px;
+        }
+
+        &_col {
+            margin: 0 0 30px;
+        }
+
+        &_item {
+            &-title {
+                font-size: 18px;
+            }
+
+            &-txt {
+                font-size: 14px;
+            }
         }
     }
 

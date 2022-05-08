@@ -3868,7 +3868,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: block;
 }
 .video_block-box {
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   height: 500px;
   margin: 0 auto;
   display: block;
@@ -5092,10 +5093,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .hero.hero_dev .hero_info {
+    width: 100%;
+    margin-right: 0;
   }
   .hero_info {
-    max-width: 100%;
-    width: 80%;
+    width: 100%;
+    margin-right: 0;
   }
   .hero_info-title {
     font-size: 38px;
@@ -5108,6 +5115,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     margin-top: 50px;
+  }
+
+  .dev_form {
+    width: 100%;
+    margin-left: 0;
   }
 
   .title_arrow::before {
@@ -5201,6 +5213,55 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .remote_item {
     margin: 0 0 30px;
+  }
+
+  .company_block-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .company_block-item {
+    margin: 0 30px 30px;
+  }
+
+  .video_block {
+    padding: 40px 0;
+  }
+  .video_block-box {
+    height: 430px;
+  }
+
+  .vet {
+    padding: 40px 0;
+  }
+
+  .info_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .info_box .col-3 {
+    width: calc(50% - 80px);
+  }
+
+  .employee {
+    padding: 40px 0;
+  }
+  .employee_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .employee_col {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .employee_col:last-child {
+    margin-bottom: 0;
+  }
+  .employee_item {
+    width: calc(50% - 40px);
+    margin: 0 20px;
   }
 
   .advantage_box {
@@ -5358,6 +5419,38 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .footer .logo {
     margin-bottom: 30px;
   }
+
+  .employee {
+    padding: 40px 0;
+  }
+  .employee_col {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .employee_col:nth-child(2) {
+    margin-top: 0;
+  }
+  .employee_col:last-child {
+    margin-bottom: 0;
+  }
+  .employee_item {
+    width: calc(100% - 40px);
+    margin: 0 20px 30px;
+  }
+
+  .testimonial_slider .slick-prev,
+.testimonial_slider .slick-next {
+    display: none !important;
+  }
+  .testimonial_item {
+    margin: 30px 25px 25px;
+    padding: 0 30px 80px 30px;
+  }
 }
 @media (max-width: 660px) {
   .hero_info {
@@ -5375,6 +5468,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin: 25px 0;
     line-height: 26px;
   }
+  .hero_dev-avatars {
+    width: 100%;
+  }
+  .hero_dev-avatars img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -o-object-fit: contain;
+  }
 
   .title-arrow::before {
     height: 34px;
@@ -5390,6 +5492,27 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .hire_dev span {
     width: 20px;
     height: 20px;
+  }
+
+  .main_link a {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .dev_form {
+    margin-top: 30px;
+    padding: 40px 20px;
+  }
+  .dev_form-input {
+    width: calc(100% - 20px);
+  }
+  .dev_form-txt {
+    text-align: center;
+  }
+  .dev_form .btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .console-underscore,
@@ -5487,6 +5610,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
     overflow: hidden;
     margin-bottom: 20px;
   }
+
+  .info_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .info_box-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .info_box-txt {
+    font-size: 14px;
+  }
+  .info_box .col-3 {
+    width: calc(100% - 80px);
+  }
+
+  .video_block-box {
+    height: 350px;
+  }
 }
 @media (max-width: 400px) {
   .auto_container {
@@ -5499,11 +5641,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .banner .main_title {
     font-size: 16px;
+    line-height: 32px;
   }
 
   .footer_row {
     -webkit-box-align: unset;
         -ms-flex-align: unset;
             align-items: unset;
+  }
+
+  .employee_box {
+    margin-top: 35px;
+  }
+  .employee_col {
+    margin: 0 0 30px;
+  }
+  .employee_item-title {
+    font-size: 18px;
+  }
+  .employee_item-txt {
+    font-size: 14px;
   }
 }
