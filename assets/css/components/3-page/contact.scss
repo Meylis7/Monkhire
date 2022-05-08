@@ -18,14 +18,19 @@
     }
 
     &_title {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 22px;
         line-height: 30px;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-        color: var(--hero-title-color);
+        color: var(--hero-text-color);
         margin-bottom: 40px;
         width: 100%;
+
+        span {
+            font-weight: 700;
+            color: var(--hero-title-color);
+        }
     }
 
     &_input {
@@ -140,7 +145,7 @@
         }
 
         &-items {
-            max-height: 120px;
+            max-height: 130px;
             overflow-y: auto;
             background: transparent;
             padding-right: 5px;
@@ -150,8 +155,9 @@
             }
 
             div {
-                background: #f0f0f0;
+                background: var(--tag-bg);
                 @include transition;
+                color: var(--hero-title-color);
 
                 &:hover {
                     color: #fff;
@@ -196,6 +202,18 @@
                 padding: 10px 15px;
                 width: 70px;
                 background: var(--nav-bg-color);
+
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: var(--hero-title-color);
+
+                &:active,
+                &:focus {
+                    border-color: var(--red);
+                }
             }
         }
     }

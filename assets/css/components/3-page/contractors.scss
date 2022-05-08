@@ -106,17 +106,18 @@
         }
 
         &-link {
-            padding: 15px 40px;
+            padding: 10px 30px;
             background: var(--red);
             border-radius: 12px;
             font-weight: 600;
             font-size: 16px;
-            line-height: 30px;
+            line-height: 27px;
             letter-spacing: 0.02em;
             color: #fff;
             box-shadow: 0px 12px 14px var(--hire-shadow);
             border-radius: 8px;
             @include transition;
+            display: inline-block;
 
             &:hover {
                 background: var(--hire-bg);

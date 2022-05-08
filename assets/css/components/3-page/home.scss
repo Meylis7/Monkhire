@@ -44,8 +44,8 @@
 
         &-title {
             font-weight: 700;
-            font-size: 60px;
-            line-height: 90px;
+            font-size: 54px;
+            line-height: 80px;
             color: var(--hero-title-color);
 
             span {
@@ -107,11 +107,13 @@
         top: 35%;
         @include transformY;
         right: 0;
-        width: 700px;
+        width: 660px;
         height: 460px;
 
-        svg {
+        svg,
+        img {
             @include ImgCon;
+            object-position: right;
         }
     }
 
@@ -123,6 +125,7 @@
         width: 580px;
         height: 380px;
 
+        img, 
         svg {
             @include ImgCon;
         }
@@ -202,11 +205,8 @@
 
 }
 
-.hidden {
-    opacity: 0;
-}
-
-.console-underscore {
+.console-underscore,
+.console-underscore2 {
     display: inline-block;
     position: relative;
     // top: -0.14em;
@@ -218,6 +218,10 @@
     font-size: 60px;
     line-height: 90px;
     color: var(--red);
+}
+
+.hidden {
+    opacity: 0;
 }
 
 .title-arrow {
@@ -425,7 +429,7 @@
 
         &-list {
             max-width: 470px;
-            margin-bottom: 60px;
+            // margin-bottom: 60px;
 
             li {
                 display: flex;
@@ -468,11 +472,23 @@
         }
     }
 
+    .desc_info-link {
+        margin-top: 40px;
+    }
+
     &_svg {
         position: absolute;
-        top: 0;
+        top: 20px;
         right: 0;
         z-index: -1;
+
+        width: 760px;
+        height: 530px;
+
+        svg,
+        img {
+            @include ImgCon;
+        }
     }
 }
 
@@ -765,11 +781,11 @@
             &::before {
                 content: '';
                 position: absolute;
-                bottom: -45px;
+                bottom: -80px;
                 left: 20px;
                 width: 350px;
                 height: 350px;
-                background: url("../images/mask-circle-2.svg") no-repeat center;
+                background: url("../images/svg/mask-circle-2.svg") no-repeat center;
                 background-size: contain;
                 opacity: var(--svg-opacity);
             }
@@ -781,20 +797,22 @@
                 right: -40px;
                 width: 280px;
                 height: 290px;
-                background: url("../images/mask-circles.svg") no-repeat center;
+                background: url("../images/svg/mask-circle-1.svg") no-repeat center;
                 background-size: contain;
                 opacity: var(--svg-opacity);
             }
         }
 
         &-txt {
-            margin: 30px 0 45px;
+            margin: 30px auto 45px;
             font-weight: 400;
             font-size: 16px;
             line-height: 30px;
             text-align: center;
             letter-spacing: 0.02em;
             color: var(--txt-color);
+
+            max-width: 720px;
         }
 
         &-link {
