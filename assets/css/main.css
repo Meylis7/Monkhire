@@ -63,8 +63,8 @@
   --extra-padding-bottom: 130px;
   --pink-section-txt: #F85052;
   --ex-photo-bg: #162B43;
-  --logo-light: none;
-  --logo-dark: block;
+  --logo-light: block;
+  --logo-dark: none;
 }
 
 *,
@@ -3695,7 +3695,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -o-object-fit: contain;
 }
 .funds_info {
-  width: calc(100% - 520px);
+  width: calc(100% - 370px);
 }
 
 .dev_form {
@@ -5116,6 +5116,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
             transform: translateY(0);
     margin-top: 50px;
   }
+  .hero .rec_svg {
+    position: relative;
+    top: unset;
+    right: unset;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    margin-top: 50px;
+    width: 450px;
+    height: 340px;
+  }
 
   .dev_form {
     width: 100%;
@@ -5181,6 +5191,38 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .about_block-slider .slick-next {
     right: 42%;
   }
+
+  .process {
+    padding: 40px 0;
+  }
+  .process_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .process_item {
+    width: calc(33.33% - 110px);
+    margin-bottom: 60px;
+  }
+  .process_item:nth-child(3)::after {
+    display: none;
+  }
+
+  .dev_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dev_info {
+    width: 100%;
+    margin-right: 0;
+  }
+  .dev_blocks {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 0;
+  }
 }
 @media (max-width: 1000px) {
   .auto_container {
@@ -5194,6 +5236,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .hero_svg img {
     -o-object-position: center;
        object-position: center;
+  }
+  .hero .rec_svg {
+    display: none;
   }
 
   .main_title {
@@ -5366,6 +5411,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .footer_nav ul li {
     margin-bottom: 10px;
   }
+
+  .process_item-icon {
+    height: 30px;
+    margin-bottom: 40px;
+  }
+  .process_item-icon::before {
+    width: 80px;
+    height: 80px;
+  }
+  .process_item-title {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+  .process_item-txt {
+    font-size: 14px;
+  }
 }
 @media (max-width: 800px) {
   .hero {
@@ -5451,6 +5512,56 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin: 30px 25px 25px;
     padding: 0 30px 80px 30px;
   }
+
+  .process_item {
+    width: calc(40% - 110px);
+  }
+  .process_item:nth-child(2)::after, .process_item:nth-child(4)::after {
+    display: none;
+  }
+  .process_item:nth-child(3)::after {
+    display: block;
+    background: url(../images/svg/svg-arrow-2.svg) no-repeat center;
+  }
+
+  .ex_item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+  .ex_item:nth-child(2) .ex_item-photo {
+    margin-right: 0;
+  }
+  .ex_item-info {
+    width: 100%;
+  }
+  .ex_item-photo {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+    padding: 20px;
+    height: 300px;
+  }
+
+  .funds_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .funds_photo {
+    width: 100%;
+    height: 340px;
+    margin-right: 0;
+  }
+  .funds_info {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .funds .vet_txt {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 660px) {
   .hero_info {
@@ -5476,6 +5587,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
     height: 100%;
     object-fit: contain;
     -o-object-fit: contain;
+  }
+  .hero_sign {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero_sign-input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .hero_sign-btn {
+    width: 100%;
   }
 
   .title-arrow::before {
@@ -5629,6 +5755,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .video_block-box {
     height: 350px;
   }
+
+  .process_item {
+    width: calc(70% - 110px);
+  }
+  .process_item::after {
+    display: none;
+  }
+  .process_item:nth-child(3)::after {
+    display: none;
+  }
+
+  .dev_blocks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dev_blocks-item {
+    width: calc(90% - 80px);
+  }
 }
 @media (max-width: 400px) {
   .auto_container {
@@ -5661,5 +5806,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .employee_item-txt {
     font-size: 14px;
+  }
+
+  .ex_item-photo {
+    height: auto;
+  }
+
+  .funds_photo {
+    height: 250px;
   }
 }
