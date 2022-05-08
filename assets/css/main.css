@@ -4551,6 +4551,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   margin-bottom: 30px;
+  color: var(--hero-text-color);
 }
 .detail_txt {
   font-weight: 400;
@@ -5223,6 +5224,37 @@ input[type=date]::-webkit-calendar-picker-indicator {
     max-width: 800px;
     margin: 40px auto 0;
   }
+
+  .detail_main-title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .detail_subtitle {
+    margin: 15px 0 40px;
+  }
+  .detail_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .detail_img {
+    height: 395px;
+  }
+  .detail_list {
+    margin-bottom: 30px;
+  }
+  .detail_list li {
+    font-size: 14px;
+  }
+  .detail_title {
+    font-size: 22px;
+  }
+
+  .about_detail-txt {
+    font-size: 14px;
+  }
+  .about_detail-list li {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1000px) {
   .auto_container {
@@ -5426,6 +5458,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .process_item-txt {
     font-size: 14px;
+  }
+
+  .privacy_main-title {
+    font-size: 40px;
+    line-height: 70px;
+  }
+  .privacy_subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .blog_item {
+    padding: 40px;
+  }
+  .blog_item-title {
+    font-size: 20px;
   }
 }
 @media (max-width: 800px) {
@@ -5692,6 +5740,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .banner_box-txt {
     font-size: 14px;
+    position: relative;
+    z-index: 3;
   }
   .banner_box-link {
     font-size: 14px;
@@ -5774,6 +5824,66 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .dev_blocks-item {
     width: calc(90% - 80px);
   }
+
+  .detail_main-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .detail_txt {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .detail_img {
+    height: 330px;
+  }
+  .detail_list {
+    margin-bottom: 20px;
+  }
+  .detail_list li {
+    font-size: 14px;
+  }
+  .detail_title {
+    font-size: 18px;
+  }
+
+  .privacy {
+    padding: 70px 0 40px;
+  }
+  .privacy_main-title {
+    font-size: 30px;
+  }
+  .privacy_title {
+    font-size: 18px;
+  }
+  .privacy_list {
+    padding-left: 15px;
+  }
+
+  .about_detail {
+    padding: 40px 0;
+  }
+  .about_detail-txt {
+    font-size: 14px;
+  }
+  .about_detail-list li {
+    font-size: 14px;
+  }
+
+  .blog_item {
+    margin-bottom: 40px;
+  }
+  .blog_item-txt {
+    font-size: 14px;
+  }
+  .blog_item-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog_item-footer-link {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 400px) {
   .auto_container {
@@ -5814,5 +5924,36 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .funds_photo {
     height: 250px;
+  }
+
+  .privacy {
+    padding: 40px 0;
+  }
+  .privacy_title {
+    font-size: 16px;
+  }
+  .privacy_main-title {
+    font-size: 25px;
+  }
+
+  .blog_item {
+    margin-bottom: 40px;
+    padding: 25px;
+  }
+  .blog_item-title {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .blog_item-txt {
+    font-size: 14px;
+  }
+  .blog_item-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog_item-footer-link {
+    margin-bottom: 15px;
   }
 }

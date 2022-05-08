@@ -334,6 +334,54 @@
 
     }
 
+    // Blog Detail ==========================
+    .detail {
+        &_main-title {
+            font-size: 32px;
+            line-height: 48px;
+        }
+
+        &_subtitle {
+            margin: 15px 0 40px;
+        }
+
+        &_txt {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        &_img {
+            height: 395px;
+        }
+
+        &_list {
+            margin-bottom: 30px;
+
+            li {
+                font-size: 14px;
+            }
+        }
+
+        &_title {
+            font-size: 22px;
+        }
+    }
+
+    // Blog About ======================
+    .about {
+        &_detail {
+            &-txt {
+                font-size: 14px;
+            }
+
+            &-list {
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
 }
 
 // 1000 =================================
@@ -598,6 +646,30 @@
 
             &-txt {
                 font-size: 14px;
+            }
+        }
+    }
+
+    // Privacy =========================
+    .privacy {
+        &_main-title {
+            font-size: 40px;
+            line-height: 70px;
+        }
+
+        &_subtitle {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+    }
+
+    // Blog =========================
+    .blog {
+        &_item {
+            padding: 40px;
+
+            &-title {
+                font-size: 20px;
             }
         }
     }
@@ -968,6 +1040,8 @@
 
             &-txt {
                 font-size: 14px;
+                position: relative;
+                z-index: 3;
             }
 
             &-link {
@@ -1103,6 +1177,88 @@
         }
     }
 
+    // Blog Detail ==========================
+    .detail {
+        &_main-title {
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        &_txt {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        &_img {
+            height: 330px;
+        }
+
+        &_list {
+            margin-bottom: 20px;
+
+            li {
+                font-size: 14px;
+            }
+        }
+
+        &_title {
+            font-size: 18px;
+        }
+    }
+
+    // Pricavy =======================
+    .privacy {
+        padding: 70px 0 40px;
+
+        &_main-title {
+            font-size: 30px;
+        }
+
+        &_title {
+            font-size: 18px;
+        }
+
+        &_list {
+            padding-left: 15px;
+        }
+    }
+
+    // Blog About ======================
+    .about {
+        &_detail {
+            padding: 40px 0;
+
+            &-txt {
+                font-size: 14px;
+            }
+
+            &-list {
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // Blog =============================
+    .blog {
+        &_item {
+            margin-bottom: 40px;
+
+            &-txt {
+                font-size: 14px;
+            }
+
+            &-footer {
+                flex-direction: column;
+
+                &-link {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
 }
 
 // 400 =======================================
@@ -1169,6 +1325,46 @@
     .funds {
         &_photo {
             height: 250px;
+        }
+    }
+
+    // Pricavy =======================
+    .privacy {
+        padding: 40px 0;
+
+        &_title {
+            font-size: 16px;
+        }
+
+        &_main-title {
+            font-size: 25px;
+        }
+    }
+
+
+    // Blog =============================
+    .blog {
+
+        &_item {
+            margin-bottom: 40px;
+            padding: 25px;
+
+            &-title {
+                font-size: 17px;
+                line-height: 30px;
+            }
+
+            &-txt {
+                font-size: 14px;
+            }
+
+            &-footer {
+                flex-direction: column;
+
+                &-link {
+                    margin-bottom: 15px;
+                }
+            }
         }
     }
 
