@@ -1,22 +1,767 @@
-@include xlg-xxlg {}
+// 1300 ============================
+@include xlg-xxlg {
 
-@include lg-xxlg {}
+    // Hero =============
+    .hero {
+        &_info {
+            &-title {
+                font-size: 46px;
+            }
+        }
 
+        .group_title {
+            margin-bottom: 40px;
+        }
+
+        &_svg {
+            width: 560px;
+            height: 380px;
+        }
+    }
+
+    .main_title {
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    // Meet ========================
+    .meet {
+        &_info {
+            &-title {
+                font-size: 34px;
+                line-height: 60px;
+            }
+        }
+
+        &_svg {
+            width: 610px;
+            height: 410px;
+            top: 70px;
+        }
+    }
+
+
+}
+
+// 1100 =============================
+@include lg-xxlg {
+
+    // Header ==============
+    .header {
+        .burger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: var(--hero-title-color);
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    right: 0;
+                    width: 15px;
+                    height: 2px;
+                    background: var(--hero-title-color);
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    right: 0;
+                    width: 15px;
+                    height: 2px;
+                    background: var(--hero-title-color);
+                }
+            }
+        }
+
+        .nav {
+            &_bg {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .5);
+                backdrop-filter: blur(5px);
+                z-index: 60;
+                @include transition;
+
+                &.active {
+                    left: 0;
+                }
+            }
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 800px;
+            width: 90%;
+            height: calc(100% - 100px);
+            background: var(--bg-section);
+
+            flex-direction: column;
+            // justify-content: center;
+            padding-top: 100px;
+            overflow: auto;
+
+            &_box {
+                margin: 0 0 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                &-title {
+                    font-size: 20px;
+                    width: fit-content;
+                }
+
+                &-outer {
+                    position: relative;
+
+                    top: unset;
+                    left: unset;
+                    transform: translateX(0);
+                    opacity: 1;
+                    pointer-events: unset;
+
+                    &.active {
+                        top: unset;
+                    }
+
+                    a {
+                        font-size: 18px;
+                        position: relative;
+                        padding-left: 10px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 1px;
+                            height: 100%;
+                            background: var(--hero-title-color);
+                        }
+                    }
+                }
+            }
+
+            &_link {
+                font-size: 20px;
+                margin: 0 0 40px;
+            }
+
+            .theme-label {
+                margin: 0 0 40px;
+            }
+        }
+    }
+
+    // Hero =============
+    .hero {
+        &_box {
+            flex-direction: column;
+        }
+
+        &_info {
+            max-width: 100%;
+            width: 80%;
+
+            &-title {
+                font-size: 38px;
+                line-height: 56px;
+            }
+        }
+
+        &_svg {
+            position: relative;
+            top: unset;
+            right: unset;
+            transform: translateY(0);
+            margin-top: 50px;
+        }
+
+    }
+
+    .title_arrow {
+        &::before {
+            width: 110px;
+            height: 40px;
+        }
+    }
+
+    .main_title {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    // Meet ========================
+    .meet {
+        padding: 40px 0;
+
+        &_box {
+            flex-direction: column;
+        }
+
+        &_info {
+            max-width: 100%;
+
+            &-title {
+                font-size: 30px;
+            }
+        }
+
+        &_svg {
+            top: unset;
+            right: unset;
+            position: relative;
+            margin: 50px auto 0;
+
+            display: none;
+        }
+    }
+
+    // Plans =========================
+    .plans {
+        padding: 40px 0;
+
+        &_table {
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+
+            table {
+                min-width: 900px;
+            }
+        }
+    }
+
+    // Clients_block ========================
+    .clients_block {
+        &-box {
+            &-item {
+                width: calc(25% - 120px);
+            }
+        }
+    }
+
+    // About_block ==========================
+    .about_block {
+        &-slider {
+            .slick-prev {
+                left: 42%;
+            }
+
+            .slick-next {
+                right: 42%;
+            }
+        }
+    }
+
+}
+
+// 1000 =================================
 @include lg-xlg {
 
     .auto_container {
         padding: 0 35px;
     }
+
+    // Hero =================
+    .hero {
+        &_svg {
+            height: 330px;
+            width: 495px;
+
+            img {
+                object-position: center;
+            }
+        }
+    }
+
+    .main_title {
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    // Remote ====================
+    .remote {
+        &_box {
+            flex-direction: column;
+            align-items: unset;
+            max-width: 600px;
+        }
+
+        &_item {
+            margin: 0 0 30px;
+        }
+    }
+
+    // Advantage ====================
+    .advantage {
+        &_box {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &_item {
+            margin: 0 30px 50px;
+            width: calc(50% - 70px);
+            max-width: 300px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // About_block ================
+    .about_block {
+        &-slider {
+            .slick-list {
+                height: auto !important;
+            }
+
+            .slick-track {
+                padding: 30px 0 20px;
+            }
+
+            .slick-prev,
+            .slick-next {
+                display: none !important;
+            }
+        }
+    }
+
+    // Clients_block ================
+    .clients_block {
+        padding: 40px 0;
+
+        &-box {
+            &-item {
+                width: calc(25% - 100px);
+                margin: 20px;
+            }
+        }
+    }
+
+    // Plans =========================
+    .plans {
+        &_table {
+            width: 100%;
+            max-width: 100%;
+            margin: 50px 0 0 0;
+            display: block;
+            align-items: unset;
+            justify-content: unset;
+
+            thead {
+                th {
+                    font-size: 16px;
+                }
+            }
+
+            tbody {
+                td {
+                    font-size: 16px !important;
+                    line-height: 50px !important;
+                }
+            }
+
+            &-link {
+                font-size: 14px;
+                padding: 6px 20px;
+            }
+        }
+    }
+
+    // Meet =========================
+    .meet {
+        &_info {
+            &-title {
+                font-size: 25px;
+                line-height: 46px;
+            }
+        }
+    }
+
+    // Banner =======================
+    .banner {
+        &_box {
+            &-inner {
+                &::after {
+                    width: 220px;
+                    height: 220px;
+                }
+
+                &::before {
+                    width: 250px;
+                    height: 270px;
+                }
+            }
+
+            &-txt {
+                margin: 15px auto 25px;
+            }
+
+            .plus-svg {
+                width: 110px;
+                height: 110px;
+                right: -30px;
+            }
+        }
+    }
+
+    // Footer =======================
+    .footer {
+        &_info {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-item {
+                margin-bottom: 25px;
+                width: calc(50% - 25px);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &_nav {
+            ul {
+                flex-wrap: wrap;
+
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+
 }
 
-@include lg-lg {}
+// 800 ==================================
+@include lg-lg {
 
-@include md-xsm {}
+    // Hero =========================
+    .hero {
+        padding: 30px 0;
 
+        &_svg {
+            display: none;
+        }
+    }
+
+    // Remote ========================
+    .remote {
+        padding: 30px 0;
+
+        &_item {
+            &-icon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+
+    // Advantage ========================
+    .advantage {
+        padding: 30px 0;
+
+        &_item {
+            &-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            &-title {
+                font-style: 20px;
+                margin: 15px 0;
+            }
+
+            &-txt {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Role ============================
+    .role {
+        &_tabs {
+            &-link {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // Description ======================
+    .desc {
+        &_info {
+            &-link {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Clients Block ===================
+    .clients_block {
+        &-box {
+            &-item {
+                width: calc(30% - 100px);
+            }
+        }
+    }
+
+    // Footer ===========================
+    .footer {
+        &_row {
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+// 660 ====================================================
+@include md-xsm {
+
+    // Hero =========================
+    .hero {
+        &_info {
+            width: 100%;
+
+            &-title {
+                font-size: 30px;
+                line-height: 45px;
+            }
+
+            &-subtitle {
+                font-size: 16px;
+            }
+
+            &-txt {
+                font-size: 14px;
+                margin: 25px 0;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .title-arrow {
+        &::before {
+            height: 34px;
+            width: 84px;
+            bottom: -20px;
+        }
+    }
+
+    .hire_dev {
+        font-size: 14px;
+        padding: 6px 30px;
+        border-radius: 6px;
+
+        span {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .console-underscore,
+    .console-underscore2 {
+        line-height: 65px;
+        font-size: 35px;
+    }
+
+    // Footer =====================
+    .footer {
+        &_nav {
+            ul {
+                li {
+                    margin: 0 15px 10px;
+                }
+            }
+        }
+
+        &_info {
+            &-item {
+                width: 100%;
+                margin: 0 0 20px;
+
+                &-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &-link {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &_end {
+            flex-direction: column;
+        }
+
+        &_media {
+            margin-top: 30px;
+        }
+
+        .copyright {
+            text-align: center;
+            line-height: 36px;
+        }
+    }
+
+    .main_title {
+        font-size: 20px;
+    }
+
+    // Banner ====================
+    .banner {
+        &_box {
+            &-inner {
+                padding: 60px 30px 40px;
+
+                &::before {
+                    width: 160px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 170px;
+                    height: 160px;
+                }
+            }
+
+            &-txt {
+                font-size: 14px;
+            }
+
+            &-link {
+                font-size: 14px;
+                padding: 6px 30px;
+            }
+        }
+    }
+
+    // Clients Block =============
+    .clients_block {
+        &-box {
+            &-item {
+                width: calc(50% - 130px);
+            }
+        }
+    }
+
+    // Remote ================
+    .remote {
+        &_subtitle {
+            font-size: 14px;
+            margin: 10px 0 40px;
+        }
+    }
+
+    // Meet ==================
+    .meet {
+
+        &_info {
+            &-title {
+                font-size: 20px;
+            }
+
+            &-list {
+                max-width: 100%;
+
+                li {
+                    span {
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        width: calc(100% - 40px);
+                    }
+                }
+            }
+        }
+    }
+
+    // Plans ==================
+    .plans {
+        &_table {
+            table {
+                thead {
+                    th {
+                        font-size: 14px;
+                        padding-top: 25px;
+                    }
+                }
+
+                tbody {
+                    td {
+                        font-size: 14px !important;
+                        line-height: 40px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // Advantage ============
+    .advantage {
+        &_item {
+            width: calc(100% - 70px);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+// 400 =======================================
 @include md-sm {
     .auto_container {
         padding: 0 20px;
     }
 
+    // Clients Block ======================
+    .clients_block {
+        &-box {
+            &-item {
+                width: calc(60% - 125px);
+            }
+        }
+    }
+
+    // Banner ============================
+    .banner {
+        .main_title {
+            font-size: 16px;
+        }
+    }
+
+    // Footer ============================
+    .footer {
+        &_row {
+            align-items: unset;
+        }
+    }
 
 }

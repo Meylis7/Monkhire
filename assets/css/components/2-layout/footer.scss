@@ -70,6 +70,7 @@
         &-box {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
 
             a {
                 display: inline-block;
@@ -82,7 +83,7 @@
                 font-size: 12px;
                 line-height: 14px;
                 letter-spacing: 0.02em;
-                margin-right: 10px;
+                margin: 0 10px 10px 0;
                 @include transition;
 
                 &:last-child {

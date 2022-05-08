@@ -82,10 +82,12 @@
         &-row {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         &-comp {
             margin-right: 40px;
+            margin: 0 40px 15px 0;
             display: block;
 
         }
@@ -235,6 +237,7 @@
         width: 140px;
         height: 50px;
         background: url("../images/svg/bg_arrow.svg") no-repeat center;
+        background-size: contain;
     }
 }
 
@@ -727,6 +730,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 40px;
 
         &-item {
             width: calc(20% - 120px);
@@ -764,6 +768,7 @@
 // Banner ====================================
 .banner {
     padding: 70px 0;
+    overflow: hidden;
 
     &_box {
         position: relative;
@@ -830,6 +835,8 @@
             transition: all 0.2s ease-in-out 0s;
             -moz-transition: all 0.2s ease-in-out 0s;
             display: inline-block;
+            position: relative;
+            z-index: 3;
 
             &:hover {
                 background: var(--hire-bg);

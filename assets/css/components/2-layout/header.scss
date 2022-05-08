@@ -46,17 +46,6 @@
             margin-right: 40px;
             position: relative;
 
-            &::after {
-                content: '';
-                position: absolute;
-                top: 9px;
-                right: -16px;
-                width: 10px;
-                height: 6px;
-                background: url("../images/svg/drop-arrow.svg") no-repeat center;
-                background-size: contain;
-            }
-
             &-title {
                 font-weight: 400;
                 font-size: 16px;
@@ -66,6 +55,18 @@
                 color: var(--txt-color);
                 cursor: pointer;
                 @include transition;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 9px;
+                    right: -16px;
+                    width: 10px;
+                    height: 6px;
+                    background: url("../images/svg/drop-arrow.svg") no-repeat center;
+                    background-size: contain;
+                }
 
                 &.active {
                     color: var(--red);
@@ -220,6 +221,10 @@
 
 
 
+    }
+
+    .burger {
+        display: none;
     }
 
 }
