@@ -4,6 +4,7 @@
 
 .form {
     max-width: 800px;
+    width: calc(100% - 50px);
     margin: 40px auto 0;
 
     &_inner {

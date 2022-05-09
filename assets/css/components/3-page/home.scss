@@ -121,7 +121,7 @@
 
     .rec_svg {
         position: absolute;
-        top: 50%;
+        top: 65%;
         @include transformY;
         right: 0;
         width: 580px;
@@ -747,21 +747,6 @@
         }
     }
 }
-
-// @keyframes clients-logo {
-//     0% {
-//         transform: translateX(0px);
-//     }
-//     40% {
-//         transform: translateX(30px);
-//     }
-//     80% {
-//         transform: translateX(-30px);
-//     }
-//     100% {
-//         transform: translateX(0px);
-//     }
-// }
 
 // Clients block end ================================
 

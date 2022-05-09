@@ -6,6 +6,7 @@
         &_info {
             &-title {
                 font-size: 46px;
+                line-height: 68px;
             }
         }
 
@@ -40,7 +41,31 @@
         }
     }
 
+    .tablet-none {
+        display: none !important;
+    }
 
+    // Description ======================
+    .desc {
+        &_photo {
+            width: 550px;
+            height: 725px;
+        }
+
+        &_info {
+            max-width: 580px;
+            width: calc(100% - 560px);
+        }
+    }
+
+    // Rate ====================
+    .rate {
+        &_item {
+            margin: 0 10px;
+            padding: 40px 25px;
+            width: calc(33.33% - 70px);
+        }
+    }
 }
 
 // 1100 =============================
@@ -382,6 +407,136 @@
         }
     }
 
+    // Network ==============================
+    .network {
+        &_box {
+            flex-direction: column;
+        }
+
+        &_photo {
+            margin: 0 auto;
+            width: 380px;
+            height: 450px;
+
+            &::before {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        &_info {
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+    // Info box =========================
+    .info_box {
+        .col-small {
+            &:nth-child(3) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    // Role ============================
+    .role {
+        &_tabs {
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &-title {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    // Description ======================
+    .desc {
+        &_box {
+            flex-direction: column;
+        }
+
+        &_photo {
+            width: 550px;
+            height: 725px;
+            position: relative;
+            top: unset;
+            right: unset;
+
+            display: none;
+        }
+
+        &_info {
+            max-width: 100%;
+            width: calc(100% - 0px);
+        }
+    }
+
+    // Rate ====================
+    .rate {
+        &_box {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &_item {
+            margin: 0 10px 30px;
+            padding: 40px 25px;
+            width: calc(50% - 70px);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Facts =========================
+    .fact {
+        padding: 40px 0;
+
+        &_item {
+            &-photo {
+                max-width: 380px;
+                height: 260px;
+            }
+
+            &-info {
+                width: calc(100% - 100px);
+                padding: 30px;
+
+                &-title {
+                    font-size: 20px;
+                }
+
+                &-txt {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // About ========================
+    .about {
+        padding: 40px 0;
+
+        &_item {
+            &-info {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            &-group {
+                flex-direction: column;
+            }
+        }
+    }
+
 }
 
 // 1000 =================================
@@ -674,6 +829,28 @@
         }
     }
 
+    // Eliminate ====================
+    .eliminate {
+        padding: 100px 0 50px;
+
+        &_box {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_col {
+            width: 100%;
+            margin: 0 0 50px;
+        }
+
+        &_info {
+            max-width: 530px;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
 }
 
 // 800 ==================================
@@ -711,7 +888,7 @@
             }
 
             &-title {
-                font-style: 20px;
+                font-size: 20px;
                 margin: 15px 0;
             }
 
@@ -723,11 +900,20 @@
 
     // Role ============================
     .role {
+        padding: 40px 0;
+
         &_tabs {
             &-link {
+                margin-top: 40px;
+
                 a {
                     font-size: 14px;
                 }
+            }
+
+            &-item {
+                font-size: 14px;
+                padding: 12px 25px;
             }
         }
     }
@@ -789,6 +975,8 @@
 
     // Testimonials =========================
     .testimonial {
+        padding: 40px 0;
+
         &_slider {
 
             .slick-prev,
@@ -874,6 +1062,250 @@
         }
     }
 
+    // Contact ===================
+    .form {
+        &_inner {
+            padding: 40px 20px 40px;
+        }
+
+        &_row {
+            flex-direction: column;
+        }
+
+        &_check {
+            margin-bottom: 50px;
+        }
+
+        &_title {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        &_next {
+            padding: 7px 30px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        &_back {
+            padding: 7px 30px;
+            font-size: 14px;
+        }
+
+        &_btn {
+            &-row {
+                margin-top: 20px;
+            }
+        }
+
+        .hire {
+            &_check {
+                label {
+                    font-size: 14px;
+
+                    span {
+                        min-width: 22px;
+                        min-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Info Box =======================
+    .info_box {
+        &-title {
+            font-size: 20px;
+        }
+
+        &-txt {
+            font-size: 14px;
+        }
+    }
+
+    // Member ==============================
+    .member {
+        &_box {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_item {
+            width: calc(100% - 80px);
+            margin: 0 0 30px;
+            max-width: 420px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Work ===========================
+    .work {
+        padding: 40px 0;
+
+        &_box {
+            flex-direction: column;
+        }
+
+        &_item {
+            width: calc(100% - 50px);
+            margin: 0 0 30px 0;
+            padding: 40px 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Solution ==========================
+    .solution {
+        &_item {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-group {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // Question =========================
+    .question {
+        padding: 40px 0;
+
+        &_item {
+            margin-bottom: 20px;
+            padding: 15px 30px;
+
+            &-title {
+                font-size: 16px;
+            }
+
+            &-txt {
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    // Rate ==========================
+    .rate {
+        // &_box {
+        //     align-items: center;
+        // }
+
+        &_item {
+            margin: 0 10px 30px;
+            padding: 40px 25px;
+            width: calc(100% - 110px);
+            max-width: 330px;
+
+            &-title {
+                font-size: 16px;
+            }
+
+            &-txt {
+                font-size: 38px;
+                padding-bottom: 0;
+
+            }
+        }
+    }
+
+    // Facts =========================
+    .fact {
+        &_item {
+            margin-bottom: 35px;
+
+            &-photo {
+                display: none;
+            }
+
+            &:nth-child(even) {
+                .fact_item-info {
+                    margin: 0;
+                }
+            }
+
+            &-info {
+                width: calc(100% - 60px);
+                padding: 30px;
+                margin: 0;
+
+                &-title {
+                    font-size: 20px;
+                }
+
+                &-txt {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // Eliminate =========================
+    .eliminate {
+        &_info {
+            padding: 30px 20px;
+            width: calc(100% - 40px);
+
+            &::before {
+                width: 180px;
+                height: 180px;
+
+                top: -35px;
+                right: -30px;
+            }
+        }
+    }
+
+    // About ========================
+    .about {
+
+        &_box {
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: 30px;
+        }
+
+        &_item {
+            width: calc(100% - 60px);
+            max-width: 500px;
+            padding: 30px;
+            margin-bottom: 40px;
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-diagram {
+                height: 160px;
+            }
+        }
+    }
+
+
+    .vet_txt {
+        margin-bottom: 40px;
+    }
 
 }
 
@@ -1021,6 +1453,13 @@
         font-size: 20px;
     }
 
+    // Company Block =====================
+    .company_block {
+        &-item {
+            height: 28px;
+        }
+    }
+
     // Banner ====================
     .banner {
         &_box {
@@ -1138,6 +1577,14 @@
         }
 
         .col-3 {
+            width: calc(100% - 80px);
+        }
+
+        .col-2 {
+            width: calc(100% - 80px);
+        }
+
+        .col-small {
             width: calc(100% - 80px);
         }
     }
@@ -1259,12 +1706,63 @@
         }
     }
 
+    // Contact ===================
+    .form {
+        &_input {
+            width: calc(100% - 0px);
+            margin: 0 0 30px;
+        }
+
+        &_check {
+            margin-bottom: 30px;
+        }
+
+        &_row {
+            &-box {
+                flex-direction: column;
+            }
+
+            &-group {
+                margin-bottom: 30px;
+            }
+        }
+
+        .thanks {
+            &_svg {
+                height: 310px;
+            }
+        }
+    }
+
+    // Network =======================
+    .network {
+        &_photo {
+            height: 320px;
+            width: 250px;
+
+            &::before {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+
+
 }
 
 // 400 =======================================
 @include md-sm {
     .auto_container {
         padding: 0 20px;
+    }
+
+    // Hero ============================
+    .hero {
+        &_info {
+            &-title {
+                font-size: 24px;
+            }
+        }
     }
 
     // Clients Block ======================
@@ -1312,6 +1810,15 @@
         }
     }
 
+    // Solution ==========================
+    .solution {
+        &_item {
+            &-title {
+                font-size: 17px;
+            }
+        }
+    }
+
     // Explanation =========================
     .ex {
         &_item {
@@ -1341,7 +1848,6 @@
         }
     }
 
-
     // Blog =============================
     .blog {
 
@@ -1367,5 +1873,43 @@
             }
         }
     }
+
+    // Form =========================
+    .form {
+        &_title {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        &_input {
+            input {
+                font-size: 14px;
+            }
+        }
+
+        .select {
+            &-selected {
+                font-size: 14px;
+            }
+        }
+
+        .thanks {
+            &_svg {
+                height: 260px;
+            }
+        }
+    }
+
+    // Facts =========================
+    .fact {
+        &_item {
+            &-info {
+                &-title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
 
 }
