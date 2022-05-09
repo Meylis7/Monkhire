@@ -4984,6 +4984,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
     padding: 40px 25px;
     width: calc(33.33% - 70px);
   }
+
+  .modal_inner {
+    padding: 40px 30px 60px;
+  }
+  .modal .vouch_info {
+    width: 330px;
+  }
+  .modal .vouch_form {
+    width: calc(100% - 380px);
+  }
 }
 @media (max-width: 1100px) {
   .header .burger {
@@ -5376,6 +5386,50 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .modal_inner {
+    padding: 40px 30px 60px;
+  }
+  .modal .vouch_box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal .vouch_title {
+    font-size: 30px;
+  }
+  .modal .vouch_subtitle {
+    font-size: 18px;
+  }
+  .modal .vouch_info {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    margin-bottom: 50px;
+  }
+  .modal .vouch_form {
+    width: 100%;
+    padding-left: 0;
+  }
+  .modal .vouch_form-title {
+    text-align: center;
+  }
+  .modal .vouch_accord-item {
+    margin-bottom: 30px;
+    padding: 0 0 30px 45px;
+  }
+  .modal .vouch_accord-item::before {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .modal .vouch_accord-item-title {
+    font-size: 16px;
+  }
+  .modal .vouch_accord-item-group p {
+    font-size: 14px;
   }
 }
 @media (max-width: 1000px) {
@@ -5952,6 +6006,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     height: 160px;
   }
 
+  .modal .vouch_form-input {
+    margin: 0 10px 30px 10px;
+    width: calc(50% - 20px);
+  }
+
   .vet_txt {
     margin-bottom: 40px;
   }
@@ -6267,6 +6326,55 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .network_photo::before {
     width: 180px;
     height: 180px;
+  }
+
+  .modal_inner {
+    width: calc(100% - 100px);
+  }
+  .modal_close {
+    top: 20px;
+    right: 20px;
+  }
+  .modal.hire-modal .modal_inner {
+    padding-top: 60px;
+  }
+  .modal .thanks_svg {
+    height: 270px;
+  }
+  .modal .thanks_txt {
+    font-size: 16px;
+  }
+  .modal .vouch_title {
+    font-size: 25px;
+  }
+  .modal .vouch_subtitle {
+    font-size: 15px;
+    margin: 20px 0 30px;
+  }
+  .modal .vouch_info {
+    margin-bottom: 20px;
+  }
+  .modal .vouch_form-title {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .modal .vouch_form-input {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+  .modal .vouch_form-input input {
+    font-size: 14px;
+  }
+  .modal .vouch_form-input .select-selected {
+    font-size: 14px;
+  }
+  .modal .vouch_accord-item {
+    margin-bottom: 20px;
+    padding: 0 0 20px 45px;
+  }
+  .modal .form_input {
+    margin: 0 0 20px;
+    width: 100%;
   }
 }
 @media (max-width: 400px) {

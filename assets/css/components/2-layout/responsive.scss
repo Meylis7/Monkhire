@@ -66,6 +66,23 @@
             width: calc(33.33% - 70px);
         }
     }
+
+    // Modal ======================
+    .modal {
+        &_inner {
+            padding: 40px 30px 60px;
+        }
+
+        .vouch {
+            &_info {
+                width: 330px;
+            }
+
+            &_form {
+                width: calc(100% - 380px);
+            }
+        }
+    }
 }
 
 // 1100 =============================
@@ -533,6 +550,66 @@
 
             &-group {
                 flex-direction: column;
+            }
+        }
+    }
+
+    // Modal ======================
+    .modal {
+        &_inner {
+            padding: 40px 30px 60px;
+        }
+
+        .vouch {
+            &_box {
+                flex-direction: column;
+            }
+
+            &_title {
+                font-size: 30px;
+            }
+
+            &_subtitle {
+                font-size: 18px;
+            }
+
+            &_info {
+                width: 100%;
+                padding: 0;
+                border-right: none;
+                margin-bottom: 50px;
+            }
+
+            &_form {
+                width: 100%;
+                padding-left: 0;
+
+                &-title {
+                    text-align: center;
+                }
+            }
+
+            &_accord {
+                &-item {
+                    margin-bottom: 30px;
+                    padding: 0 0 30px 45px;
+
+                    &::before {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 15px;
+                    }
+
+                    &-title {
+                        font-size: 16px;
+                    }
+
+                    &-group {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1302,6 +1379,19 @@
         }
     }
 
+    // Modal ======================
+    .modal {
+
+        .vouch {
+            &_form {
+                &-input {
+                    margin: 0 10px 30px 10px;
+                    width: calc(50% - 20px);
+                }
+            }
+        }
+    }
+
 
     .vet_txt {
         margin-bottom: 40px;
@@ -1747,6 +1837,84 @@
         }
     }
 
+    // Modal ======================
+    .modal {
+        &_inner {
+            width: calc(100% - 100px);
+        }
+
+        &_close {
+            top: 20px;
+            right: 20px;
+        }
+
+        &.hire-modal {
+            .modal_inner {
+                padding-top: 60px;
+            }
+        }
+
+        .thanks {
+            &_svg {
+                height: 270px;
+            }
+
+            &_txt {
+                font-size: 16px;
+            }
+        }
+
+        .vouch {
+            &_title {
+                font-size: 25px;
+            }
+
+            &_subtitle {
+                font-size: 15px;
+                margin: 20px 0 30px;
+            }
+
+            &_info {
+                margin-bottom: 20px;
+            }
+
+            &_form {
+                &-title {
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                }
+
+                &-input {
+                    width: 100%;
+                    margin: 0 0 30px 0;
+
+                    input {
+                        font-size: 14px;
+                    }
+
+                    .select {
+                        &-selected {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            &_accord {
+                &-item {
+                    margin-bottom: 20px;
+                    padding: 0 0 20px 45px;
+                }
+            }
+        }
+
+        .form {
+            &_input {
+                margin: 0 0 20px;
+                width: 100%;
+            }
+        }
+    }
 
 }
 
