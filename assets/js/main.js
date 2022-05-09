@@ -6,6 +6,7 @@ let vid = document.getElementById("about_video");
 
 let vouch_btn = document.querySelector('.vouch-link');
 let vouch_modal = document.querySelector('.vouch-modal');
+let vouch_close = document.querySelector('.vouchClose');
 
 let burger = document.querySelector('.burger');
 let nav_bg = document.querySelector('.nav_bg');
@@ -170,11 +171,11 @@ window.onclick = function (e) {
     }
     );
 
-    if (vouch_modal != undefined) {
-        if (vouch_modal.classList.contains('active') && !e.target.closest('.modal_inner')) {
-            vouch_modal.classList.remove('active')
-        }
-    }
+    // if (vouch_modal != undefined) {
+    //     if (vouch_modal.classList.contains('active') && !e.target.closest('.modal_inner')) {
+    //         vouch_modal.classList.remove('active')
+    //     }
+    // }
 
     if (nav_bg != undefined) {
         if (nav_bg.classList.contains('active') && !e.target.closest('.theme-label') && !e.target.closest('.nav_box-title') ) {
@@ -236,6 +237,15 @@ if (vouch_btn != undefined) {
         });
     });
 }
+
+if (vouch_close != undefined) {
+    vouch_close.addEventListener('click', function () {
+        sleep(2).then(() => {
+            vouch_modal.classList.remove('active');
+        });
+    });
+}
+
 
 if (burger != undefined) {
     burger.addEventListener('click', function () {
