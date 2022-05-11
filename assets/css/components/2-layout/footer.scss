@@ -3,6 +3,9 @@
     overflow: hidden;
 
     .logo {
+        width: 150px;
+        height: 60px;
+        
         img {
             @include ImgCon;
         }
@@ -10,14 +13,10 @@
         &-dark {
             display: var(--logo-dark);
             object-position: left;
-            width: 130px !important;
-            height: 40px !important;
         }
 
         &-light {
             display: var(--logo-light);
-            width: 150px !important;
-            height: 26px !important;
         }
     }
 

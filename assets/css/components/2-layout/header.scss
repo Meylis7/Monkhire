@@ -20,6 +20,9 @@
     }
 
     .logo {
+        width: 150px;
+        height: 60px;
+
         img {
             @include ImgCon;
         }
@@ -27,14 +30,10 @@
         &-dark {
             display: var(--logo-dark);
             object-position: left;
-            width: 130px;
-            height: 40px;
         }
 
         &-light {
             display: var(--logo-light);
-            width: 150px;
-            height: 32px;
         }
     }
 
@@ -237,7 +236,7 @@
 
     color: #fff;
     background: var(--red);
-    padding: 10px 40px;
+    padding: 10px 25px 10px 40px;
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
@@ -249,18 +248,76 @@
 
     span {
         display: block;
-        width: 22px;
+        width: 0;
         height: 22px;
-        margin-left: 8px;
+        margin-left: 12px;
+        @include transition;
 
         svg {
             @include ImgCon;
+            @include transition;
         }
     }
 
     &:hover {
         background: var(--hire-bg);
         box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+
+        span {
+            display: block;
+            width: 22px;
+
+            svg {
+                animation: trendUp 3s linear;
+                animation-delay: .1s;
+                stroke-dasharray: 100;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@keyframes trendUp {
+    0% {
+        stroke-dashoffset: -31;
+    }
+
+    25% {
+        stroke-dashoffset: 31;
+    }
+
+    50% {
+        stroke-dashoffset: 31;
+    }
+
+    75% {
+        stroke-dashoffset: 31;
+    }
+
+    100% {
+        stroke-dashoffset: 31;
+    }
+}
+
+@-webkit-keyframes trendUp {
+    0% {
+        stroke-dashoffset: -31;
+    }
+
+    25% {
+        stroke-dashoffset: 31;
+    }
+
+    50% {
+        stroke-dashoffset: 31;
+    }
+
+    75% {
+        stroke-dashoffset: 31;
+    }
+
+    100% {
+        stroke-dashoffset: 31;
     }
 }
 
