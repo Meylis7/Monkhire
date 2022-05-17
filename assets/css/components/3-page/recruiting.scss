@@ -491,13 +491,41 @@
                 color: #fff;
                 background: var(--red);
                 @include transition;
-                padding: 10px 37px;
+                padding: 10px 27px 10px 37px;
                 box-shadow: 0px 12px 14px var(--hire-shadow);
                 border-radius: 8px;
 
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: block;
+                    width: 0;
+                    height: 22px;
+                    margin-left: 12px;
+                    @include transition;
+            
+                    svg {
+                        @include ImgCon;
+                        @include transition;
+                    }
+                }
+            
                 &:hover {
                     background: var(--hire-bg);
-                    box-shadow: 0px 12px 14px rgb(25 50 78 / 22%);
+                    box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+            
+                    span {
+                        display: block;
+                        width: 22px;
+            
+                        svg {
+                            animation: trendUp 3s linear;
+                            animation-delay: .1s;
+                            stroke-dasharray: 100;
+                            pointer-events: none;
+                        }
+                    }
                 }
             }
         }

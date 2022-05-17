@@ -146,10 +146,11 @@
         }
 
         &-items {
-            max-height: 130px;
+            max-height: 190px;
             overflow-y: auto;
             background: transparent;
             padding-right: 5px;
+            top: 0 !important;
 
             ::-webkit-scrollbar {
                 width: 3px;
@@ -498,6 +499,18 @@
 }
 
 @keyframes form {
+    0% {
+        opacity: 0;
+        transform: scale(.85);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes form {
     0% {
         opacity: 0;
         transform: scale(.85);

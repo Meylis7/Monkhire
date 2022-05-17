@@ -5,7 +5,7 @@
     .logo {
         width: 150px;
         height: 60px;
-        
+
         img {
             @include ImgCon;
         }
@@ -38,7 +38,8 @@
                     margin-right: 0;
                 }
 
-                a {
+                a,
+                h4 {
                     display: block;
                     font-weight: 500;
                     font-size: 16px;
@@ -46,6 +47,7 @@
                     letter-spacing: 0.02em;
                     color: var(--txt-color);
                     @include transition;
+                    cursor: pointer;
 
                     &:hover {
                         color: var(--red);

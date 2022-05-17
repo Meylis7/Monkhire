@@ -106,9 +106,10 @@
                 }
     
                 &-items {
-                    max-height: 130px;
+                    max-height: 190px;
                     overflow-y: auto;
                     background: var(--bg-section);
+                    top: 0 !important;
     
                     ::-webkit-scrollbar {
                         width: 3px;
@@ -332,9 +333,10 @@
                 }
 
                 &-items {
-                    max-height: 130px;
+                    max-height: 190px;
                     overflow-y: auto;
                     background: var(--bg-section);
+                    top: -20px !important;
 
                     ::-webkit-scrollbar {
                         width: 3px;

@@ -205,7 +205,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .header {
-  padding: 20px 0;
+  padding: 12px 0;
   background: var(--bg-section);
   -webkit-box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
           box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
@@ -441,9 +441,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   color: #fff;
   background: var(--red);
-  padding: 10px 25px 10px 40px;
+  padding: 8px 25px 8px 40px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.2px;
   border-radius: 8px;
@@ -569,7 +569,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer_nav ul li:last-child {
   margin-right: 0;
 }
-.footer_nav ul li a {
+.footer_nav ul li a,
+.footer_nav ul li h4 {
   display: block;
   font-weight: 500;
   font-size: 16px;
@@ -579,8 +580,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
 }
-.footer_nav ul li a:hover {
+.footer_nav ul li a:hover,
+.footer_nav ul li h4:hover {
   color: var(--red);
 }
 .footer_tags {
@@ -943,9 +946,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-family: "Graphik", sans-serif;
 }
 .modal .form_input .select-items {
-  max-height: 130px;
+  max-height: 190px;
   overflow-y: auto;
   background: var(--bg-section);
+  top: 0 !important;
 }
 .modal .form_input .select-items ::-webkit-scrollbar {
   width: 3px;
@@ -1155,9 +1159,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   top: 60px !important;
 }
 .modal .vouch_form .select-items {
-  max-height: 130px;
+  max-height: 190px;
   overflow-y: auto;
   background: var(--bg-section);
+  top: -20px !important;
 }
 .modal .vouch_form .select-items ::-webkit-scrollbar {
   width: 3px;
@@ -1308,11 +1313,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: var(--hero-title-color);
   margin: 30px 0 0;
 }
-.hero_info-subtitle a {
+.hero_info-subtitle a,
+.hero_info-subtitle span {
   font-weight: 700;
   color: var(--red);
   display: inline-block;
   margin-left: 10px;
+  cursor: pointer;
 }
 .hero_info-txt {
   font-weight: 400;
@@ -1756,13 +1763,51 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.02em;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+}
+.plans_table-link span {
+  display: block;
+  width: 0;
+  height: 22px;
+  margin-left: 12px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.plans_table-link span svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
 .plans_table-link:hover {
   background: var(--hire-bg) !important;
+  -webkit-box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+          box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+}
+.plans_table-link:hover span {
+  display: block;
+  width: 22px;
+}
+.plans_table-link:hover span svg {
+  -webkit-animation: trendUp 3s linear;
+          animation: trendUp 3s linear;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  stroke-dasharray: 100;
+  pointer-events: none;
 }
 .plans_table table {
   width: 100%;
@@ -2035,7 +2080,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-align: center;
   background: var(--red);
   color: #fff;
-  padding: 10px 50px;
+  padding: 10px 35px 10px 50px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 16px;
@@ -2045,12 +2090,49 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 3;
 }
+.banner_box-link span {
+  display: block;
+  width: 0;
+  height: 22px;
+  margin-left: 12px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.banner_box-link span svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
 .banner_box-link:hover {
   background: var(--hire-bg);
+  -webkit-box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+          box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+}
+.banner_box-link:hover span {
+  display: block;
+  width: 22px;
+}
+.banner_box-link:hover span svg {
+  -webkit-animation: trendUp 3s linear;
+          animation: trendUp 3s linear;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  stroke-dasharray: 100;
+  pointer-events: none;
 }
 .banner_box .plus-svg {
   position: absolute;
@@ -2237,10 +2319,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-family: "Graphik", sans-serif;
 }
 .form .select-items {
-  max-height: 130px;
+  max-height: 190px;
   overflow-y: auto;
   background: transparent;
   padding-right: 5px;
+  top: 0 !important;
 }
 .form .select-items ::-webkit-scrollbar {
   width: 3px;
@@ -2593,7 +2676,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -o-object-fit: contain;
 }
 
-@-webkit-keyframes form {
+@keyframes form {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.85);
@@ -2605,8 +2688,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
             transform: scale(1);
   }
 }
-
-@keyframes form {
+@-webkit-keyframes form {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.85);
@@ -3117,15 +3199,51 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  padding: 10px 37px;
+  padding: 10px 27px 10px 37px;
   -webkit-box-shadow: 0px 12px 14px var(--hire-shadow);
           box-shadow: 0px 12px 14px var(--hire-shadow);
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.role_tabs-link a span {
+  display: block;
+  width: 0;
+  height: 22px;
+  margin-left: 12px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.role_tabs-link a span svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .role_tabs-link a:hover {
   background: var(--hire-bg);
   -webkit-box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
           box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+}
+.role_tabs-link a:hover span {
+  display: block;
+  width: 22px;
+}
+.role_tabs-link a:hover span svg {
+  -webkit-animation: trendUp 3s linear;
+          animation: trendUp 3s linear;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  stroke-dasharray: 100;
+  pointer-events: none;
 }
 
 @keyframes role-item {
@@ -4075,6 +4193,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   margin-top: 60px;
 }
+.desc-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 .desc_info {
   max-width: 600px;
   width: 55%;
@@ -4115,12 +4245,48 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.desc_info-link span {
+  display: block;
+  width: 0;
+  height: 22px;
+  margin-left: 12px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.desc_info-link span svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .desc_info-link:hover {
   background: var(--hire-bg);
   -webkit-box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
-  box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+          box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+}
+.desc_info-link:hover span {
+  display: block;
+  width: 22px;
+}
+.desc_info-link:hover span svg {
+  -webkit-animation: trendUp 3s linear;
+          animation: trendUp 3s linear;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  stroke-dasharray: 100;
+  pointer-events: none;
 }
 .desc_photo {
   position: absolute;

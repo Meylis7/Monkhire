@@ -46,9 +46,9 @@
                                 </div>
                             </div>
 
-                            <a href="#" class="nav_link">
+                            <h4 class="nav_link vouch-link">
                                 Get Vouch
-                            </a>
+                            </h4>
 
                             <a href="contact.html" class="nav_link">
                                 Contact us
@@ -60,7 +60,7 @@
                                 <!-- <label for="theme-check" class="theme-dark">Dark</label> -->
                             </div>
 
-                         <a href="hire.html" class="hire_dev">
+                            <a href="hire.html" class="hire_dev">
                                 Hire Developers
 
                                 <span>
@@ -289,8 +289,14 @@
                             interested in and you can turn off job emails at any time.
                         </p>
 
-                        <a href="#" class="banner_box-link wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            Join Monkhire 
+                        <a href="hire.html" class="banner_box-link wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            Join Monkhire
+
+                            <span>
+                                <svg width="20" height="20" fill="none">
+                                    <use xlink:href="#arrow-circle"></use>
+                                </svg>
+                            </span>
                         </a>
                     </div>
 
@@ -361,7 +367,7 @@
         <div class="auto_container">
             <div class="footer_wrap">
                 <div class="footer_row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                  <a href="#" class="logo">
+                    <a href="#" class="logo">
                         <img src="assets/images/logo-white.png" class="logo-light" alt="logo-main">
                         <img src="assets/images/logo-dark.png" class="logo-dark" alt="logo-dark">
                     </a>
@@ -372,7 +378,7 @@
                                 <a href="blog.html">Blog</a>
                             </li>
                             <li>
-                                <a href="hire.html">Apply For Jobs</a>
+                                <h4 class="modBtn" data-tab="#hire-modal">Apply For Jobs</h4>
                             </li>
                             <li>
                                 <a href="hire.html">Hire Developers</a>
@@ -398,7 +404,8 @@
                         <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".35s">Technology</a>
                         <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">App</a>
                         <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".45s">Web Developer</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">Application Developer</a>
+                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">Application
+                            Developer</a>
                     </div>
                 </div>
 
@@ -574,12 +581,263 @@
     </footer>
     <!-- Footer end ====================== -->
 
+    <svg display="none">
+        <symbol id="arrow-circle" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 19.25C15.108 19.25 19.25 15.109 19.25 10C19.25 4.892 15.108 0.75 10 0.75C4.892 0.75 0.75 4.892 0.75 10C0.75 15.109 4.892 19.25 10 19.25Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8.55762 13.4717L12.0436 10.0007L8.55762 6.52968" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+    </svg>
+
+    <!-- Modal Vouch ========================= -->
+    <div class="modal vouch-modal">
+        <div class="modal_inner">
+            <div class="modal_close vouchClose">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.3955 7.59491L7.60352 12.3869" stroke="#455A64" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.3971 12.3898L7.60107 7.59277" stroke="#455A64" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.3345 0.750183H5.66549C2.64449 0.750183 0.750488 2.88918 0.750488 5.91618V14.0842C0.750488 17.1112 2.63549 19.2502 5.66549 19.2502H14.3335C17.3645 19.2502 19.2505 17.1112 19.2505 14.0842V5.91618C19.2505 2.88918 17.3645 0.750183 14.3345 0.750183Z"
+                        stroke="#455A64" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <div class="vouch_box">
+                <div class="vouch_info">
+                    <h2 class="vouch_title">
+                        Get <span>Vouch</span>
+                    </h2>
+
+                    <h4 class="vouch_subtitle">
+                        <span> How it works :</span>
+                        3 simple steps to earn $1000
+                    </h4>
+
+                    <div class="vouch_accord">
+                        <div class="vouch_accord-item">
+                            <h6 class="vouch_accord-item-title active accord">
+                                Vouch for people you know
+                            </h6>
+
+                            <div class="vouch_accord-item-group" style="max-height: 100%;">
+                                <p>
+                                    Recommend top six people you know, we'll reach out to them and match them with
+                                    opportunities from meticulously selected partner companies
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="vouch_accord-item">
+                            <h6 class="vouch_accord-item-title accord">
+                                Get Verified
+                            </h6>
+
+                            <div class="vouch_accord-item-group">
+                                <p>
+                                    Recommend top six people you know, we'll reach out to them and match them with
+                                    opportunities from meticulously selected partner companies
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="vouch_accord-item">
+                            <h6 class="vouch_accord-item-title accord">
+                                Get Rewarded
+                            </h6>
+
+                            <div class="vouch_accord-item-group">
+                                <p>
+                                    Recommend top six people you know, we'll reach out to them and match them with
+                                    opportunities from meticulously selected partner companies
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form action="#" class="vouch_form">
+                    <h4 class="vouch_form-title">
+                        Hi 👋, How do we greet you?
+                    </h4>
+
+                    <div class="vouch_form-group line">
+                        <div class="vouch_form-input">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" placeholder="Enter Full Name">
+                        </div>
+
+                        <div class="vouch_form-input">
+                            <label for="url">What's your Linkedin URL?</label>
+                            <input type="text" id="url" placeholder="Enter Linkedin URL">
+                        </div>
+                    </div>
+
+                    <div class="vouch_form-group">
+                        <h4 class="vouch_form-title">
+                            Candidate who you refer
+                        </h4>
+
+                        <div class="vouch_form-input">
+                            <label for="name-2">Full Name *</label>
+                            <input type="text" id="name-2" placeholder="Enter Full Name">
+                        </div>
+
+                        <div class="vouch_form-input">
+                            <label for="url-2">Candidate Linkedin URL *</label>
+                            <input type="text" id="url-2" placeholder="Enter Linkedin URL">
+                        </div>
+
+                        <div class="vouch_form-input">
+                            <label for="mail">Candidate Email *</label>
+                            <input type="text" id="mail" placeholder="Enter Email">
+                        </div>
+
+                        <div class="vouch_form-input">
+                            <label for="number">Candidate Phone Number (If Available) *</label>
+                            <input type="text" id="number" placeholder="Enter Phone Number">
+                        </div>
+
+                        <div class="vouch_form-input">
+                            <div class="custom-select">
+                                <label>Select Your Relationship with Candidate *</label>
+                                <select>
+                                    <option value="01">Select Relationship </option>
+                                    <option value="1">Peer</option>
+                                    <option value="2">Sub-ordinate</option>
+                                    <option value="3">Manager</option>
+                                    <option value="4">Mentor</option>
+                                    <option value="5">Client</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="vouch_form-input">
+                            <div class="custom-select">
+                                <label>What would be their ideal job role be?</label>
+                                <select>
+                                    <option value="01">Select Job Role</option>
+                                    <option value="1">Java Backend Developer </option>
+                                    <option value="2">Java FullStack Developer (Java + Angular/React)</option>
+                                    <option value="3">React Js Developer </option>
+                                    <option value="4">Angular Developer</option>
+                                    <option value="5">Node.Js Developer</option>
+                                    <option value="6">Flutter Developer</option>
+                                    <option value="7">React Native Developer</option>
+                                    <option value="8">AWS Devops Engineer </option>
+                                    <option value="9">Asp dot-net Developer </option>
+                                    <option value="10">Python Developer</option>
+                                    <option value="11">Vue Js Developer </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="btn">
+                            <button class="vouch_form-btn">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Vouch end ===================== -->
+
+    <!-- Modal Hire ========================== -->
+    <div class="modal hire-modal mod" id="hire-modal">
+        <div class="modal_inner">
+            <div class="modal_close modClose" data-mod="hire-modal">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.3955 7.59491L7.60352 12.3869" stroke="#455A64" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.3971 12.3898L7.60107 7.59277" stroke="#455A64" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.3345 0.750183H5.66549C2.64449 0.750183 0.750488 2.88918 0.750488 5.91618V14.0842C0.750488 17.1112 2.63549 19.2502 5.66549 19.2502H14.3335C17.3645 19.2502 19.2505 17.1112 19.2505 14.0842V5.91618C19.2505 2.88918 17.3645 0.750183 14.3345 0.750183Z"
+                        stroke="#455A64" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <form action="#">
+                <div class="form_inner">
+                    <h4 class="form_title">
+                        Want to join Monkhire DigiTech?
+                    </h4>
+
+                    <div class="form_input">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" placeholder="Enter name">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="name">Graduation Year *</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="01">Select Year</option>
+                                <option value="1">2017</option>
+                                <option value="2">2018</option>
+                                <option value="3">2019</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_input">
+                        <label for="email">Email Address *</label>
+                        <input type="text" id="email" placeholder="Enter Email Address">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="name">Phone Number *</label>
+                        <input type="text" id="name" placeholder="Enter Phone Number">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="comp-name">What's your Linkedin URL? *</label>
+                        <input type="text" id="comp-name" placeholder="Enter Linkedin URL">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="name">Your Skill Set *</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="01">Enter your Skill</option>
+                                <option value="1">Java Backend Developer </option>
+                                <option value="2">Java FullStack Developer (Java + Angular/React)</option>
+                                <option value="3">React Js Developer </option>
+                                <option value="4">Angular Developer</option>
+                                <option value="5">Node.Js Developer</option>
+                                <option value="6">Flutter Developer</option>
+                                <option value="7">React Native Developer</option>
+                                <option value="8">AWS Devops Engineer </option>
+                                <option value="9">Asp dot-net Developer </option>
+                                <option value="10">Python Developer</option>
+                                <option value="11">Vue Js Developer </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="form_next" type="submit">
+                        Request Callback
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal Hire end ====================== -->
+
 
 
     <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/customSelect.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/modal-close.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
