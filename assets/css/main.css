@@ -204,6 +204,37 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+#cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #725a56a9;
+  display: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+#cursor:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+div:hover ~ #cursor {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+p:hover ~ #cursor,
+h1:hover ~ #cursor,
+h2:hover ~ #cursor,
+h3:hover ~ #cursor,
+h4:hover ~ #cursor,
+h5:hover ~ #cursor,
+h6:hover ~ #cursor,
+a:hover ~ #cursor {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
 .header {
   padding: 12px 0;
   background: var(--bg-section);

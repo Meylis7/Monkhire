@@ -11,6 +11,18 @@ let vouch_close = document.querySelector('.vouchClose');
 let burger = document.querySelector('.burger');
 let nav_bg = document.querySelector('.nav_bg');
 
+// cursor =========================
+var cursor = document.getElementById("cursor");
+
+document.onmousemove = function (e) {
+    cursor.style.left = (e.pageX - 15) + "px";
+    cursor.style.top = (e.pageY - 15) + "px";
+    cursor.style.display = "block";
+}
+
+
+// cursor end =====================
+
 
 
 function sleep(time) {

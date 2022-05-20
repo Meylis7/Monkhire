@@ -1,3 +1,36 @@
+// Cursor ================================
+#cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #725a56a9;
+    // z-index: 100;
+    display: none;
+    transition: all .2s ease-out;
+
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+div:hover~#cursor {
+    transform: scale(1.5);
+}
+
+p:hover~#cursor,
+h1:hover~#cursor,
+h2:hover~#cursor,
+h3:hover~#cursor,
+h4:hover~#cursor,
+h5:hover~#cursor,
+h6:hover~#cursor,
+a:hover~#cursor {
+    background: rgba(0,0,0,.3) !important;
+}
+
+
 // Header ====================================
 
 .header {
