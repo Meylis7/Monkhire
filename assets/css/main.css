@@ -224,15 +224,48 @@ div:hover ~ #cursor {
           transform: scale(1.5);
 }
 
-p:hover ~ #cursor,
-h1:hover ~ #cursor,
-h2:hover ~ #cursor,
-h3:hover ~ #cursor,
-h4:hover ~ #cursor,
-h5:hover ~ #cursor,
-h6:hover ~ #cursor,
-a:hover ~ #cursor {
-  background: rgba(0, 0, 0, 0.3) !important;
+p:hover ~ .project_bg,
+h1:hover ~ .project_bg,
+h2:hover ~ .project_bg,
+h3:hover ~ .project_bg,
+h4:hover ~ .project_bg,
+h5:hover ~ .project_bg,
+h6:hover ~ .project_bg,
+a:hover ~ .project_bg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  mix-blend-mode: exclusion;
+  background-color: #fff;
+}
+
+.project_bg {
+  position: absolute;
+  /* position: fixed; */
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: 160;
+  pointer-events: none;
+  /* background-color: #fff; */
+  background-color: #c09841;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background-color 0.5s;
+  transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.home-featured-hovered .project_bg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  mix-blend-mode: exclusion;
+  background-color: #fff;
 }
 
 .header {

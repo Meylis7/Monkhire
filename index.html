@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="assets/fonts/Graphik/graphik-font.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
+
     <title>Home Page</title>
 </head>
 
 <body>
 
-    <div id="cursor"></div>
+    <!-- <div id="cursor"></div> -->
 
     <!-- Header ============================== -->
     <header class="header">
@@ -240,10 +242,10 @@
                         <div class="advantage_item-title">
                             50+ hours
                         </div>
-                        <div class="advantage_item-txt">
+                        <p class="advantage_item-txt">
                             of engineering team time
                             saved <span>per hire</span> on interviewing.
-                        </div>
+                        </p>
 
                         <div class="bg_svg">
                             <svg width="124" height="205">
@@ -264,9 +266,9 @@
                         <div class="advantage_item-title">
                             97%
                         </div>
-                        <div class="advantage_item-txt">
+                        <p class="advantage_item-txt">
                             engagement <span>success rate.</span>
-                        </div>
+                        </p>
 
                         <div class="bg_svg">
                             <svg width="124" height="205">
@@ -287,10 +289,10 @@
                         <div class="advantage_item-title">
                             5 Days
                         </div>
-                        <div class="advantage_item-txt">
+                        <p class="advantage_item-txt">
                             to fill <span> most roles,</span>
                             sometimes same day.
-                        </div>
+                        </p>
 
                         <div class="bg_svg">
                             <svg width="124" height="205">
@@ -1710,7 +1712,7 @@
     <!-- Modal Hire end ====================== -->
 
 
-
+    <div class="project_bg" style="top: 343px; left: 1172px;"></div>
 
 
 
@@ -1723,10 +1725,36 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+
     <script>
         new WOW().init();
     </script>
 
+    <!-- <script>
+        var $circle = $('.project_bg');
+        function moveCircle(e) {
+            TweenLite.to($circle, 0.7, {
+                css: {
+                    left: (e.pageX - 25),
+                    top: (e.pageY - 25),
+                    /*left: e.offsetX,
+                    top: e.offsetY,*/
+                }
+            });
+        }
+
+        $(window).on('mousemove', moveCircle);
+
+        $('p, h1, h2, h3, h4, h5, h6, a, img, li, label, input, span, svg, .main_title, .advantage_item-title, .meet_info-title, table, .meet_box, button, .role_tabs-link a ').hover(function () {
+            $('body').addClass('home-featured-hovered');
+        },
+            function () {
+                $('body').removeClass('home-featured-hovered');
+            }
+        );
+    </script> -->
 
 </body>
 
