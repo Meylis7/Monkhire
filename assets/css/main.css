@@ -204,21 +204,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-#cursor {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #725a56a9;
-  display: none;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-#cursor:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
 div:hover ~ #cursor {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -248,7 +233,7 @@ a:hover ~ .project_bg {
   z-index: 160;
   pointer-events: none;
   /* background-color: #fff; */
-  background-color: #c09841;
+  background-color: var(--hire-bg);
   border-radius: 50%;
   overflow: hidden;
   -webkit-transform: scale(0.4);
@@ -265,7 +250,7 @@ a:hover ~ .project_bg {
   -webkit-transform: scale(1);
           transform: scale(1);
   mix-blend-mode: exclusion;
-  background-color: #fff;
+  background-color: var(--hire-bg);
 }
 
 .header {

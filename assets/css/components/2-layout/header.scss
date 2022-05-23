@@ -1,19 +1,19 @@
 // Cursor ================================
-#cursor {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #725a56a9;
-    // z-index: 100;
-    display: none;
-    transition: all .2s ease-out;
+// #cursor {
+//     position: absolute;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     background: $red;
+//     // z-index: 100;
+//     display: none;
+//     transition: all .2s ease-out;
 
 
-    &:hover {
-        transform: scale(1.5);
-    }
-}
+//     &:hover {
+//         transform: scale(1.5);
+//     }
+// }
 
 div:hover~#cursor {
     transform: scale(1.5);
@@ -43,7 +43,7 @@ a:hover~.project_bg  {
     z-index: 160;
     pointer-events: none;
     /* background-color: #fff; */
-    background-color: #c09841;
+    background-color: var(--hire-bg);
     border-radius: 50%;
     overflow: hidden;
     transform: scale(0.4);
@@ -54,7 +54,7 @@ a:hover~.project_bg  {
 .home-featured-hovered .project_bg {
     transform: scale(1);
     mix-blend-mode: exclusion;
-    background-color: #fff;
+    background-color: var(--hire-bg);
 }
 
 // Header ====================================
