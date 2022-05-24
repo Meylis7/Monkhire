@@ -250,7 +250,7 @@ a:hover ~ .project_bg {
   -webkit-transform: scale(1);
           transform: scale(1);
   mix-blend-mode: exclusion;
-  background-color: #c09841;
+  background-color: #fff;
 }
 
 .header {
