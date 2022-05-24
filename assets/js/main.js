@@ -292,15 +292,17 @@ if (burger != undefined) {
 
 
 var $circle = $('.project_bg');
-function moveCircle(e) {
-    TweenLite.to($circle, 0.7, {
-        css: {
-            left: (e.pageX - 25),
-            top: (e.pageY - 25),
-            /*left: e.offsetX,
-            top: e.offsetY,*/
-        }
-    });
+if($circle != undefined) {
+    function moveCircle(e) {
+        TweenLite.to($circle, 0.7, {
+            css: {
+                left: (e.pageX - 25),
+                top: (e.pageY - 25),
+                /*left: e.offsetX,
+                top: e.offsetY,*/
+            }
+        });
+    }
 }
 
 $(window).on('mousemove', moveCircle);

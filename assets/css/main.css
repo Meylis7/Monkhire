@@ -233,7 +233,7 @@ a:hover ~ .project_bg {
   z-index: 160;
   pointer-events: none;
   /* background-color: #fff; */
-  background-color: var(--hire-bg);
+  background-color: #c09841;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transform: scale(0.4);
@@ -250,7 +250,7 @@ a:hover ~ .project_bg {
   -webkit-transform: scale(1);
           transform: scale(1);
   mix-blend-mode: exclusion;
-  background-color: var(--hire-bg);
+  background-color: #c09841;
 }
 
 .header {
@@ -1410,7 +1410,7 @@ a:hover ~ .project_bg {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   right: 0;
-  width: 660px;
+  width: 630px;
   height: 460px;
 }
 .hero_svg svg,
@@ -5215,7 +5215,7 @@ a:hover ~ .project_bg {
     margin-bottom: 40px;
   }
   .hero_svg {
-    width: 560px;
+    width: 530px;
     height: 380px;
   }
 
@@ -5261,6 +5261,10 @@ a:hover ~ .project_bg {
   }
   .modal .vouch_form {
     width: calc(100% - 380px);
+  }
+
+  .project_bg {
+    display: none !important;
   }
 }
 @media (max-width: 1100px) {

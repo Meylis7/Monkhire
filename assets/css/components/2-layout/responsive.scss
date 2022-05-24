@@ -15,7 +15,7 @@
         }
 
         &_svg {
-            width: 560px;
+            width: 530px;
             height: 380px;
         }
     }
@@ -82,6 +82,10 @@
                 width: calc(100% - 380px);
             }
         }
+    }
+
+    .project_bg {
+        display: none !important;
     }
 }
 

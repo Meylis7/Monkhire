@@ -43,7 +43,7 @@ a:hover~.project_bg  {
     z-index: 160;
     pointer-events: none;
     /* background-color: #fff; */
-    background-color: var(--hire-bg);
+    background-color:  #c09841;
     border-radius: 50%;
     overflow: hidden;
     transform: scale(0.4);
@@ -54,7 +54,7 @@ a:hover~.project_bg  {
 .home-featured-hovered .project_bg {
     transform: scale(1);
     mix-blend-mode: exclusion;
-    background-color: var(--hire-bg);
+    background-color:  #c09841;
 }
 
 // Header ====================================
