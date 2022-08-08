@@ -1978,6 +1978,7 @@ a:hover ~ .project_bg {
 }
 .about_block-item-txt {
   margin: 30px 0;
+  min-height: 196px;/*For height fixing*/
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
