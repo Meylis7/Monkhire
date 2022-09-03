@@ -1512,8 +1512,8 @@ a:hover~.project_bg {
 
 .hero_info-title {
   font-weight: 700;
-  font-size: 54px;
-  line-height: 80px;
+  font-size: 40px;
+  line-height: 45px;
   color: var(--hero-title-color);
 }
 
@@ -1571,7 +1571,7 @@ a:hover~.project_bg {
 }
 
 .hero .group_title {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .hero_svg {
@@ -1744,8 +1744,8 @@ a:hover~.project_bg {
 
 .main_title {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 80px;
+  font-size: 30px;
+  line-height: 40px;
   color: var(--hero-title-color);
   text-align: center;
   position: relative;
@@ -1853,7 +1853,7 @@ a:hover~.project_bg {
   display: -ms-flexbox;
   display: flex;
   max-width: 980px;
-  margin: 60px auto 0;
+  margin: 30px auto 0;
 }
 
 .advantage_item {
@@ -1938,7 +1938,7 @@ a:hover~.project_bg {
 
 .meet_info-title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 60px;
   text-transform: capitalize;
   color: var(--hero-title-color);
@@ -2099,7 +2099,7 @@ a:hover~.project_bg {
 }
 
 .plans_table table thead th {
-  padding: 40px 5px 20px;
+  padding: 20px 5px 20px;
   font-weight: 600;
   font-size: 18px;
   line-height: 30px;
@@ -2118,8 +2118,8 @@ a:hover~.project_bg {
 .plans_table table tbody td {
   padding: 10px 5px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 60px;
+  font-size: 16px;
+  line-height: 30px;
   letter-spacing: 0.02em;
   color: var(--hero-text-color);
   border-bottom: 1px solid #F0F0F0;
@@ -7731,4 +7731,8 @@ a:hover~.project_bg {
 .Meet_info_SubTitle {
   margin-bottom: 20px;
   font-size: 16px;
+}
+
+.CustomPadding {
+  padding-top: 80px;
 }
