@@ -1921,9 +1921,9 @@ a:hover~.project_bg {
   fill: none;
 }
 
-/* .meet {
-  padding: 70px 0;
-} */
+.meet {
+  padding: 40px 0;
+}
 
 .meet_box {
   display: -webkit-box;
@@ -1939,7 +1939,7 @@ a:hover~.project_bg {
 .meet_info-title {
   font-weight: 700;
   font-size: 35px;
-  line-height: 60px;
+  line-height: 50px;
   text-transform: capitalize;
   color: var(--hero-title-color);
   margin-bottom: 20px;
@@ -2099,10 +2099,10 @@ a:hover~.project_bg {
 }
 
 .plans_table table thead th {
-  padding: 20px 5px 20px;
+  padding: 10px 5px 10px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 25px;
   letter-spacing: 0.02em;
   color: var(--hero-title-color);
   border-bottom: 1px solid #F0F0F0;
@@ -2116,9 +2116,9 @@ a:hover~.project_bg {
 }
 
 .plans_table table tbody td {
-  padding: 10px 5px;
+  padding: 5px 5px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.02em;
   color: var(--hero-text-color);
@@ -2141,12 +2141,12 @@ a:hover~.project_bg {
 }
 
 .about_block {
-  /* padding: 70px 0 40px; */
+  padding: 40px 0 40px;
   display: block;
 }
 
 .about_block-slider .slick-track {
-  padding: 60px 0;
+  padding: 35px 0;
 }
 
 .about_block-slider .slick-prev {
@@ -7724,9 +7724,9 @@ a:hover~.project_bg {
   justify-content: center;
 }
 
-.pt-0 {
+/* .pt-0 {
   padding: 0;
-}
+} */
 
 .Meet_info_SubTitle {
   margin-bottom: 20px;
