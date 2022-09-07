@@ -6747,7 +6747,17 @@ a:hover~.project_bg {
   }
 
   .role_tabs-link {
-    margin-top: 40px;
+    margin-top: 10px;
+  }
+
+  .footer_tags-box {
+    display: flex;
+    flex-flow: wrap;
+    gap: 15px;
+  }
+
+  .footer_tags-box iframe {
+    height: auto;
   }
 
   .role_tabs-link a {
