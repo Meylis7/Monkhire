@@ -127,7 +127,7 @@
 
                         <div class="form_input">
                             <label for="name">Name *</label>
-                            <input type="text" id="name" placeholder="Enter Name">
+                            <input type="text" id="name" name="name" class="inputvalid" placeholder="Enter Name">
                         </div>
 
                         <!-- <div class="form_input">
@@ -137,7 +137,8 @@
 
                         <div class="form_input">
                             <label for="email">Email Address *</label>
-                            <input type="text" id="email" placeholder="Enter Email Address">
+                            <input type="email" id="email" name="email" class="inputvalid" placeholder="Enter Email Address">
+                            <span  class="email_error " style="color:red"></span>
                         </div>
 
                         <!-- <div class="form_input">
@@ -152,7 +153,7 @@
 
                         <div class="form_input">
                             <label for="Skill">Skill/Technology *</label>
-                            <input type="text" id="Skill" placeholder="Skill/Technology">
+                            <input type="text" class="inputvalid" id="Skill" name="skill" placeholder="Skill/Technology">
                             <!-- <div class="custom-select">
                                 <select>
                                     <option value="01">Enter your Skill</option>
@@ -172,7 +173,7 @@
                         </div>
 
                         <div class="form_textarea">
-                            <textarea id="textarea" placeholder="Message"></textarea>
+                            <textarea id="textarea" name="message" placeholder="Message"></textarea>
                         </div>
 
                         <div class="form_row">
@@ -182,12 +183,13 @@
                             </div>
 
                             <div class="form_row-box">
-                                <div class="form_row-group">
+                                <!-- <div class="form_row-group">
                                     <p>5+2 = </p>
                                     <input type="number">
-                                </div>
-
-                                <button class="form_submit" type="submit">
+                                </div> -->
+                                
+                                <div id="html_element"></div> 
+                                <button class="form_submit disabled-btn" type="submit" disabled>
                                     Submit
                                 </button>
                             </div>
@@ -775,8 +777,90 @@
     <!-- <script>
         new WOW().init();
     </script> -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          grecaptcha.render('html_element', {
+            'sitekey' : '6LcXnNMhAAAAAJYlcEDj47WE4BmkMB6-zS2Ftelb'
+          });
+        };
+      </script>
 
 
+<script>
+
+$('.inputvalid').on('click keyup blur',function(){
+    var inputs = $('.inputvalid').length;
+    var type = $(this).attr('type');        
+    if(type === 'email'){
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var emailVal = $(this).val();
+        if(!emailReg.test(emailVal)) {
+            $(this).parent().find('.email_error').html('Enter a valid email address.');
+            $(this).addClass('invalid');
+            $(this).removeClass('valid');
+        }else{
+            $(this).parent().find('.email_error').html('');
+            $(this).addClass('valid')
+            $(this).removeClass('invalid');
+        }
+    }else{
+        if($(this).val()==''){
+            $(this).addClass('invalid');
+            $(this).removeClass('valid');
+        }else{
+            $(this).addClass('valid')
+            $(this).removeClass('invalid');
+        }
+    }
+    var inputs_valid = $(this).closest('form').find('.valid');
+    if(inputs_valid.length == inputs ){
+        $(this).closest('form').find('.form_submit').prop("disabled", false).removeClass('disabled-btn');  
+    }else{
+        $(this).closest('form').find('.form_submit').prop("disabled", true).addClass('disabled-btn');  
+    }      
+})
+
+
+// for the Contact Us  form start 
+$('.form_submit').click(function(e){
+    e.preventDefault();
+    var valid_input = $(this).closest('.form').find('.inputvalid');
+    var valid_key = $(this).closest('.form').find('.inputvalid');
+    console.log('data',valid_input);
+
+    var data = ['contact_us'];
+    var key = ['form_name'];
+    for (let index = 0; index < valid_input.length; index++) {
+        key.push(valid_key.eq(index).attr('name'))   
+        data.push(valid_input.eq(index).val());
+    }
+    key.push('message');
+    var textarea = $(this).closest('.form').find('textarea[name="message"]').val();
+    data.push(textarea);
+    var associated = key.reduce(function (previous, key01, index01) {
+        previous[key01] = data[index01];
+        return previous
+    }, {})
+    
+    $.ajax({
+        url:"./allAjax.php",
+        method:'post',
+        data:associated,
+        success:function(result){
+            console.log('result',result);
+            $('.form_submit').closest('.form').find('.inputvalid').val('');
+            $('.form_submit').closest('.form').find('textarea').val('');
+            $('.form_submit').prop("disabled", true).addClass('disabled-btn');
+        }
+    })
+})
+// for the Contact Us  form end 
+
+
+</script>
 </body>
 
 </html>

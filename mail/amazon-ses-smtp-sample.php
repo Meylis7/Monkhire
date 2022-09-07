@@ -1,6 +1,6 @@
 <?php
 
-print_r($_POST); exit();
+// print_r($_POST); exit();
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -18,13 +18,17 @@ $senderName = 'Hr Team';
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-$recipient = 'connect@monkhire.com';
+// $recipient = 'connect@monkhire.com';
+$recipient = 'ashishnuance@gmail.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-$usernameSmtp = 'AKIA2YHORIZUVKN3E77U';
+// $usernameSmtp = 'AKIA2YHORIZUVKN3E77U';
+$usernameSmtp = 'AKIA2YHORIZU5OTOQQUZ';
+
 
 // Replace smtp_password with your Amazon SES SMTP password.
-$passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
+// $passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
+$passwordSmtp = 'BMLMiF+93mvKTwK6l5XifDncxJ2ONdsTqaPYhqNz19ft';
 
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment or remove the next line.
@@ -33,7 +37,8 @@ $passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
 // If you're using Amazon SES in a region other than US West (Oregon),
 // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
 // endpoint in the appropriate region.
-$host = 'email-smtp.us-east-1.amazonaws.com';
+// $host = 'email-smtp.us-east-1.amazonaws.com';
+$host = 'email-smtp.ap-south-1.amazonaws.com';
 $port = 587;   
 
 // The subject line of the email
