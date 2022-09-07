@@ -7736,3 +7736,8 @@ a:hover~.project_bg {
 .CustomPadding {
   padding-top: 80px;
 }
+
+.disabled-btn {
+  opacity: 0.5;
+  cursor: no-drop;
+}
