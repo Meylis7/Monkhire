@@ -291,29 +291,29 @@ if (burger != undefined) {
 
 
 
-var $circle = $('.project_bg');
-if($circle != undefined) {
-    function moveCircle(e) {
-        TweenLite.to($circle, 0.7, {
-            css: {
-                left: (e.pageX - 25),
-                top: (e.pageY - 25),
-                /*left: e.offsetX,
-                top: e.offsetY,*/
-            }
-        });
-    }
-}
+// var $circle = $('.project_bg');
+// if($circle != undefined) {
+//     function moveCircle(e) {
+//         TweenLite.to($circle, 0.7, {
+//             css: {
+//                 left: (e.pageX - 25),
+//                 top: (e.pageY - 25),
+//                 /*left: e.offsetX,
+//                 top: e.offsetY,*/
+//             }
+//         });
+//     }
+// }
 
-$(window).on('mousemove', moveCircle);
+// $(window).on('mousemove', moveCircle);
 
-$('p, h1, h2, h3, h4, h5, h6, a, img, li, label, input, span, svg, .main_title, .advantage_item-title, .meet_info-title, table, .meet_box, button, .role_tabs-link a, .select-selected, .hero_info-subtitle, .select-items div ').hover(function () {
-    $('body').addClass('home-featured-hovered');
-},
-    function () {
-        $('body').removeClass('home-featured-hovered');
-    }
-);
+// $('p, h1, h2, h3, h4, h5, h6, a, img, li, label, input, span, svg, .main_title, .advantage_item-title, .meet_info-title, table, .meet_box, button, .role_tabs-link a, .select-selected, .hero_info-subtitle, .select-items div ').hover(function () {
+//     $('body').addClass('home-featured-hovered');
+// },
+//     function () {
+//         $('body').removeClass('home-featured-hovered');
+//     }
+// );
 
 
 
