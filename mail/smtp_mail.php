@@ -1,6 +1,23 @@
 <?php
 
 // print_r($_POST); exit();
+$contact_us = ''; 
+$body_data = '';
+$email_data = '';
+
+if(isset($_POST['form_name']) && $_POST['form_name']!=''){
+    if($_POST['form_name']=='apply-for-job'){
+        $contact_us = ucfirst(str_replace('-',' ',$_POST['form_name']));
+    }else{
+        $contact_us = ucfirst(str_replace('_',' ',$_POST['form_name']));
+    }
+}
+if(isset($_POST['message']) && $_POST['message']!=''){
+    $body_data = $_POST['message'];
+}
+if(isset($_POST['email']) && $_POST['email']!=''){
+    $email_data = $_POST['email'];
+}
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -42,18 +59,65 @@ $host = 'email-smtp.ap-south-1.amazonaws.com';
 $port = 587;   
 
 // The subject line of the email
-$subject = 'Amazon SES test (SMTP interface accessed using PHP)';
+$subject = $contact_us;
 
 // The plain-text body of the email
-$bodyText =  "Email Test\r\nThis email was sent through the
-    Amazon SES SMTP interface using the PHPMailer class.";
+$bodyText =  $body_data;
 
 // The HTML-formatted body of the email
-$bodyHtml = '<h1>Email Test</h1>
-    <p>This email was sent through the
-    <a href="https://aws.amazon.com/ses">Amazon SES</a> SMTP
-    interface using the <a href="https://github.com/PHPMailer/PHPMailer">
-    PHPMailer</a> class.</p>';
+$bodyHtml_form_data = '';
+if(isset($_POST) && !empty($_POST)){
+    foreach ($_POST as $key => $value) {
+        if($key!='form_name'){
+            $bodyHtml_form_data .= '<tr>
+                <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">'.ucfirst($key).'
+                </td>
+                <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">'.ucfirst($value).'</td>
+            </tr>';
+        }
+    }
+}
+$bodyHtml = '
+<body style="background-color: rgb(211 201 201 / 21%); padding: 0px 50px 0px 50px;">
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+    }
+</style>
+    <div style="max-width: 600px; margin: auto; display: block;"> 
+        <table style="display: flex; justify-content: center;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">
+                        <img src="https://monkhire.com/assets/images/logo-white.png" alt=""
+                            style="width:200px; height:100px; object-fit: contain;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="background-color: white; padding:60px; width: 100%; border-radius:12px; ">
+            <tbody>
+                <tr>
+                    <td style="font-size: 22px;">Hi Sumit</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <table style="width:100%; border: 1px solid #D6DBDF;  border-collapse: collapse; margin-top: 40px; text-align: center;">
+                            '.$bodyHtml_form_data.'
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 22px; font-size: 16px;">
+                        Many Thanks,<br> Monkhire Team
+                    </td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
+</body>';
+
 
 $mail = new PHPMailer(true);
 

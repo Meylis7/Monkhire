@@ -118,9 +118,12 @@
                 <h2 class="main_title">
                     Please Contact Us
                 </h2>
-
+                
                 <form action="#" class="form">
                     <div class="form_inner">
+                        <div   role="alert">
+                            <h4 class="contact_message" style="color:greenyellow; display:none"></h4>
+                          </div>
                         <h4 class="form_title">
                             <span>Do you have any questions?</span> We'd Be Delighted to Hear from You.
                         </h4>
@@ -137,7 +140,7 @@
 
                         <div class="form_input">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" class="inputvalid" placeholder="Enter Email Address">
+                            <input type="email" id="email" name="email" class="inputvalid email-input" placeholder="Enter Email Address">
                             <span  class="email_error " style="color:red"></span>
                         </div>
 
@@ -702,39 +705,43 @@
 
                     <div class="form_input">
                         <label for="name">Your Name *</label>
-                        <input type="text" id="name" placeholder="Enter name">
+                        <input type="text" id="name" class="validCheck" name="name" placeholder="Enter name">
                     </div>
 
                     <div class="form_input">
-                        <label for="name">Graduation Year *</label>
-                        <div class="custom-select">
-                            <select>
+                       
+                        <label for="graduation_year">Graduation Year *</label>
+                        <input type="text" class="validCheck" name="graduation_year" id="graduation_year" placeholder="Enter Graduation Year">
+                        <!-- <div class="custom-select">
+                            <select >
                                 <option value="01">Select Year</option>
                                 <option value="1">2017</option>
                                 <option value="2">2018</option>
                                 <option value="3">2019</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="form_input">
                         <label for="email">Email Address *</label>
-                        <input type="text" id="email" placeholder="Enter Email Address">
+                        <input type="email" class="validCheck" name="email" id="email" placeholder="Enter Email Address">
+                        <span  class="email_error " style="color:red"></span>
                     </div>
 
                     <div class="form_input">
                         <label for="name">Phone Number *</label>
-                        <input type="text" id="name" placeholder="Enter Phone Number">
+                        <input type="text" id="phone" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" name="phone"  class="validCheck" placeholder="Enter Phone Number">
                     </div>
 
                     <div class="form_input">
                         <label for="comp-name">What's your Linkedin URL? *</label>
-                        <input type="text" id="comp-name" placeholder="Enter Linkedin URL">
+                        <input type="text" id="comp-name" name="linkedinUrl" class="validCheck" placeholder="Enter Linkedin URL">
                     </div>
 
                     <div class="form_input">
                         <label for="name">Your Skill Set *</label>
-                        <div class="custom-select">
+                        <input type="text" id="Skill" class="validCheck" name="skill" placeholder="Enter Your Skill Set">
+                        <!-- <div class="custom-select">
                             <select>
                                 <option value="01">Enter your Skill</option>
                                 <option value="1">Java Backend Developer </option>
@@ -749,10 +756,10 @@
                                 <option value="10">Python Developer</option>
                                 <option value="11">Vue Js Developer </option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <button class="form_next" type="submit">
+                    <button class="form_next disabled-btn apply-for-job" disabled type="submit">
                         Request Callback
                     </button>
                 </div>
@@ -846,11 +853,22 @@ $('.form_submit').click(function(e){
     }, {})
     
     $.ajax({
-        url:"./allAjax.php",
+        url:"./mail/smtp_mail.php",
         method:'post',
         data:associated,
         success:function(result){
-            console.log('result',result);
+            console.log('resultasa',result);
+
+            // if(result && result == 'Email sent!'){
+                console.log('result',result);
+                $('.contact_message').html('Message Sent SuccessFully').show();
+                setTimeout(() => {
+                    $('.contact_message').html('').hide();
+                }, 3000);
+                // setInterval(() => {
+                //     $('.contact_message').html('').hide();
+                // }, 3000);
+            // }
             $('.form_submit').closest('.form').find('.inputvalid').val('');
             $('.form_submit').closest('.form').find('textarea').val('');
             $('.form_submit').prop("disabled", true).addClass('disabled-btn');
@@ -859,8 +877,8 @@ $('.form_submit').click(function(e){
 })
 // for the Contact Us  form end 
 
-
 </script>
+<script src="./assets/js/footer.js"></script>
 </body>
 
 </html>

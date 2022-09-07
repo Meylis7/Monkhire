@@ -7741,3 +7741,7 @@ a:hover~.project_bg {
   opacity: 0.5;
   cursor: no-drop;
 }
+
+.email-input{
+  text-transform:none !important;
+}
