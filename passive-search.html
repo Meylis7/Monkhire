@@ -1244,39 +1244,43 @@
 
                     <div class="form_input">
                         <label for="name">Your Name *</label>
-                        <input type="text" id="name" placeholder="Enter name">
+                        <input type="text" id="name" class="validCheck" name="name" placeholder="Enter name">
                     </div>
 
                     <div class="form_input">
-                        <label for="name">Graduation Year *</label>
-                        <div class="custom-select">
-                            <select>
+                       
+                        <label for="graduation_year">Graduation Year *</label>
+                        <input type="text" class="validCheck" name="graduation_year" id="graduation_year" placeholder="Enter Graduation Year">
+                        <!-- <div class="custom-select">
+                            <select >
                                 <option value="01">Select Year</option>
                                 <option value="1">2017</option>
                                 <option value="2">2018</option>
                                 <option value="3">2019</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="form_input">
                         <label for="email">Email Address *</label>
-                        <input type="text" id="email" placeholder="Enter Email Address">
+                        <input type="email" class="validCheck" name="email" id="email" placeholder="Enter Email Address">
+                        <span  class="email_error " style="color:red"></span>
                     </div>
 
                     <div class="form_input">
                         <label for="name">Phone Number *</label>
-                        <input type="text" id="name" placeholder="Enter Phone Number">
+                        <input type="text" id="phone" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" name="phone"  class="validCheck" placeholder="Enter Phone Number">
                     </div>
 
                     <div class="form_input">
                         <label for="comp-name">What's your Linkedin URL? *</label>
-                        <input type="text" id="comp-name" placeholder="Enter Linkedin URL">
+                        <input type="text" id="comp-name" name="linkedinUrl" class="validCheck" placeholder="Enter Linkedin URL">
                     </div>
 
                     <div class="form_input">
                         <label for="name">Your Skill Set *</label>
-                        <div class="custom-select">
+                        <input type="text" id="Skill" class="validCheck" name="skill" placeholder="Enter Your Skill Set">
+                        <!-- <div class="custom-select">
                             <select>
                                 <option value="01">Enter your Skill</option>
                                 <option value="1">Java Backend Developer </option>
@@ -1291,10 +1295,10 @@
                                 <option value="10">Python Developer</option>
                                 <option value="11">Vue Js Developer </option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <button class="form_next" type="submit">
+                    <button class="form_next disabled-btn apply-for-job" disabled type="submit">
                         Request Callback
                     </button>
                 </div>
@@ -1317,7 +1321,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-
+    <script src="./assets/js/footer.js"></script>
     <!-- <script>
         new WOW().init();
     </script> -->
