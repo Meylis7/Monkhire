@@ -199,7 +199,7 @@ try {
 
             // Specify the content of the message.
             $mail->isHTML(true);
-            $mail->Subject    = 'Thank you '.$subject;
+            $mail->Subject    = 'Thank you for '.$subject;
             $mail->Body       = $bodyHtml_thankyou;
             // $mail->AltBody    = $bodyText;
             $mail->Send();
