@@ -128,7 +128,7 @@
 
                             <div class="form_input">
                                 <label for="name">Name *</label>
-                                <input type="text" class="inputvalid" id="name" placeholder="Enter Name" oninput="this.className=''">
+                                <input type="text" class="inputvalid" name="user_name" id="name" placeholder="Enter Name" oninput="this.className=''">
                             </div>
 
                             <!-- <div class="form_input">
@@ -138,23 +138,23 @@
 
                             <div class="form_input">
                                 <label for="email">Email Address *</label>
-                                <input type="email" class="inputvalid" id="email" placeholder="Enter Email Address">
+                                <input type="email" class="inputvalid" name="email" id="email" placeholder="Enter Email Address">
                                 <span  class="email_error " style="color:red"></span>
                             </div>
 
                             <div class="form_input">
                                 <label for="name">Phone Number *</label>
-                                <input type="text" class="inputvalid" id="name" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" placeholder="Enter Phone Number">
+                                <input type="text" class="inputvalid" id="name" name="mobile" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" placeholder="Enter Phone Number">
                             </div>
 
                             <div class="form_input">
-                                <label for="comp-name">Comany Name *</label>
-                                <input type="text" class="inputvalid" id="comp-name" placeholder="Enter Company Name">
+                                <label for="comp-name">Company Name *</label>
+                                <input type="text" class="inputvalid" id="comp-name" name="company_name" placeholder="Enter Company Name">
                             </div>
 
                             <div class="form_input">
                                 <label for="about">How did you here about us? *</label>
-                                <input type="text" class="inputvalid" id="about" placeholder="How did you here about us?">
+                                <input type="text" class="inputvalid" name="know_about_us" id="about" placeholder="How did you here about us?">
                                 <!-- <div class="custom-select">
                                     <select>
                                         <option value="01">Select Skill</option>
@@ -188,7 +188,7 @@
                             </h4>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-1" id="individual" class="inputvalid" >
+                                <input type="radio" name="hire-1" id="individual" class="inputvalid" value="Hire an Indivisual developer" >
                                 <label for="individual" class="hire_check-label">
                                     <span>
                                         <svg width="26" height="34" viewBox="0 0 26 34" fill="none"
@@ -209,7 +209,7 @@
                             </div>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-1" id="Team" class="inputvalid">
+                                <input type="radio" name="hire-1" id="Team" class="inputvalid" value="build a team of developer">
                                 <label for="Team" class="hire_check-label">
                                     <span>
                                         <svg width="37" height="28" viewBox="0 0 37 28" fill="none"
@@ -246,7 +246,7 @@
                             </div>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-1" id="get-know" class="inputvalid" >
+                                <input type="radio" name="hire-1" id="get-know" class="inputvalid" value="get to know Monkhire better">
                                 <label for="get-know" class="hire_check-label">
                                     <span>
                                         <svg width="36" height="32" viewBox="0 0 36 32" fill="none"
@@ -285,7 +285,7 @@
                             </h4>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-2" id="date-1" class="inputvalid">
+                                <input type="radio" name="hire-2" id="date-1" class="inputvalid" value=" 3 - 6 Months">
                                 <label for="date-1" class="hire_check-label">
                                     <span>
                                         <svg width="32" height="36" viewBox="0 0 32 36" fill="none"
@@ -320,7 +320,7 @@
                             </div>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-2" id="date-2" class="inputvalid">
+                                <input type="radio" name="hire-2" id="date-2" class="inputvalid" value="6 - 9 Months">
                                 <label for="date-2" class="hire_check-label">
                                     <span>
                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -359,7 +359,7 @@
                             </div>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-2" id="date-3" class="inputvalid">
+                                <input type="radio" name="hire-2" id="date-3" class="inputvalid" value="9+ Months">
                                 <label for="date-3" class="hire_check-label">
                                     <span>
                                         <svg width="42" height="40" viewBox="0 0 42 40" fill="none"
@@ -420,7 +420,7 @@
                             </h4>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-3" id="week-1" class="inputvalid">
+                                <input type="radio" name="hire-3" id="week-1" class="inputvalid" value="1 Weeks">
                                 <label for="week-1" class="hire_check-label">
                                     <span>
                                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
@@ -439,7 +439,7 @@
                             </div>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-3" id="week-2" class="inputvalid">
+                                <input type="radio" name="hire-3" id="week-2" class="inputvalid" value="1 - 2 Weeks">
                                 <label for="week-2" class="hire_check-label">
                                     <span>
                                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
@@ -458,7 +458,7 @@
                             </div>
 
                             <div class="hire_check">
-                                <input type="radio" name="hire-3" id="week-3" class="inputvalid">
+                                <input type="radio" name="hire-3" id="week-3" class="inputvalid" value="2+ Weeks">
                                 <label for="week-3" class="hire_check-label">
                                     <span>
                                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
@@ -1173,15 +1173,17 @@
                     $(this).parent().find('.email_error').html('Enter a valid email address.');
                     $(this).addClass('invalid');
                     $(this).removeClass('valid');
+                    console.log('asdas',$(this).attr('class'));
                 }else{
                     $(this).parent().find('.email_error').html('');
                     $(this).addClass('valid')
                     $(this).removeClass('invalid');
                 }
             }
-             if(type ==='radio'){
-                var name = $(this).attr('name');
-                var checked = $("input[name='"+name+"']:checked").length;
+            if(type ==='radio'){
+                 var name = $(this).attr('name');
+                 var checked = $("input[name='"+name+"']:checked").length;
+                 
                if(checked === 1){
                     $(this).parent().parent().find('.form_next').prop("disabled", false).removeClass('disabled-btn'); 
                     // $("input[name='"+name+"']").parent().find('label').fadeOut(500);
@@ -1199,7 +1201,10 @@
                     $(this).removeClass('invalid');
                 }
                 var inputs_valid = $(this).parents('.form_info').find('input.valid');
-                if(inputs_valid.length == inputs.length ){
+                // if($(this).parents('.form_info').find('.email_error').text()==''){
+
+                
+                if(inputs_valid.length == inputs.length && $(this).parents('.form_info').find('.email_error').text()==''){
                   $(this).parents('.form_info').find('.form_next').prop("disabled", false).removeClass('disabled-btn');  
                 }else{
                     $(this).parents('.form_info').find('.form_next').prop("disabled", true).addClass('disabled-btn'); 
@@ -1209,24 +1214,39 @@
 
         $('.hire_form_submit').click(function(e){
             e.preventDefault();
-            var valid_input = $(this).closest('.hire-form').find('.inputvalid');
-            var valid_key = $(this).closest('.hire-form').find('.inputvalid');
-            // console.log('data',valid_input);
+            var current = $(this).closest('.hire-form');
+            var valid_input = current.find('.inputvalid');
+            var valid_key = current.find('.inputvalid');
+            console.log('data',valid_input);
             var data = ['hire_developer'];
-            var key = ['form_name'];
+            var key = [];
             for (let index = 0; index < valid_input.length; index++) {
-                key.push(valid_key.eq(index).attr('name'))   
-                data.push(valid_input.eq(index).val());
+                var type = valid_key.eq(index).attr('type');
+                var name = valid_key.eq(index).attr('name')
+                if(type == 'radio'){
+                    key.push(valid_key.eq(index).attr('name'))
+                    // data.push(current.find("input[name='"+name+"']:checked").val());
+                }else{
+                    // data.push(valid_input.eq(index).val());
+                    key.push(valid_key.eq(index).attr('name'))   
+
+                }
+                //console.log('asdss',name,$("input[name='"+name+"']:checked").val());
+
             }
-            // key.push('message');
-            // var textarea = $(this).closest('.form').find('textarea[name="message"]').val();
-            // data.push(textarea);
+            key.push('message');
+            var textarea = current.find('textarea[name="message"]').val();
+            data.push(textarea);
+            console.log('data',data,'key',key);
             var associated = key.reduce(function (previous, key01, index01) {
                 previous[key01] = data[index01];
-                return previous
+                return previous;
             }, {})
             
-            console.log('data',data,'key',key,'associated',associated);
+            var unique = key.filter((value, index, self)=>{
+                    return self.indexOf(value) === index;
+            });
+            console.log('unique',unique)
             // $.ajax({
             //     url:"./allAjax.php",
             //     method:'post',

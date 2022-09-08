@@ -7742,6 +7742,6 @@ a:hover~.project_bg {
   cursor: no-drop;
 }
 
-.email-input{
+.email-input,input[type='email']{
   text-transform:none !important;
 }
