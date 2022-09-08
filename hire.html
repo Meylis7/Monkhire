@@ -508,7 +508,7 @@
                             </h4>
 
                             <div class="form_textarea hire-text">
-                                <textarea id="textarea" placeholder="Message" required></textarea>
+                                <textarea id="textarea" name="message" placeholder="Message" required></textarea>
                             </div>
 
                             <div class="form_btn-row">
@@ -1239,12 +1239,12 @@
 
         $('.hire_form_submit').click(function (e) {
             e.preventDefault();
-            var current = $(this).closest('.hire-form');
+            var current = $(this).closest('form');
             var valid_input = current.find('.inputvalid');
             var valid_key = current.find('.inputvalid');
-            console.log('data', valid_input);
             var data = ['hire_developer'];
-            var key = [];
+            var key = ['form_name', 'user_name'];
+
             for (let index = 0; index < valid_input.length; index++) {
                 var type = valid_key.eq(index).attr('type');
                 var name = valid_key.eq(index).attr('name')
@@ -1254,35 +1254,59 @@
                 } else {
                     // data.push(valid_input.eq(index).val());
                     key.push(valid_key.eq(index).attr('name'))
-
                 }
-                //console.log('asdss',name,$("input[name='"+name+"']:checked").val());
-
             }
             key.push('message');
-            var textarea = current.find('textarea[name="message"]').val();
-            data.push(textarea);
-            console.log('data', data, 'key', key);
-            var associated = key.reduce(function (previous, key01, index01) {
+            var unique_keys = key.filter((value, index, self) => {
+                return self.indexOf(value) === index;
+            });
+            for (let y = 0; y < unique_keys.length; y++) {
+                if (y > 0) {
+                    var in_data = current.find('input[name=' + unique_keys[y] + ']');
+                    var in_type = in_data.attr('type');
+                    if (in_type == 'radio') {
+                        data.push(current.find('input[name=' + unique_keys[y] + ']:checked').val());
+                    } else if (unique_keys[y] === 'message') {
+                        data.push(current.find('textarea[name="message"]').val());
+                    } else {
+                        data.push(in_data.val());
+                    }
+                }
+            }
+            var associated = unique_keys.reduce(function (previous, key01, index01) {
                 previous[key01] = data[index01];
                 return previous;
             }, {})
-
-            var unique = key.filter((value, index, self) => {
-                return self.indexOf(value) === index;
-            });
-            console.log('unique', unique)
-            // $.ajax({
-            //     url:"./allAjax.php",
-            //     method:'post',
-            //     data:associated,
-            //     success:function(result){
-            //         console.log('result',result);
-            //         $('.form_submit').closest('.form').find('.inputvalid').val('');
-            //         $('.form_submit').closest('.form').find('textarea').val('');
-            //         $('.form_submit').prop("disabled", true).addClass('disabled-btn');
-            //     }
-            // })
+            console.log('data', data, 'key', unique_keys, 'post_data', associated, );
+            $.ajax({
+                url: "./mail/smtp_mail.php",
+                method: 'post',
+                data: associated,
+                success: function (result) {
+                    var data_status = JSON.parse(result);
+                    // console.log('result',data_status);
+                    if (data_status.status === 1) {
+                        window.location.href = "./thanks.html";
+                    }
+                    // for (let y = 0; y < unique_keys.length; y++) {
+                    //     if(y > 0 ){
+                    //         var in_data01 = current.find('input[name='+unique_keys[y]+']');
+                    //         var in_type01 = in_data.attr('type');
+                    //         if(in_type01 == 'radio'){
+                    //             current.find('input[name='+unique_keys[y]+']').prop('checked',false);
+                    //         }else if(unique_keys[y] ==='message' ){
+                    //             current.find('textarea[name="message"]').val('').html('');
+                    //         }else{
+                    //             in_data01.val('');
+                    //         }
+                    //     }
+                    // }
+                    // // current.find('.inputvalid').val('');
+                    // // current.find('textarea').val('');
+                    // current.find('.form_next').prop("disabled", true).addClass('disabled-btn');
+                    // $('.hire_form_submit').prop("disabled", true).addClass('disabled-btn');
+                }
+            })
         })
 
         //******************   for the Hire Developers form end ************************

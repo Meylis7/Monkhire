@@ -56,9 +56,14 @@
                 data:associated,
                 success:function(result){
                     console.log('result',result);
-                    $('.apply-for-job').closest('form').find('.validCheck').val('');
-                    $('.apply-for-job').closest('form').find('textarea').val('');
-                    $('.apply-for-job').prop("disabled", true).addClass('disabled-btn');
+                    var data_status = JSON.parse(result);
+                    console.log('result',data_status);
+                    if(data_status.status === 1){
+                        window.location.href = "./thanks.html";
+                    }
+                    // $('.apply-for-job').closest('form').find('.validCheck').val('');
+                    // $('.apply-for-job').closest('form').find('textarea').val('');
+                    // $('.apply-for-job').prop("disabled", true).addClass('disabled-btn');
                 }
             })
         })

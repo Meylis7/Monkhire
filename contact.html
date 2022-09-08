@@ -871,24 +871,26 @@
                 method: 'post',
                 data: associated,
                 success: function (result) {
-                    console.log('resultasa', result);
 
-                    // if(result && result == 'Email sent!'){
-                    console.log('result', result);
-                    $('.contact_message').html('Message Sent SuccessFully').show();
-                    setTimeout(() => {
-                        $('.contact_message').html('').hide();
-                    }, 3000);
-                    // setInterval(() => {
+                    var data_status = JSON.parse(result);
+                    // console.log('result',data_status);
+                    if (data_status.status === 1) {
+                        window.location.href = "./thanks.html";
+                    }
+
+                    // // if(result && result == 'Email sent!'){
+                    // console.log('result',result);
+                    // $('.contact_message').html('Message Sent SuccessFully').show();
+                    // setTimeout(() => {
                     //     $('.contact_message').html('').hide();
                     // }, 3000);
-                    // }
-                    $('.form_submit').closest('.form').find('.inputvalid').val('');
-                    $('.form_submit').closest('.form').find('textarea').val('');
-                    $('.form_submit').prop("disabled", true).addClass('disabled-btn');
+                    // $('.form_submit').closest('.form').find('.inputvalid').val('');
+                    // $('.form_submit').closest('.form').find('textarea').val('');
+                    // $('.form_submit').prop("disabled", true).addClass('disabled-btn');
                 }
             })
         })
+
         // for the Contact Us  form end 
     </script>
     <script src="./assets/js/footer.js"></script>

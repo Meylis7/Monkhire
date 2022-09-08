@@ -15,7 +15,7 @@ if(isset($_POST['form_name']) && $_POST['form_name']!=''){
 if(isset($_POST['message']) && $_POST['message']!=''){
     $body_data = $_POST['message'];
 }
-if(isset($_POST['email']) && $_POST['email']!=''){
+if(isset($_POST['sender_email']) && $_POST['email']!=''){
     $email_data = $_POST['email'];
 }
 
@@ -36,7 +36,7 @@ $senderName = 'Hr Team';
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
 // $recipient = 'connect@monkhire.com';
-$recipient = 'connect@monkhire.com';
+$recipient = 'ashishnuance@gmail.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 // $usernameSmtp = 'AKIA2YHORIZUVKN3E77U';
@@ -85,7 +85,7 @@ $bodyHtml = '
     }
 </style>
     <div style="max-width: 600px; margin: auto; display: block;"> 
-        <table style="text-align: center; width: 100%;">
+        <table style="display: flex; justify-content: center;">
             <tbody>
                 <tr>
                     <td style="text-align: center;">
@@ -95,7 +95,7 @@ $bodyHtml = '
                 </tr>
             </tbody>
         </table>
-        <table style="background-color: #f2f2f2; padding:30px; width: 100%; border-radius:12px; ">
+        <table style="background-color: white; padding:60px; width: 100%; border-radius:12px; ">
             <tbody>
                 <tr>
                     <td style="font-size: 22px;">Hi Sumit</td>
@@ -142,71 +142,7 @@ try {
     $mail->Subject    = $subject;
     $mail->Body       = $bodyHtml;
     $mail->AltBody    = $bodyText;
-    if($mail->Send()){
-        $bodyHtml_thankyou = '
-            <body style="background-color: rgb(211 201 201 / 21%); padding: 0px 50px 0px 50px;">
-            <style type="text/css">
-                body {
-                    font-family: sans-serif;
-                }
-            </style>
-                <div style="max-width: 600px; margin: auto; display: block;"> 
-                    <table style="width: 100%; text-align: center;">
-                        <tbody>
-                            <tr>
-                                <td style="text-align: center;">
-                                    <img src="https://monkhire.com/assets/images/logo-white.png" alt=""
-                                        style="width:200px; height:100px; object-fit: contain;">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="background-color: #f2f2f2; padding:30px; width: 100%; border-radius:12px; ">
-                        <tbody>
-                            <tr>
-                                <td style="font-size: 22px;">Hi,</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    Thank you for reaching out, to Monkhire.
-                                    We have received your message, someone from our team will contact your soon. In the meantime you can review our Process (Add Hyperlink https://monkhire.com/)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding-top: 22px; font-size: 16px;">
-                                    Many Thanks,<br> Monkhire Team
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>    
-                </div>
-            </body>';
-            // Specify the SMTP settings.
-            $mail->isSMTP();
-            $mail->setFrom($sender, $senderName);
-            $mail->Username   = $usernameSmtp;
-            $mail->Password   = $passwordSmtp;
-            $mail->Host       = $host;
-            $mail->Port       = $port;
-            $mail->SMTPAuth   = true;
-            $mail->SMTPSecure = 'tls';
-            // $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
-
-            // Specify the message recipients.
-            $mail->addAddress($_POST['email']);
-            // You can also add CC, BCC, and additional To recipients here.
-
-            // Specify the content of the message.
-            $mail->isHTML(true);
-            $mail->Subject    = 'Thank you '.$subject;
-            $mail->Body       = $bodyHtml_thankyou;
-            // $mail->AltBody    = $bodyText;
-            $mail->Send();
-            $data = json_encode(['status'=>1]);
-            echo $data , PHP_EOL;
-            exit();
-    }
+    $mail->Send();
     $data = json_encode(['status'=>1]);
     echo $data , PHP_EOL;
     // echo "Email sent!" , PHP_EOL;
