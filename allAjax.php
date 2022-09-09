@@ -1,6 +1,6 @@
 <?php
 
-
+    phpinfo();
     if(isset($_POST['form_name']) && $_POST['form_name'] == 'contact_us'){
         echo '<pre>';
         print_r($_POST);

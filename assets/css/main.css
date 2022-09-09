@@ -2480,6 +2480,29 @@ a:hover~.project_bg {
   padding: 50px 0 70px;
 }
 
+.contact_wrap .form_input {
+  width: calc(50% - 24px);
+  margin: 12px;
+}
+
+.contact_wrap .form_textarea,
+.contact_wrap .form_row {
+  margin: 12px;
+}
+
+.contact_wrap .form_textarea textarea {
+  width: calc(100% - 24px);
+  height: 80px;
+}
+
+.contact_wrap .form_title {
+  margin-bottom: 30px;
+}
+
+.contact_wrap #html_element {
+  margin-right: 25px;
+}
+
 .form {
   max-width: 800px;
   width: calc(100% - 50px);
@@ -7878,3 +7901,8 @@ input[type='email'] {
 .sitemap-navigation>.menu-item-has-children>.sub-menu>.menu-item>a:hover {
   background: #f85053e1;
 }
+
+/* #fullpage section {
+  padding-top: 100px;
+  height: auto !important;
+} */
