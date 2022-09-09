@@ -494,14 +494,17 @@
                                     Back
                                 </button>
 
-                                <button class="form_next tabBtn disabled-btn" data-tab="#form-5" type="button" disabled>
+                                <!-- <button class="form_next tabBtn disabled-btn" data-tab="#form-5" type="button" disabled>
                                     Next
+                                </button> -->
+                                <button class="form_next disabled-btn hire_form_submit" disabled  type="submit">
+                                    Submit
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="form_info tabItem " id="form-5">
+                    <!-- <div class="form_info tabItem " id="form-5">
                         <div class="form_inner">
                             <h4 class="form_title">
                                 How soon do you Want to start your work with your Remote Team
@@ -521,7 +524,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </form>
             </div>
@@ -1256,7 +1259,7 @@
                     key.push(valid_key.eq(index).attr('name'))
                 }
             }
-            key.push('message');
+            // key.push('message');
             var unique_keys = key.filter((value, index, self) => {
                 return self.indexOf(value) === index;
             });
@@ -1288,23 +1291,6 @@
                     if (data_status.status === 1) {
                         window.location.href = "./thanks.html";
                     }
-                    // for (let y = 0; y < unique_keys.length; y++) {
-                    //     if(y > 0 ){
-                    //         var in_data01 = current.find('input[name='+unique_keys[y]+']');
-                    //         var in_type01 = in_data.attr('type');
-                    //         if(in_type01 == 'radio'){
-                    //             current.find('input[name='+unique_keys[y]+']').prop('checked',false);
-                    //         }else if(unique_keys[y] ==='message' ){
-                    //             current.find('textarea[name="message"]').val('').html('');
-                    //         }else{
-                    //             in_data01.val('');
-                    //         }
-                    //     }
-                    // }
-                    // // current.find('.inputvalid').val('');
-                    // // current.find('textarea').val('');
-                    // current.find('.form_next').prop("disabled", true).addClass('disabled-btn');
-                    // $('.hire_form_submit').prop("disabled", true).addClass('disabled-btn');
                 }
             })
         })
