@@ -6185,6 +6185,7 @@ a:hover~.project_bg {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-overflow-scrolling: touch;
   }
 
   .plans_table table {
@@ -6736,6 +6737,9 @@ a:hover~.project_bg {
     padding: 30px 0;
   }
 
+  .footer {
+    padding-top: 0;
+  }
   .hero_box {
     width: 100%;
 }
