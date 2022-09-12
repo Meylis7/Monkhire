@@ -6738,7 +6738,7 @@ a:hover~.project_bg {
   }
 
   .footer_wrap {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
 
   .footer_row .logo {

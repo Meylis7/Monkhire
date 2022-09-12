@@ -130,7 +130,7 @@
                             </h1>
                         </div>
 
-                        <a href="hire.html" class="hire_dev  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <a href="javascprit:void(0);" class="hire_dev OpenMOdal">
                             Join Monkhire now!
 
                             <span>
@@ -384,7 +384,7 @@
                 </div>
 
                 <div class="role_tabs-link  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                    <a href="hire.html">
+                    <a href="javascrpit:void(0);" class="OpenMOdal">
                         Join MonkHire
 
                         <span>
@@ -813,7 +813,7 @@
                 </div>
 
                 <div class="role_tabs-link  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                    <a href="hire.html">
+                    <a href="javascript:void(0);" class="OpenMOdal">
                         Join Monkhire
 
                         <span>
@@ -972,7 +972,7 @@
                             that you're interested in, and you can opt out of job emails at any moment.
                         </p>
 
-                        <a href="#" class="banner_box-link  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <a href="javascript:void(0);" class="banner_box-link OpenMOdal">
                             Join Monkhire
 
                             <span>
@@ -1061,7 +1061,7 @@
                                 <a href="https://blog.monkhire.com/">Blog</a>
                             </li>
                             <li>
-                                <h4 class="modBtn" data-tab="#hire-modal">Apply For Jobs</h4>
+                                <h4 class="modBtn" id="openhire" data-tab="#hire-modal">Apply For Jobs</h4>
                             </li>
                             <li>
                                 <a href="hire.html">Hire Developers</a>
@@ -1553,7 +1553,11 @@
     </script> -->
 
 
-
+    <script>
+        $(".OpenMOdal").click(function(){
+            $("#openhire").trigger("click");
+        });
+    </script>
 
 </body>
 
