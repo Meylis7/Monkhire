@@ -110,6 +110,7 @@ body {
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
 body.active {
@@ -2478,6 +2479,29 @@ a:hover~.project_bg {
 
 .contact {
   padding: 50px 0 70px;
+}
+
+.contact_wrap .form_input {
+  width: calc(50% - 24px);
+  margin: 12px;
+}
+
+.contact_wrap .form_textarea,
+.contact_wrap .form_row {
+  margin: 12px;
+}
+
+.contact_wrap .form_textarea textarea {
+  width: calc(100% - 24px);
+  height: 80px;
+}
+
+.contact_wrap .form_title {
+  margin-bottom: 30px;
+}
+
+.contact_wrap #html_element {
+  margin-right: 25px;
 }
 
 .form {
@@ -6161,6 +6185,7 @@ a:hover~.project_bg {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-overflow-scrolling: touch;
   }
 
   .plans_table table {
@@ -6573,6 +6598,7 @@ a:hover~.project_bg {
     -webkit-box-pack: unset;
     -ms-flex-pack: unset;
     justify-content: unset;
+    -webkit-overflow-scrolling: touch;
   }
 
   .plans_table thead th {
@@ -6711,6 +6737,43 @@ a:hover~.project_bg {
     padding: 30px 0;
   }
 
+  .footer_row .logo {
+    display: none;
+  }
+
+  .footer {
+    padding-top: 0;
+  }
+
+  .hero_box {
+    width: 100%;
+  }
+
+  .footer_info {
+    padding: 15px 0 !important;
+  }
+
+  .header .logo {
+    width: 110px;
+    height: 30px;
+  }
+
+  .footer_nav ul li {
+    margin-left: 0px !important;
+  }
+
+  .footer_tags {
+    margin: 15px 0;
+  }
+
+  .advantage_item {
+    padding: 15px;
+  }
+
+  .advantage_box {
+    margin: 15px auto 0;
+  }
+
   .hero_svg {
     display: none;
   }
@@ -6731,6 +6794,14 @@ a:hover~.project_bg {
   .advantage_item-icon {
     width: 30px;
     height: 30px;
+  }
+
+  .footer_info {
+    padding: 15px 0 !important;
+  }
+
+  .footer_end {
+    margin: 15px 0 !important;
   }
 
   .advantage_item-title {
@@ -6757,7 +6828,7 @@ a:hover~.project_bg {
   }
 
   .footer_tags-box iframe {
-    height: auto;
+    height: 150px;
   }
 
   .role_tabs-link a {
@@ -7878,3 +7949,8 @@ input[type='email'] {
 .sitemap-navigation>.menu-item-has-children>.sub-menu>.menu-item>a:hover {
   background: #f85053e1;
 }
+
+/* #fullpage section {
+  padding-top: 100px;
+  height: auto !important;
+} */
