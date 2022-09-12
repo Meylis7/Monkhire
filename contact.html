@@ -27,6 +27,15 @@
 
         gtag('config', 'G-QG1WW8HQ94');
     </script>
+
+
+<script type="text/javascript">
+    var onloadCallback = function () {
+        grecaptcha.render('html_element', {
+            'sitekey': '6LcXnNMhAAAAAJYlcEDj47WE4BmkMB6-zS2Ftelb'
+        });
+    };
+</script>
 </head>
 
 <body>
@@ -198,7 +207,11 @@
                                 </div> -->
 
                                 <div id="html_element"></div>
-                                <button class="form_submit disabled-btn" type="submit" disabled>
+
+                                <div class="g-recaptcha" 
+                                    data-sitekey="6LcXnNMhAAAAAJYlcEDj47WE4BmkMB6-zS2Ftelb">
+                                </div>
+                                <button class="form_submit disabled-btn recaptcha-form type="submit" disabled>
                                     Submit
                                 </button>
                             </div>
@@ -799,18 +812,23 @@
     <!-- <script>
         new WOW().init();
     </script> -->
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-    </script>
-    <script type="text/javascript">
-        var onloadCallback = function () {
-            grecaptcha.render('html_element', {
-                'sitekey': '6LcXnNMhAAAAAJYlcEDj47WE4BmkMB6-zS2Ftelb'
-            });
-        };
-    </script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script> -->
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 
 
     <script>
+
+        $('form').on('submit', function(e) {
+            if(grecaptcha.getResponse() == "") {
+             e.preventDefault();
+            alert("You can't proceed!");
+            } else {
+                alert("Thank you");
+            }
+        });
         $('.inputvalid').on('click keyup blur', function () {
             var inputs = $('.inputvalid').length;
             var type = $(this).attr('type');
@@ -851,7 +869,7 @@
             var valid_input = $(this).closest('.form').find('.inputvalid');
             var valid_key = $(this).closest('.form').find('.inputvalid');
             console.log('data', valid_input);
-
+            
             var data = ['contact_us'];
             var key = ['form_name'];
             for (let index = 0; index < valid_input.length; index++) {
@@ -865,34 +883,42 @@
                 previous[key01] = data[index01];
                 return previous
             }, {})
-
-            $.ajax({
-                url: "./mail/smtp_mail.php",
-                method: 'post',
-                data: associated,
-                success: function (result) {
-
-                    var data_status = JSON.parse(result);
-                    // console.log('result',data_status);
-                    if (data_status.status === 1) {
-                        window.location.href = "./thanks.html";
+            if(grecaptcha.getResponse() == "") {
+            //  e.preventDefault();
+            alert("You can't proceed! Fill the Captcha First");
+            } else {
+                alert("Thank you");
+                $.ajax({
+                    url: "./mail/smtp_mail.php",
+                    method: 'post',
+                    data: associated,
+                    success: function (result) {
+    
+                        var data_status = JSON.parse(result);
+                        // console.log('result',data_status);
+                        if (data_status.status === 1) {
+                            window.location.href = "./thanks.html";
+                        }
+    
+                        // // if(result && result == 'Email sent!'){
+                        // console.log('result',result);
+                        // $('.contact_message').html('Message Sent SuccessFully').show();
+                        // setTimeout(() => {
+                        //     $('.contact_message').html('').hide();
+                        // }, 3000);
+                        // $('.form_submit').closest('.form').find('.inputvalid').val('');
+                        // $('.form_submit').closest('.form').find('textarea').val('');
+                        // $('.form_submit').prop("disabled", true).addClass('disabled-btn');
                     }
-
-                    // // if(result && result == 'Email sent!'){
-                    // console.log('result',result);
-                    // $('.contact_message').html('Message Sent SuccessFully').show();
-                    // setTimeout(() => {
-                    //     $('.contact_message').html('').hide();
-                    // }, 3000);
-                    // $('.form_submit').closest('.form').find('.inputvalid').val('');
-                    // $('.form_submit').closest('.form').find('textarea').val('');
-                    // $('.form_submit').prop("disabled", true).addClass('disabled-btn');
-                }
+                })
             })
-        })
+            }
+            
 
         // for the Contact Us  form end 
     </script>
+
+
     <script src="./assets/js/footer.js"></script>
 </body>
 
