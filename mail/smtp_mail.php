@@ -1,6 +1,6 @@
 <?php
 
-// print_r($_POST); exit();
+// echo json_encode($_POST), PHP_EOL; exit();
 $contact_us = ''; 
 $body_data = '';
 $email_data = '';
@@ -31,7 +31,7 @@ require 'vendor/autoload.php';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 $sender = 'connect@monkhire.com';
-$senderName = 'Hr Team';
+$senderName = 'MonkHire Team';
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
@@ -170,7 +170,7 @@ try {
                             <tr>
                                 <td>
                                     Thank you for reaching out, to Monkhire.
-                                    We have received your message, someone from our team will contact your soon. In the meantime you can review our Process (Add Hyperlink https://monkhire.com/)
+                                    We have received your message, someone from our team will contact your soon. In the meantime you can review our  <a href="https://monkhire.com/" target="_blank" > Process </a>
                                 </td>
                             </tr>
                             <tr>
@@ -199,16 +199,16 @@ try {
 
             // Specify the content of the message.
             $mail->isHTML(true);
-            $mail->Subject    = 'Thank you for '.$subject;
+            $mail->Subject    = 'Thank you for Contacting Us | MonkHire';
             $mail->Body       = $bodyHtml_thankyou;
             // $mail->AltBody    = $bodyText;
             $mail->Send();
-            $data = json_encode(['status'=>1]);
+            $data = json_encode(['status'=>1,'message'=>'send mail']);
             echo $data , PHP_EOL;
             exit();
     }
-    $data = json_encode(['status'=>1]);
-    echo $data , PHP_EOL;
+    $data = json_encode(['status'=>1,'message'=>'send mail']);
+    echo $data , PHP_EOL; exit();
     // echo "Email sent!" , PHP_EOL;
 } catch (phpmailerException $e) {
     echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
