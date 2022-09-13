@@ -50,22 +50,28 @@
                 previous[key01] = data[index01];
                 return previous
             }, {})
-            $.ajax({
-                url:"./mail/smtp_mail.php",
-                method:'post',
-                data:associated,
-                success:function(result){
-                    console.log('result',result);
-                    var data_status = JSON.parse(result);
-                    console.log('result',data_status);
-                    if(data_status.status === 1){
-                        window.location.href = "./thanks.html";
-                    }
-                    // $('.apply-for-job').closest('form').find('.validCheck').val('');
-                    // $('.apply-for-job').closest('form').find('textarea').val('');
-                    // $('.apply-for-job').prop("disabled", true).addClass('disabled-btn');
+
+            if(grecaptcha.getResponse() == "") {
+                //  e.preventDefault();
+                    alert("You can't proceed! Fill the Captcha First");
+                } else {
+                    $.ajax({
+                        url:"./mail/smtp_mail.php",
+                        method:'post',
+                        data:associated,
+                        success:function(result){
+                            console.log('result',result);
+                            var data_status = JSON.parse(result);
+                            console.log('result',data_status);
+                            if(data_status.status === 1){
+                                window.location.href = "./thanks.html";
+                            }
+                            // $('.apply-for-job').closest('form').find('.validCheck').val('');
+                            // $('.apply-for-job').closest('form').find('textarea').val('');
+                            // $('.apply-for-job').prop("disabled", true).addClass('disabled-btn');
+                        }
+                    })
                 }
-            })
         })
         //************************ for the Apply to join form end *********************
         //************************ for the Apply to join form end *********************

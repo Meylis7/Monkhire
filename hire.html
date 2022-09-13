@@ -497,6 +497,10 @@
                                 <!-- <button class="form_next tabBtn disabled-btn" data-tab="#form-5" type="button" disabled>
                                     Next
                                 </button> -->
+
+                                <div class="g-recaptcha" 
+                                    data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
+                                </div>
                                 <button class="form_next disabled-btn hire_form_submit" disabled  type="submit">
                                     Submit
                                 </button>
@@ -1161,6 +1165,9 @@
                             </select>
                         </div> -->
                     </div>
+                    <div class="g-recaptcha" 
+                        data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
+                    </div>
 
                     <button class="form_next disabled-btn apply-for-job" disabled type="submit">
                         Request Callback
@@ -1182,6 +1189,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script>
         //******************   for the Hire Developers form start ************************
@@ -1281,23 +1289,33 @@
                 return previous;
             }, {})
             console.log('data', data, 'key', unique_keys, 'post_data', associated, );
-            $.ajax({
-                url: "./mail/smtp_mail.php",
-                method: 'post',
-                data: associated,
-                success: function (result) {
-                    var data_status = JSON.parse(result);
-                    console.log('result',data_status);
-                    if (data_status.status === 1) {
-                        window.location.href = "./thanks.html";
+
+            if(grecaptcha.getResponse() == "") {
+            //  e.preventDefault();
+                alert("You can't proceed! Fill the Captcha First");
+            } else {
+                // alert("Thank you");
+                $.ajax({
+                    url: "./mail/smtp_mail.php",
+                    method: 'post',
+                    data: associated,
+                    success: function (result) {
+                        var data_status = JSON.parse(result);
+                        console.log('result',data_status);
+                        if (data_status.status === 1) {
+                            window.location.href = "./thanks.html";
+                        }
                     }
-                }
-            })
+                })
+            }
         })
 
         //******************   for the Hire Developers form end ************************
         //******************   for the Hire Developers form end ************************
     </script>
+
+
+
     <script src="./assets/js/footer.js"></script>
 
 </body>

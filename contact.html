@@ -209,7 +209,7 @@
                                 <div id="html_element"></div>
 
                                 <div class="g-recaptcha" 
-                                    data-sitekey="6LcXnNMhAAAAAJYlcEDj47WE4BmkMB6-zS2Ftelb">
+                                    data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
                                 </div>
                                 <button class="form_submit disabled-btn recaptcha-form type="submit" disabled>
                                     Submit
@@ -786,6 +786,9 @@
                             </select>
                         </div> -->
                     </div>
+                    <div class="g-recaptcha" 
+                        data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
+                    </div>
 
                     <button class="form_next disabled-btn apply-for-job" disabled type="submit">
                         Request Callback
@@ -821,14 +824,14 @@
 
     <script>
 
-        $('form').on('submit', function(e) {
-            if(grecaptcha.getResponse() == "") {
-             e.preventDefault();
-            alert("You can't proceed!");
-            } else {
-                alert("Thank you");
-            }
-        });
+        // $('form').on('submit', function(e) {
+        //     if(grecaptcha.getResponse() == "") {
+        //      e.preventDefault();
+        //     alert("You can't proceed!");
+        //     } else {
+        //         alert("Thank you");
+        //     }
+        // });
         $('.inputvalid').on('click keyup blur', function () {
             var inputs = $('.inputvalid').length;
             var type = $(this).attr('type');
