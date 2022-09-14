@@ -1003,7 +1003,7 @@ a:hover~.project_bg {
   background: rgba(25, 50, 78, 0.6);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
-  z-index: 60;
+  z-index: 9999;
   display: none;
 }
 
@@ -7526,7 +7526,7 @@ a:hover~.project_bg {
   }
 
   .form_input {
-    width: calc(100% - 0px);
+    width: calc(100% - 0px) !important;
     margin: 0 0 30px;
   }
 
@@ -7954,6 +7954,45 @@ input[type='email'] {
   background: #f85053e1;
 }
 
+@media only screen and (max-width: 800px) {
+  .sitemap-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+  .sitemap-navigation {
+    width: 100%;
+    padding: 0;
+  }
+  .sitemap-navigation>.menu-item-has-children>.sub-menu {
+    display: block;
+    border: none;
+  }
+  .sitemap-navigation>.menu-item-has-children>.sub-menu::before {
+        top: -1em;
+    margin-top: -11px;
+  }
+  .sitemap-navigation>.menu-item-has-children>.sub-menu>.menu-item {
+        margin-top: -1px;
+  }
+
+  .gc-recaptcha {
+
+
+transform-origin:0 0 !important;
+
+}
+.g-recaptcha > div {
+    width: 100% !important;
+}
+
+.g-recaptcha iframe {
+    width: 100% !important;
+}
+.g-recaptcha {
+  transform-origin: left top;
+  -webkit-transform-origin: left top;
+}
+}
 /* #fullpage section {
   padding-top: 100px;
   height: auto !important;
