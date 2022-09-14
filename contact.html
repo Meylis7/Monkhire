@@ -211,7 +211,7 @@
                                 <!-- <div class="g-recaptcha" 
                                     data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
                                 </div> -->
-                                <div class="g-recaptcha-contact" data-sitekey="6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy" id="RecaptchaField2"></div>
+                                <div class="g-recaptcha-contact" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ" id="RecaptchaField2"></div>
 		                        <input type="hidden" class="hiddenRecaptcha" name="ct_hiddenRecaptcha" id="ct_hiddenRecaptcha" required>
                                 <span class="hide captchaerror_ct" style="color: red;"></span>
                                 <button class="form_submit disabled-btn recaptcha-form type="submit" disabled>
@@ -793,7 +793,7 @@
                     <!-- <div class="g-recaptcha" 
                         data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
                     </div> -->
-                    <div class="g-recaptcha-quote" data-sitekey="6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy" id="RecaptchaField1"></div>
+                    <div class="g-recaptcha-quote" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ" id="RecaptchaField1"></div>
 		            <input type="hidden" class="hiddenRecaptcha" name="qt_hiddenRecaptcha" id="qt_hiddenRecaptcha" required>
                     <span class="hide captchaerror_qt" style="color: red;"></span>
                     <button class="form_next disabled-btn apply-for-job" disabled type="submit">
@@ -833,8 +833,8 @@
         var CaptchaCallback = function() {
 		    var widgetId1;
 		    var widgetId2;
-		    widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy', 'callback' : correctCaptcha_quote});
-		    widgetId2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy', 'callback' : correctCaptcha_contact});
+		    widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback' : correctCaptcha_quote});
+		    widgetId2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback' : correctCaptcha_contact});
 		};
 		var correctCaptcha_quote = function(response) {
 		    $("#qt_hiddenRecaptcha").val(response);
@@ -924,7 +924,7 @@
                     method: 'post',
                     data: associated,
                     success: function (result) {
-                        $('.captchaerror_ct').addClass('hide');
+                        $('.captchaerror_ct').text('');
                         var data_status = JSON.parse(result);
                         // console.log('result',data_status);
                         if (data_status.status === 1) {

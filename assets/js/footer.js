@@ -68,7 +68,7 @@
                         method:'post',
                         data:associated,
                         success:function(result){
-                            $('.captchaerror_qt').addClass('hide');
+                            $('.captchaerror_qt').text('');
                             console.log('result',result);
                             var data_status = JSON.parse(result);
                             console.log('result',data_status);
