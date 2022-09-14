@@ -1,4 +1,6 @@
 
+        
+        
         //******** for the Apply to join form start ************************
         //******** for the Apply to join form start ************************
 
@@ -51,15 +53,22 @@
                 return previous
             }, {})
 
-            if(grecaptcha.getResponse() == "") {
-                //  e.preventDefault();
-                    alert("You can't proceed! Fill the Captcha First");
+            if($("#ct_hiddenRecaptcha").val()!=''){
+                // //  e.preventDefault();
+                $('.captchaerror_qt').removeClass('hide');
+                $('.captchaerror_qt').text("You can't proceed! Fill the Captcha First")
+                
+            
+            // if(grecaptcha.getResponse() == "") {
+            //     //  e.preventDefault();
+            //         alert("You can't proceed! Fill the Captcha First");
                 } else {
                     $.ajax({
                         url:"./mail/smtp_mail.php",
                         method:'post',
                         data:associated,
                         success:function(result){
+                            $('.captchaerror_qt').addClass('hide');
                             console.log('result',result);
                             var data_status = JSON.parse(result);
                             console.log('result',data_status);

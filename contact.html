@@ -208,12 +208,16 @@
 
                                 <div id="html_element"></div>
 
-                                <div class="g-recaptcha" 
+                                <!-- <div class="g-recaptcha" 
                                     data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
-                                </div>
+                                </div> -->
+                                <div class="g-recaptcha-contact" data-sitekey="6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy" id="RecaptchaField2"></div>
+		                        <input type="hidden" class="hiddenRecaptcha" name="ct_hiddenRecaptcha" id="ct_hiddenRecaptcha" required>
+                                <span class="hide captchaerror_ct" style="color: red;"></span>
                                 <button class="form_submit disabled-btn recaptcha-form type="submit" disabled>
                                     Submit
                                 </button>
+                               
                             </div>
                         </div>
 
@@ -786,12 +790,14 @@
                             </select>
                         </div> -->
                     </div>
-                    <div class="g-recaptcha" 
+                    <!-- <div class="g-recaptcha" 
                         data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
-                    </div>
-
+                    </div> -->
+                    <div class="g-recaptcha-quote" data-sitekey="6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy" id="RecaptchaField1"></div>
+		            <input type="hidden" class="hiddenRecaptcha" name="qt_hiddenRecaptcha" id="qt_hiddenRecaptcha" required>
+                    <span class="hide captchaerror_qt" style="color: red;"></span>
                     <button class="form_next disabled-btn apply-for-job" disabled type="submit">
-                        Request Callback
+                        Request Callback qt_hiddenRecaptcha
                     </button>
                 </div>
             </form>
@@ -818,11 +824,24 @@
     <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     </script> -->
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit"></script>
 
 
     <script>
+
+        var CaptchaCallback = function() {
+		    var widgetId1;
+		    var widgetId2;
+		    widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy', 'callback' : correctCaptcha_quote});
+		    widgetId2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6LeuL_khAAAAAAALoXFuuN2-zB4pZhAVJvNWxXIy', 'callback' : correctCaptcha_contact});
+		};
+		var correctCaptcha_quote = function(response) {
+		    $("#qt_hiddenRecaptcha").val(response);
+		};
+		var correctCaptcha_contact = function(response) {
+		    $("#ct_hiddenRecaptcha").val(response);
+		};
 
         // $('form').on('submit', function(e) {
         //     if(grecaptcha.getResponse() == "") {
@@ -832,6 +851,13 @@
         //         alert("Thank you");
         //     }
         // });
+
+        var CaptchaCallback = function() {
+    var widgetId1;
+    var widgetId2;
+    widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : 'Your Site Key', 'callback' : correctCaptcha_quote});
+    // widgetId2 = grecaptcha.render('RecaptchaField2', {'sitekey' : 'Your Site Key', 'callback' : correctCaptcha_contact});
+};
         $('.inputvalid').on('click keyup blur', function () {
             var inputs = $('.inputvalid').length;
             var type = $(this).attr('type');
@@ -886,17 +912,19 @@
                 previous[key01] = data[index01];
                 return previous
             }, {})
-            if(grecaptcha.getResponse() == "") {
-            //  e.preventDefault();
-            alert("You can't proceed! Fill the Captcha First");
+            if($("#ct_hiddenRecaptcha").val()!=''){
+                // //  e.preventDefault();
+                $('.captchaerror_ct').removeClass('hide');
+                $('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
+                
             } else {
-                alert("Thank you");
+                
                 $.ajax({
                     url: "./mail/smtp_mail.php",
                     method: 'post',
                     data: associated,
                     success: function (result) {
-    
+                        $('.captchaerror_ct').addClass('hide');
                         var data_status = JSON.parse(result);
                         // console.log('result',data_status);
                         if (data_status.status === 1) {
