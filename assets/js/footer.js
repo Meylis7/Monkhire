@@ -53,7 +53,7 @@
                 return previous
             }, {})
 
-            if($("#ct_hiddenRecaptcha").val()!=''){
+            if($("#qt_hiddenRecaptcha").val()==''){
                 // //  e.preventDefault();
                 $('.captchaerror_qt').removeClass('hide');
                 $('.captchaerror_qt').text("You can't proceed! Fill the Captcha First")

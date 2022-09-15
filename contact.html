@@ -907,7 +907,7 @@
                 previous[key01] = data[index01];
                 return previous
             }, {})
-            if($("#ct_hiddenRecaptcha").val()!=''){
+            if($("#ct_hiddenRecaptcha").val()==''){
                 // //  e.preventDefault();
                 $('.captchaerror_ct').removeClass('hide');
                 $('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
