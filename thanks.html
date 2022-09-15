@@ -933,9 +933,9 @@
                             </select>
                         </div> -->
                     </div>
-                    <div class="g-recaptcha" 
-                    data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
-                    </div>
+                    <div class="g-recaptcha-quote" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ" id="RecaptchaField1"></div>
+		            <input type="hidden" class="hiddenRecaptcha" name="qt_hiddenRecaptcha" id="qt_hiddenRecaptcha" required>
+                    <span class="hide captchaerror_qt" style="color: red;"></span>
                     <button class="form_next disabled-btn apply-for-job" disabled type="submit">
                         Request Callback
                     </button>
@@ -957,9 +957,23 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit"></script>
     <script src="./assets/js/footer.js"></script>
+    <script>
+        var CaptchaCallback = function() {
+		    var widgetId1;
+		    var widgetId2;
+		    widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback' : correctCaptcha_quote});
+		    widgetId2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback' : correctCaptcha_contact});
+		};
+		var correctCaptcha_quote = function(response) {
+		    $("#qt_hiddenRecaptcha").val(response);
+		};
+		var correctCaptcha_contact = function(response) {
+		    $("#ct_hiddenRecaptcha").val(response);
+		};
+    </script>
 
 
 </body>

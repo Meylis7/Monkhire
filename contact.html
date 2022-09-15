@@ -797,7 +797,7 @@
 		            <input type="hidden" class="hiddenRecaptcha" name="qt_hiddenRecaptcha" id="qt_hiddenRecaptcha" required>
                     <span class="hide captchaerror_qt" style="color: red;"></span>
                     <button class="form_next disabled-btn apply-for-job" disabled type="submit">
-                        Request Callback qt_hiddenRecaptcha
+                        Request
                     </button>
                 </div>
             </form>
@@ -913,7 +913,7 @@
                 $('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
                 
             } else {
-                
+                $('.captchaerror_ct').text('');
                 $.ajax({
                     url: "./mail/smtp_mail.php",
                     method: 'post',

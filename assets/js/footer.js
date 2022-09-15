@@ -37,6 +37,8 @@
             } 
         })
 
+        
+
         // submit form--------------------------------------------------------------------------
         $('.apply-for-job').click(function(e){
             e.preventDefault();
@@ -63,6 +65,7 @@
             //     //  e.preventDefault();
             //         alert("You can't proceed! Fill the Captcha First");
                 } else {
+                    $('.captchaerror_qt').text('');
                     $.ajax({
                         url:"./mail/smtp_mail.php",
                         method:'post',
