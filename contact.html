@@ -823,7 +823,7 @@
     </script> -->
     <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     </script> -->
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit"></script>
 
@@ -852,12 +852,7 @@
         //     }
         // });
 
-        var CaptchaCallback = function() {
-    var widgetId1;
-    var widgetId2;
-    widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : 'Your Site Key', 'callback' : correctCaptcha_quote});
-    // widgetId2 = grecaptcha.render('RecaptchaField2', {'sitekey' : 'Your Site Key', 'callback' : correctCaptcha_contact});
-};
+        
         $('.inputvalid').on('click keyup blur', function () {
             var inputs = $('.inputvalid').length;
             var type = $(this).attr('type');

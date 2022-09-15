@@ -116,6 +116,6 @@ $(function() {
   
   // Update scaling on window resize
   // Uses jQuery throttle plugin to limit strain on the browser
-  $(window).resize( $.throttle( 100, scaleCaptcha ) );
+//   $(window).resize( $.throttle( 100, scaleCaptcha ) );
   
 });
