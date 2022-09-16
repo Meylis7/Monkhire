@@ -1,6 +1,10 @@
 <?php
 
-// echo json_encode($_POST), PHP_EOL; exit();
+if(isset($_GET) && !empty($_GET)){
+    $_POST = $_GET; 
+}
+
+// print_r($_POST); exit();
 $contact_us = ''; 
 $body_data = '';
 $email_data = '';

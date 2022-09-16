@@ -907,6 +907,7 @@
                 previous[key01] = data[index01];
                 return previous
             }, {})
+            // console.log('associated',associated);
             if($("#ct_hiddenRecaptcha").val()==''){
                 // //  e.preventDefault();
                 $('.captchaerror_ct').removeClass('hide');
@@ -916,7 +917,7 @@
                 $('.captchaerror_ct').text('');
                 $.ajax({
                     url: "./mail/smtp_mail.php",
-                    method: 'post',
+                    method: 'POST',
                     data: associated,
                     success: function (result) {
                         $('.captchaerror_ct').text('');
