@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+
+    scroll-behavior: smooth;
+}
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*** 
+====================================================================
+    Global Settings
+====================================================================
+***/
+
+body {
+    font-family: 'Graphik', sans-serif;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.7em;
+    font-weight: 400;
+    background: var(--bg-body);
+    position: relative;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    font-weight: normal;
+    margin: 0px;
+    background: none;
+    line-height: 1.6em;
+}
+
+/* Typography */
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 34px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    position: relative;
+    line-height: 1.8em;
+}
+
+.auto_container {
+    position: relative;
+    max-width: 1250px;
+    padding: 0px 60px;
+    margin: 0 auto;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+    border: 1px solid var(--bg-body);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 10px;
+
+    &:hover {
+        background: red;
+    }
+}
+
+/* Handle on hover */
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}

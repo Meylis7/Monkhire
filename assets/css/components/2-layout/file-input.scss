@@ -1,0 +1,40 @@
+/* Custom file-input ============================ */
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.inputfile+label {
+    max-width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+
+    font-size: var(--vacancy_text);
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+.inputfile+label {
+    display: none;
+}
+
+.inputfile:focus+label,
+.inputfile.has-focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile+label * {
+    pointer-events: none;
+}
+
+/* Custom file-input ============================ */

@@ -1,0 +1,490 @@
+// Membership ========================
+.member {
+    padding: 70px 0;
+
+    &_box {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+
+    &_item {
+        width: calc(50% - 120px);
+        max-width: 320px;
+        margin: 0 20px;
+
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 20px;
+        padding: 40px;
+        background: var(--bg-section);
+
+        &-title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 40px;
+            text-transform: capitalize;
+
+            color: var(--hero-title-color);
+            margin-bottom: 20px;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: var(--hero-text-color);
+                width: calc(100% - 35px);
+            }
+
+            span {
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        stroke: var(--member-svg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Membership end ====================
+
+// Description ========================
+.desc {
+    padding: 70px 0;
+
+    &_box {
+        display: flex;
+        position: relative;
+        margin-top: 60px;
+    }
+
+    &-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &_info {
+        max-width: 600px;
+        width: 55%;
+        position: relative;
+        z-index: 3;
+
+        &-row {
+            margin-bottom: 60px;
+
+            &-title {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 40px;
+                text-transform: capitalize;
+
+                color: var(--hero-title-color);
+                margin-bottom: 20px;
+            }
+
+            &-txt {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: var(--hero-text-color);
+            }
+
+        }
+
+        &-link {
+            padding: 10px 30px;
+            background: var(--red);
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: 0.02em;
+            color: #fff;
+            box-shadow: 0px 12px 14px var(--hire-shadow);
+            border-radius: 8px;
+            @include transition;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            span {
+                display: block;
+                width: 0;
+                height: 22px;
+                margin-left: 12px;
+                @include transition;
+        
+                svg {
+                    @include ImgCon;
+                    @include transition;
+                }
+            }
+        
+            &:hover {
+                background: var(--hire-bg);
+                box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
+        
+                span {
+                    display: block;
+                    width: 22px;
+        
+                    svg {
+                        animation: trendUp 3s linear;
+                        animation-delay: .1s;
+                        stroke-dasharray: 100;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &_photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 670px;
+        height: 850px;
+
+        img {
+            @include ImgCon;
+            object-position: right;
+        }
+    }
+}
+
+// Description end ====================
+
+// Solution ========================
+.solution {
+    padding: 70px 0;
+    background: var(--bg-section);
+    margin: var(--section-margin-top) 0 var(--section-margin-top) 0;
+
+    &_box {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 25px 0 25px 35px;
+        border-left: 2px solid #F0F0F0;
+    }
+
+    &_item {
+        margin-bottom: 50px;
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+            text-transform: capitalize;
+            color: var(--hero-text-color);
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: -40px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #F0F0F0;
+                z-index: 1;
+            }
+
+            &.active {
+                color: var(--red);
+                font-weight: 500;
+
+                &::before {
+                    left: -43px;
+                    width: 14px;
+                    height: 14px;
+                    background: var(--red);
+                }
+            }
+        }
+
+        &-group {
+            overflow: hidden;
+            max-height: 0;
+            transition: .4s linear;
+            -ms-transition: .4s linear;
+            -moz-transition: .4s linear;
+            -webkit-transition: .4s linear;
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: var(--hero-text-color);
+                margin-top: 20px;
+                @include transition;
+            }
+        }
+    }
+
+}
+
+// Solution end ====================
+
+// Rates ========================
+.rate {
+    padding: 70px 0;
+
+    &_box {
+        display: flex;
+        margin: 0 -20px;
+    }
+
+    &_item {
+        margin: 0 20px;
+        width: calc(33.33% - 120px);
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        border-radius: 20px;
+        background: var(--bg-section);
+        @include transition;
+        padding: 40px;
+
+        &:hover {
+            background: var(--red);
+
+            .rate_item-title,
+            .rate_item-suptitle,
+            .rate_item-txt,
+            .rate_item-txt span,
+            .rate_item-row p {
+                color: #fff;
+            }
+
+            .rate_item-row span svg path {
+                stroke: #fff;
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            text-transform: capitalize;
+            color: var(--hero-title-color);
+            @include transition;
+        }
+
+        &-suptitle {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: var(--hero-text-color);
+            text-align: center;
+            margin: 15px 0;
+            @include transition;
+        }
+
+        &-txt {
+            position: relative;
+            // padding-bottom: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 1px solid #F0F0F0;
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 40px;
+            text-transform: capitalize;
+            color: var(--red);
+            @include transition;
+
+            span {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 90px;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: var(--hero-text-color);
+                @include transition;
+            }
+        }
+
+        &-row {
+            display: flex;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                width: 20px;
+                height: 20px;
+                margin-right: 12px;
+                margin-top: 10px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        stroke: var(--member-svg);
+                        @include transition;
+                    }
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 40px;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: var(--hero-text-color);
+                @include transition;
+            }
+        }
+    }
+
+    &_txt {
+        text-align: center;
+        margin-top: 40px;
+        display: inline-block;
+        width: 100%;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: var(--hero-title-color);
+
+        a {
+            color: var(--red);
+            text-decoration: underline;
+            @include transition;
+
+            &:hover {
+                color: var(--hero-title-color);
+            }
+        }
+    }
+
+}
+
+// Rates end ====================
+
+// Questions ========================
+.question {
+    padding: 70px 0;
+
+    &_wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    &_box {
+        margin-top: 60px;
+    }
+
+    &_item {
+        margin-bottom: 30px;
+        border: 1px solid var(--tag-bg);
+        padding: 20px 40px;
+        border-radius: 20px;
+        box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
+        background: var(--bg-section);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: var(--hero-title-color);
+            position: relative;
+            cursor: pointer;
+            padding-right: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(270deg);
+                -webkit-transform: translateY(-50%) rotate(270deg);
+                -o-transform: translateY(-50%) rotate(270deg);
+                -moz-transform: translateY(-50%) rotate(270deg);
+                right: 0px;
+                width: 20px;
+                height: 20px;
+                background: url("../images/svg/drop-arrow.svg") no-repeat center;
+                background-size: contain;
+            }
+
+            &.active {
+                &::before {
+                    transform: translateY(-50%) rotate(0deg);
+                    -webkit-transform: translateY(-50%) rotate(0deg);
+                    -o-transform: translateY(-50%) rotate(0deg);
+                    -moz-transform: translateY(-50%) rotate(0deg);
+                }
+            }
+        }
+
+        &-group {
+            max-height: 0;
+            overflow: hidden;
+            transition: .7s linear;
+            -ms-transition: .7s linear;
+            -moz-transition: .7s linear;
+            -webkit-transition: .7s linear;
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: var(--hero-text-color);
+            margin-top: 15px;
+        }
+    }
+
+    &_txt {
+        margin-top: 60px;
+        color: var(--hero-text-color);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+    }
+}
+
+// Questions end ====================
