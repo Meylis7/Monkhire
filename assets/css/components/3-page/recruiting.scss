@@ -760,8 +760,8 @@
     }
 
     &_photo {
-        width: 440px;
-        height: 520px;
+        width: 390px;
+        height: 460px;
         margin-right: 50px;
         position: relative;
 
@@ -778,8 +778,8 @@
             position: absolute;
             bottom: -60px;
             left: -100px;
-            width: 380px;
-            height: 380px;
+            width: 280px;
+            height: 280px;
             background: #FFF3F3;
             border-radius: 10px;
             opacity: var(--svg-opacity);
@@ -794,7 +794,7 @@
     }
 
     &_info {
-        width: calc(100% - 490px);
+        width: calc(100% - 440px);
 
         &-txt {
             font-weight: 400;

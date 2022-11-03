@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/fonts/Graphik/graphik-font.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>React js Developer</title>
 </head>
 
 <body>
 
-    <div id="cursor"></div>
+    <!-- <h4 class="nav_link vouch-link">
+        Get Vouch
+    </h4> -->
 
     <!-- Header ============================== -->
     <header class="header">
@@ -48,9 +49,7 @@
                                 </div>
                             </div>
 
-                            <!-- <h4 class="nav_link vouch-link">
-                                Get Vouch
-                            </h4> -->
+                           
 
                             <a href="contact.html" class="nav_link">
                                 Contact us
@@ -105,22 +104,22 @@
 
 
     <!-- Banner ========================== -->
-    <section class="banner wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
+    <section class="banner">
         <div class="auto_container">
             <div class="banner_wrap">
                 <div class="banner_box">
                     <div class="banner_box-inner">
-                        <h2 class="main_title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                        <h2 class="main_title">
                             Ready to <span>transform your business?</span> <br>
                             Take the first step.
                         </h2>
 
-                        <p class="banner_box-txt wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <p class="banner_box-txt" data-delay=".2s">
                             Our team is here to help.
                         </p>
 
-                        <a href="hire.html" class="banner_box-link wow fadeInUp" data-wow-duration="1s"
-                            data-wow-delay=".3s">
+                        <a href="hire.html" class="banner_box-link"
+                           >
                             Get Started
 
                             <span>
@@ -197,7 +196,7 @@
     <footer class="footer">
         <div class="auto_container">
             <div class="footer_wrap">
-                <div class="footer_row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <div class="footer_row">
                     <a href="#" class="logo">
                         <img src="assets/images/logo-white.png" class="logo-light" alt="logo-main">
                         <img src="assets/images/logo-dark.png" class="logo-dark" alt="logo-dark">
@@ -222,54 +221,54 @@
                 </div>
 
                 <div class="footer_tags">
-                    <h4 class="footer_tags-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s">
+                    <h4 class="footer_tags-title">
                         Popular Tags
                     </h4>
 
                     <div class="footer_tags-box">
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1.2s">Hire</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".15s">Remote Hire</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".2s">Developer</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".25s">PHP Developer</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">Asp.net Developer</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".35s">Technology</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">App</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".45s">Web Developer</a>
-                        <a href="#" class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">Application
+                        <a href="#">Hire</a>
+                        <a href="#">Remote Hire</a>
+                        <a href="#">Developer</a>
+                        <a href="#">PHP Developer</a>
+                        <a href="#">Asp.net Developer</a>
+                        <a href="#">Technology</a>
+                        <a href="#">App</a>
+                        <a href="#">Web Developer</a>
+                        <a href="#">Application
                             Developer</a>
                     </div>
                 </div>
 
                 <div class="footer_list">
-                    <ul class="footer_list-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                    <ul class="footer_list-box">
                         <li><a href="#">Hire Reactjs Developer</a></li>
                         <li><a href="#">Hire Java Developer</a></li>
                         <li><a href="#">Hire dot-net Developer</a></li>
-                        <li><a href="#">Hire Angular Developer</a></li>
+                        <li><a href="#" class="active">Hire Angular Developer</a></li>
                     </ul>
 
-                    <ul class="footer_list-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <ul class="footer_list-box">
                         <li><a href="#">Hire Nodejs Developer</a></li>
                         <li><a href="#">Hire Aws Devops Engineer</a></li>
                         <li><a href="#">Hire Azure Devops Engineer</a></li>
                         <li><a href="#">Hire Android Developer</a></li>
                     </ul>
 
-                    <ul class="footer_list-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <ul class="footer_list-box">
                         <li><a href="#">Hire UI/UX Designer</a></li>
                         <li><a href="#">Hire C Developer</a></li>
                         <li><a href="#">Hire C++ Developer </a></li>
                         <li><a href="#">Hire Flutter Developer</a></li>
                     </ul>
 
-                    <ul class="footer_list-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                    <ul class="footer_list-box">
                         <li><a href="#">Hire React Native Developer</a></li>
                         <li><a href="#">Hire ROR Developer</a></li>
                         <li><a href="#">Hire MEAN stack Developer</a></li>
                         <li><a href="#">Hire MERN stack Developer</a></li>
                     </ul>
 
-                    <ul class="footer_list-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <ul class="footer_list-box">
                         <li><a href="#">Hire Swift Developer</a></li>
                         <li><a href="#">Hire Vuejs Developer</a></li>
                         <li><a href="#">Hire Ai-ML Developer</a></li>
@@ -278,7 +277,7 @@
                 </div>
 
                 <div class="footer_info">
-                    <div class="footer_info-item wow bounceIn" data-wow-duration="1s" data-wow-delay=".1s">
+                    <div class="footer_info-item ">
                         <div class="footer_info-item-icon">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +303,7 @@
                         </div>
                     </div>
 
-                    <div class="footer_info-item wow bounceIn" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="footer_info-item">
                         <div class="footer_info-item-icon">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -330,7 +329,7 @@
                         </div>
                     </div>
 
-                    <div class="footer_info-item wow bounceIn" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="footer_info-item">
                         <div class="footer_info-item-icon">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -503,6 +502,90 @@
     </svg>
 
 
+
+
+    <!-- Modal Hire ========================== -->
+    <div class="modal hire-modal mod" id="hire-modal">
+        <div class="modal_inner">
+            <div class="modal_close modClose" data-mod="hire-modal">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.3955 7.59491L7.60352 12.3869" stroke="#455A64" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.3971 12.3898L7.60107 7.59277" stroke="#455A64" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.3345 0.750183H5.66549C2.64449 0.750183 0.750488 2.88918 0.750488 5.91618V14.0842C0.750488 17.1112 2.63549 19.2502 5.66549 19.2502H14.3335C17.3645 19.2502 19.2505 17.1112 19.2505 14.0842V5.91618C19.2505 2.88918 17.3645 0.750183 14.3345 0.750183Z"
+                        stroke="#455A64" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <form action="#">
+                <div class="form_inner">
+                    <h4 class="form_title">
+                        Want to join Monkhire DigiTech?
+                    </h4>
+
+                    <div class="form_input">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" placeholder="Enter name">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="name">Graduation Year *</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="01">Select Year</option>
+                                <option value="1">2017</option>
+                                <option value="2">2018</option>
+                                <option value="3">2019</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_input">
+                        <label for="email">Email Address *</label>
+                        <input type="text" id="email" placeholder="Enter Email Address">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="name">Phone Number *</label>
+                        <input type="text" id="name" placeholder="Enter Phone Number">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="comp-name">What's your Linkedin URL? *</label>
+                        <input type="text" id="comp-name" placeholder="Enter Linkedin URL">
+                    </div>
+
+                    <div class="form_input">
+                        <label for="name">Your Skill Set *</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="01">Enter your Skill</option>
+                                <option value="1">Java Backend Developer </option>
+                                <option value="2">Java FullStack Developer (Java + Angular/React)</option>
+                                <option value="3">React Js Developer </option>
+                                <option value="4">Angular Developer</option>
+                                <option value="5">Node.Js Developer</option>
+                                <option value="6">Flutter Developer</option>
+                                <option value="7">React Native Developer</option>
+                                <option value="8">AWS Devops Engineer </option>
+                                <option value="9">Asp dot-net Developer </option>
+                                <option value="10">Python Developer</option>
+                                <option value="11">Vue Js Developer </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="form_next" type="submit">
+                        Request Callback
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal Hire end ====================== -->
+
     <!-- Modal Vouch ========================= -->
     <div class="modal vouch-modal">
         <div class="modal_inner">
@@ -660,89 +743,6 @@
     </div>
     <!-- Modal Vouch end ===================== -->
 
-    <!-- Modal Hire ========================== -->
-    <div class="modal hire-modal mod" id="hire-modal">
-        <div class="modal_inner">
-            <div class="modal_close modClose" data-mod="hire-modal">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.3955 7.59491L7.60352 12.3869" stroke="#455A64" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.3971 12.3898L7.60107 7.59277" stroke="#455A64" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M14.3345 0.750183H5.66549C2.64449 0.750183 0.750488 2.88918 0.750488 5.91618V14.0842C0.750488 17.1112 2.63549 19.2502 5.66549 19.2502H14.3335C17.3645 19.2502 19.2505 17.1112 19.2505 14.0842V5.91618C19.2505 2.88918 17.3645 0.750183 14.3345 0.750183Z"
-                        stroke="#455A64" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
-
-            <form action="#">
-                <div class="form_inner">
-                    <h4 class="form_title">
-                        Want to join Monkhire DigiTech?
-                    </h4>
-
-                    <div class="form_input">
-                        <label for="name">Your Name *</label>
-                        <input type="text" id="name" placeholder="Enter name">
-                    </div>
-
-                    <div class="form_input">
-                        <label for="name">Graduation Year *</label>
-                        <div class="custom-select">
-                            <select>
-                                <option value="01">Select Year</option>
-                                <option value="1">2017</option>
-                                <option value="2">2018</option>
-                                <option value="3">2019</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form_input">
-                        <label for="email">Email Address *</label>
-                        <input type="text" id="email" placeholder="Enter Email Address">
-                    </div>
-
-                    <div class="form_input">
-                        <label for="name">Phone Number *</label>
-                        <input type="text" id="name" placeholder="Enter Phone Number">
-                    </div>
-
-                    <div class="form_input">
-                        <label for="comp-name">What's your Linkedin URL? *</label>
-                        <input type="text" id="comp-name" placeholder="Enter Linkedin URL">
-                    </div>
-
-                    <div class="form_input">
-                        <label for="name">Your Skill Set *</label>
-                        <div class="custom-select">
-                            <select>
-                                <option value="01">Enter your Skill</option>
-                                <option value="1">Java Backend Developer </option>
-                                <option value="2">Java FullStack Developer (Java + Angular/React)</option>
-                                <option value="3">React Js Developer </option>
-                                <option value="4">Angular Developer</option>
-                                <option value="5">Node.Js Developer</option>
-                                <option value="6">Flutter Developer</option>
-                                <option value="7">React Native Developer</option>
-                                <option value="8">AWS Devops Engineer </option>
-                                <option value="9">Asp dot-net Developer </option>
-                                <option value="10">Python Developer</option>
-                                <option value="11">Vue Js Developer </option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button class="form_next" type="submit">
-                        Request Callback
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Modal Hire end ====================== -->
-
-    <div class="project_bg" style="top: 343px; left: 1172px;"></div>
 
 
 
@@ -752,14 +752,11 @@
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/customSelect.js"></script>
     <script src="assets/js/modal-close.js"></script>
-    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
 
  
 
-    <script>
-        new WOW().init();
-    </script>
+
 
 </body>
 
