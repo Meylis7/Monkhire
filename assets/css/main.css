@@ -4781,10 +4781,8 @@ a:hover ~ .project_bg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border: 1 solid #CECECE;
   -webkit-box-shadow: 0px 84.201px 67.3608px rgba(0, 0, 0, 0.03), 0px 54.5747px 39.4497px rgba(0, 0, 0, 0.0227778), 0px 32.433px 21.4557px rgba(0, 0, 0, 0.0182222), 0px 16.8402px 10.9461px rgba(0, 0, 0, 0.015), 0px 6.86082px 5.48865px rgba(0, 0, 0, 0.0117778), 0px 1.55928px 2.65077px rgba(0, 0, 0, 0.00722222), 2.52603px 37.0484px 45.4685px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 84.201px 67.3608px rgba(0, 0, 0, 0.03), 0px 54.5747px 39.4497px rgba(0, 0, 0, 0.0227778), 0px 32.433px 21.4557px rgba(0, 0, 0, 0.0182222), 0px 16.8402px 10.9461px rgba(0, 0, 0, 0.015), 0px 6.86082px 5.48865px rgba(0, 0, 0, 0.0117778), 0px 1.55928px 2.65077px rgba(0, 0, 0, 0.00722222), 2.52603px 37.0484px 45.4685px rgba(0, 0, 0, 0.08);
@@ -4802,12 +4800,13 @@ a:hover ~ .project_bg {
   font-weight: 700;
 }
 .developer_form .form_input {
-  width: 100%;
-  margin: 15px 0;
+  margin: 10px 10px;
+  width: calc(50% - 20px);
 }
 .developer_form .form_input input {
   padding: 12px 20px;
   font-size: 14px;
+  width: calc(100% - 42px);
 }
 .developer_form .form_textarea {
   width: 100%;
@@ -4934,10 +4933,23 @@ a:hover ~ .project_bg {
   overflow: hidden;
   margin-bottom: 40px;
 }
+.tools_box.big-one .tools_col {
+  width: 100%;
+  border-right: none;
+}
+.tools_box.big-one .tools_col-item {
+  width: calc(12.5% - 20px);
+}
 .tools_col {
   width: 33.33%;
   border-right: 1px solid var(--light-gray);
   background: var(--bg-section);
+}
+.tools_col .line {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: var(--light-gray);
 }
 .tools_col:last-child {
   border-right: none;
@@ -5226,6 +5238,9 @@ a:hover ~ .project_bg {
       flex-wrap: wrap;
   margin: -15px auto;
   max-width: 950px;
+}
+.service_box.big {
+  max-width: 100%;
 }
 .service_item {
   display: -webkit-box;
@@ -7800,6 +7815,10 @@ a:hover ~ .project_bg {
     width: 100%;
   }
 
+  .developer_form .form_input {
+    width: 100%;
+    margin: 10px 0;
+  }
   .developer_skills {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
