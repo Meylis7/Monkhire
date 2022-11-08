@@ -7459,6 +7459,15 @@ a:hover ~ .project_bg {
   .spending_row-item.mobile_remove {
     display: none;
   }
+
+  .tools_box.big-one .tools_col-inner {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .tools_box.big-one .tools_col-item {
+    width: calc(20% - 20px);
+    min-width: 100px;
+  }
 }
 @media (max-width: 660px) {
   .hero_info {
@@ -7861,6 +7870,11 @@ a:hover ~ .project_bg {
     font-size: 14px;
   }
 
+  .tools_box.big-one .tools_col-item {
+    width: calc(33.33% - 14px);
+    min-width: unset;
+    margin: 7px;
+  }
   .tools_col {
     width: calc(100% - 2px);
   }

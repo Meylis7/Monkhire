@@ -1758,6 +1758,26 @@
         }
     }
 
+    // Tools =======================
+    .tools {
+        &_box {
+            &.big-one {
+                .tools {
+                    &_col {
+                        &-inner {
+                            justify-content: space-around;
+                        }
+
+                        &-item {
+                            width: calc(20% - 20px);
+                            min-width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // 660 ====================================================
@@ -2333,6 +2353,20 @@
 
     // Tools ========================
     .tools {
+        &_box {
+            &.big-one {
+                .tools {
+                    &_col {
+                        &-item {
+                            width: calc(33.33% - 14px);
+                            min-width: unset;
+                            margin: 7px;
+                        }
+                    }
+                }
+            }
+        }
+
         &_col {
             width: calc(100% - 2px);
 
@@ -2695,5 +2729,4 @@
     .condidate {
         padding-bottom: 50px;
     }
-
 }
