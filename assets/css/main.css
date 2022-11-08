@@ -7956,6 +7956,10 @@ a:hover ~ .project_bg {
     width: calc(60% - 125px);
   }
 
+  .company_block-item {
+    margin: 0 10px 30px;
+  }
+
   .banner .main_title {
     font-size: 16px;
     line-height: 32px;

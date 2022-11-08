@@ -2494,6 +2494,15 @@
         }
     }
 
+    // Company ============================
+    .company {
+        &_block {
+            &-item {
+                margin: 0 10px 30px;
+            }
+        }
+    }
+
     // Banner ============================
     .banner {
         .main_title {
