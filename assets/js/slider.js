@@ -103,7 +103,7 @@ $(".testimonial_slider").slick({
     waitForAnimate: false,
     draggable: true,
 
-    
+
     prevArrow: `<button type='button' class='slick-prev pull-left'> 
         <svg width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_1_2704)">
@@ -145,3 +145,31 @@ $(".testimonial_slider").slick({
     </button>`
 
 });
+
+
+
+if (window.matchMedia("(max-width: 800px)").matches) {
+    /* the viewport is less than 768 pixels wide */
+    $(".rate_box").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+
+        speed: 800,
+        fade: false,
+        adaptiveHeight: false,
+        lazyLoad: 'ondemand',
+
+        cssEase: 'linear',
+        swipeToSlide: true,
+        waitForAnimate: false,
+        draggable: true,
+        autoplay: true,
+        infinite: false,
+
+    });
+} 

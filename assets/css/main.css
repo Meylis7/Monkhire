@@ -7305,11 +7305,34 @@ a:hover ~ .project_bg {
     font-size: 14px;
   }
 
+  .rate {
+    overflow: hidden;
+  }
+  .rate .auto_container {
+    padding: 0;
+  }
+  .rate .role_tabs-link {
+    margin-top: 0;
+  }
+  .rate .main_title,
+.rate .vet_txt {
+    padding: 0 20px;
+  }
+  .rate_box .slick-list {
+    padding: 0 10% !important;
+  }
+  .rate_box .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 60px;
+  }
   .rate_item {
-    margin: 0 10px 30px;
+    margin: 0 10px;
     padding: 40px 25px;
     width: calc(100% - 110px);
-    max-width: 330px;
+    max-width: unset;
+    height: initial;
   }
   .rate_item-title {
     font-size: 16px;
@@ -7815,6 +7838,9 @@ a:hover ~ .project_bg {
     width: 100%;
   }
 
+  .developer_form {
+    display: none;
+  }
   .developer_form .form_input {
     width: 100%;
     margin: 10px 0;
@@ -7849,6 +7875,7 @@ a:hover ~ .project_bg {
   }
 
   .global_photo {
+    display: none;
     height: 270px;
   }
 
@@ -7921,9 +7948,9 @@ a:hover ~ .project_bg {
   }
 
   .footer_list-box {
-    width: 100%;
-    margin: 20px 0;
-    text-align: center;
+    width: calc(50% - 5px);
+    margin: 7px 0;
+    text-align: left;
   }
   .footer_tags-title {
     text-align: center;

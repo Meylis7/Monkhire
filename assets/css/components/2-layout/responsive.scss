@@ -1550,17 +1550,42 @@
 
     }
 
-    // Rate ==========================
+    // Rate ============================
     .rate {
-        // &_box {
-        //     align-items: center;
-        // }
+        overflow: hidden;
+
+        .auto_container {
+            padding: 0;
+        }
+
+        .role_tabs-link {
+            margin-top: 0;
+        }
+
+        .main_title,
+        .vet_txt {
+            padding: 0 20px;
+        }
+
+        &_box {
+            .slick {
+                &-list {
+                    padding: 0 10% !important;
+                }
+
+                &-track {
+                    display: flex;
+                    padding-bottom: 60px;
+                }
+            }
+        }
 
         &_item {
-            margin: 0 10px 30px;
+            margin: 0 10px;
             padding: 40px 25px;
             width: calc(100% - 110px);
-            max-width: 330px;
+            max-width: unset;
+            height: initial;
 
             &-title {
                 font-size: 16px;
@@ -2278,6 +2303,8 @@
     // Developer =====================
     .developer {
         &_form {
+            display: none;
+
             .form {
                 &_input {
                     width: 100%;
@@ -2326,6 +2353,7 @@
     // Global =======================
     .global {
         &_photo {
+            display: none;
             height: 270px;
         }
     }
@@ -2406,8 +2434,6 @@
     }
 
 
-
-
 }
 
 // 400 =======================================
@@ -2447,9 +2473,9 @@
 
         &_list {
             &-box {
-                width: 100%;
-                margin: 20px 0;
-                text-align: center;
+                width: calc(50% - 5px);
+                margin: 7px 0;
+                text-align: left;
             }
         }
 
@@ -2462,6 +2488,8 @@
                 justify-content: center;
             }
         }
+
+
     }
 
     // Employee ==========================
@@ -2667,7 +2695,5 @@
     .condidate {
         padding-bottom: 50px;
     }
-
-
 
 }
