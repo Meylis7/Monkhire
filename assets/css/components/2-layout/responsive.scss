@@ -175,6 +175,27 @@
         }
     }
 
+    // Developer ===============
+    .developer {
+        &_skills {
+            &.small {
+                .developer_skills-item {
+                    width: calc(33.33% - 100px);
+                }
+            }
+        }
+    }
+
+    // Vet =====================
+    .info {
+        &_box {
+            &.small {
+                .col-3 {
+                    width: calc(33.33% - 80px);
+                }
+            }
+        }
+    }
 
 }
 
@@ -853,7 +874,12 @@
 
         .col-3 {
             width: calc(50% - 80px);
+        }
 
+        &.medium {
+            .col-3 {
+                width: calc(50% - 80px);
+            }
         }
     }
 
@@ -1026,7 +1052,6 @@
     .privacy {
         &_main-title {
             font-size: 40px;
-            line-height: 70px;
         }
 
         &_subtitle {
@@ -1197,6 +1222,39 @@
             width: 100%;
             height: 280px;
             margin-top: 60px;
+        }
+    }
+
+    // About =====================
+    .about {
+        .about_box {
+            margin-top: 0;
+        }
+
+        &_box {
+            flex-direction: column-reverse;
+        }
+
+        &_photo {
+            width: 100%;
+            height: 350px;
+            margin-bottom: 30px;
+        }
+
+        &_info {
+            width: 100%;
+            align-items: end;
+            justify-content: center;
+            flex-direction: unset;
+
+            &-item {
+                &:first-child {
+                    margin-right: 40px;
+                }
+
+                &:nth-child(2) {
+                }
+            }
         }
     }
 
@@ -1656,6 +1714,26 @@
             margin-top: 30px;
         }
 
+        .about_box {
+            flex-direction: column-reverse;
+            margin-top: 0;
+        }
+
+        &_info {
+            flex-direction: column;
+            align-items: center;
+
+            &-item {
+                &:first-child {
+                    margin-right: 0;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 90px;
+                }
+            }
+        }
+
         &_item {
             width: calc(100% - 60px);
             max-width: 500px;
@@ -1778,6 +1856,29 @@
         }
     }
 
+    // Developer ===============
+    .developer {
+        &_skills {
+            &.small {
+                .developer_skills-item {
+                    width: calc(50% - 90px);
+                }
+            }
+        }
+    }
+
+    // Vet =====================
+    .info {
+        &_box {
+            &.small {
+                .col-3 {
+                    width: calc(50% - 80px);
+                }
+            }
+        }
+    }
+
+
 }
 
 // 660 ====================================================
@@ -1882,6 +1983,8 @@
 
     // Footer =====================
     .footer {
+        margin-top: 30px;
+
         &_nav {
             ul {
                 flex-wrap: wrap;
@@ -1894,6 +1997,13 @@
         }
 
         &_info {
+            padding: 15px 0 10px;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
             &-item {
                 width: 100%;
                 margin: 0 0 20px;
@@ -1911,21 +2021,52 @@
 
         &_end {
             flex-direction: column;
+            margin: 0;
+        }
+
+        &_row {
+            display: none
         }
 
         &_media {
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         .copyright {
             text-align: center;
             line-height: 36px;
+            order: 1;
+            position: relative;
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 10px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                @include transformX;
+                height: .5px;
+                width: 100%;
+                // opacity: .8;
+                background: var(--hero-title-color);
+            }
+
+            a {
+                display: none;
+            }
         }
 
         &_list {
+            white-space: nowrap;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
             &-box {
-                // width: calc(50% - 20px);
-                width: unset;
+                width: calc(50% - 10px);
+                text-align: left;
+                margin: 0 5px;
             }
         }
     }
@@ -1936,8 +2077,13 @@
 
     // Company Block =====================
     .company_block {
+        padding: 30px 0;
+        margin-top: 30px;
+
         &-item {
             height: 28px;
+            min-width: 100px;
+            margin: 0 15px 20px;
         }
     }
 
@@ -2037,15 +2183,28 @@
 
     // Advantage ============
     .advantage {
+        &_box {
+            margin-top: 10px;
+        }
+
         &_item {
             width: calc(100% - 70px);
             overflow: hidden;
-            margin-bottom: 20px;
+            margin: 0 0 20px;
             max-width: 300px;
         }
     }
 
     // Vet =========================
+    .vet {
+        padding: 30px 0;
+
+        .main_link {
+            margin-bottom: 0;
+            margin-top: 30px;
+        }
+    }
+
     .info_box {
         flex-wrap: wrap;
 
@@ -2058,8 +2217,24 @@
             font-size: 14px;
         }
 
+        &.small {
+            .col-3 {
+                width: calc(100% - 80px);
+            }
+        }
+
+        &.medium {
+            .col-3 {
+                width: calc(100% - 80px);
+            }
+        }
+
         .col-3 {
             width: calc(100% - 80px);
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
 
         .col-2 {
@@ -2097,6 +2272,14 @@
 
     // Question ======================
     .question {
+        .vet_txt {
+            text-align: center;
+        }
+
+        &_box {
+            margin-top: 30px;
+        }
+
         &_item {
             &-title {
                 &::before {
@@ -2116,6 +2299,11 @@
                 width: calc(90% - 80px);
             }
         }
+    }
+
+    // Service =============================
+    .service {
+        padding: 30px 0;
     }
 
     // Blog Detail ==========================
@@ -2164,6 +2352,11 @@
         }
     }
 
+    // Rate ==============================
+    .rate {
+        padding: 30px 0;
+    }
+
     // Blog About ======================
     .about {
         &_detail {
@@ -2176,6 +2369,16 @@
             &-list {
                 li {
                     font-size: 14px;
+                }
+            }
+        }
+
+        &_info {
+            &-item {
+                max-width: calc(100% - 80px);
+
+                &:nth-child(2) {
+                    margin-left: 0;
                 }
             }
         }
@@ -2225,6 +2428,15 @@
             &_svg {
                 height: 310px;
             }
+        }
+    }
+
+    // Testimonial ====================
+    .testimonial {
+        padding: 30px 0;
+
+        &_item {
+            padding-bottom: 25px;
         }
     }
 
@@ -2322,8 +2534,26 @@
 
     // Developer =====================
     .developer {
+        padding: 50px 0 20px;
+
+        .privacy_main-title {
+            text-align: left;
+            margin-bottom: 30px;
+
+            &::after {
+                left: 10px;
+                bottom: -25px;
+                transform: translateX(0) rotate(6deg);
+            }
+        }
+
+        .privacy_subtitle {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
         &_form {
-            display: none;
+            // display: none;
 
             .form {
                 &_input {
@@ -2340,19 +2570,43 @@
                 width: calc(100% - 60px);
                 margin: 15px 0;
 
-                &-title {
-                    font-size: 18px;
+                &:last-child {
+                    margin-bottom: 0;
                 }
 
-                &-txt {
-                    font-size: 14px;
+                &-title {
+                    margin: 15px 0;
                 }
+
+                &-icon {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            &.small {
+                .developer_skills-item {
+                    width: calc(100% - 90px);
+                }
+            }
+        }
+
+        &_info {
+            &-txt {
+                margin-bottom: 10px;
             }
         }
     }
 
     // Tools ========================
     .tools {
+        padding: 30px 0;
+
+        .main_link {
+            margin-bottom: 0;
+            margin-top: 30px;
+        }
+
         &_box {
             &.big-one {
                 .tools {
@@ -2371,7 +2625,7 @@
             width: calc(100% - 2px);
 
             &-inner {
-                padding-bottom: 60px;
+                padding-bottom: 30px;
             }
 
             &:nth-child(2) {
@@ -2386,25 +2640,40 @@
 
     // Global =======================
     .global {
+        padding: 30px 0;
+
+        .main_title {
+            text-align: center;
+        }
+
+        .vet_txt {
+            text-align: center;
+        }
+
+        .main_link {
+            margin: 30px 0 0;
+        }
+
         &_photo {
-            display: none;
+            // display: none;
+            order: 1;
+            margin: 0 0 15px;
             height: 270px;
         }
     }
 
     // Online =======================
     .online {
-        padding: 50px 0;
+        padding: 30px 0;
 
         &_info {
-            flex-direction: column;
+            // flex-direction: column;
         }
 
         &_col {
-            width: 100%;
-
             &:first-child {
-                margin-right: 0;
+                margin-right: 10px;
+                width: calc(50% - 5px);
             }
 
             &:last-child {
@@ -2413,13 +2682,13 @@
 
             &-item {
                 &-icon {
-                    width: 50px;
-                    height: 50px;
+                    width: 35px;
+                    height: 35px;
                 }
 
                 &-txt {
-                    // font-size: 14px;
-                    width: calc(100% - 55px);
+                    font-size: 10px;
+                    width: calc(100% - 40px);
                 }
             }
         }
@@ -2427,6 +2696,8 @@
 
     // Comment ======================
     .comment {
+        padding: 30px 0;
+
         &_info {
             &-item {
                 &-title {
@@ -2513,24 +2784,15 @@
 
     // Footer ============================
     .footer {
+        // &_tags {
+        //     &-title {
+        //         text-align: center;
+        //     }
 
-        &_list {
-            &-box {
-                width: calc(50% - 5px);
-                margin: 7px 0;
-                text-align: left;
-            }
-        }
-
-        &_tags {
-            &-title {
-                text-align: center;
-            }
-
-            &-box {
-                justify-content: center;
-            }
-        }
+        //     &-box {
+        //         justify-content: center;
+        //     }
+        // }
 
 
     }
@@ -2673,7 +2935,6 @@
 
     // Global ========================
     .global {
-        padding: 50px 0 35px 0;
 
         &_info {
             &-row {
@@ -2700,6 +2961,26 @@
         &_box {
             justify-content: unset;
         }
+
+        &_item {
+            margin: 7px;
+            padding: 10px 11px;
+
+            &-txt {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Vet =========================
+    .vet {
+        &_txt {
+            margin-bottom: 20px;
+        }
+    }
+
+    .info_box.mt-30 {
+        margin-top: 10px;
     }
 
     // Policy =====================
