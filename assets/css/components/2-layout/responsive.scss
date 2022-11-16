@@ -798,6 +798,14 @@
                 margin: 10px;
             }
         }
+
+        .copyright {
+            margin-bottom: 10px;
+        }
+
+        &_end {
+            flex-direction: column;
+        }
     }
 
 
@@ -1252,8 +1260,7 @@
                     margin-right: 40px;
                 }
 
-                &:nth-child(2) {
-                }
+                &:nth-child(2) {}
             }
         }
     }
@@ -2053,9 +2060,9 @@
                 background: var(--hero-title-color);
             }
 
-            a {
-                display: none;
-            }
+            // a {
+            //     display: none;
+            // }
         }
 
         &_list {

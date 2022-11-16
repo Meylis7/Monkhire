@@ -6859,6 +6859,15 @@ a:hover ~ .project_bg {
     width: calc(50% - 20px);
     margin: 10px;
   }
+  .footer .copyright {
+    margin-bottom: 10px;
+  }
+  .footer_end {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 @media (max-width: 1000px) {
   .auto_container {
@@ -7824,9 +7833,6 @@ a:hover ~ .project_bg {
     height: 0.5px;
     width: 100%;
     background: var(--hero-title-color);
-  }
-  .footer .copyright a {
-    display: none;
   }
   .footer_list {
     white-space: nowrap;
