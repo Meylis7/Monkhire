@@ -31,7 +31,6 @@
 
         &-row {
             display: flex;
-            align-items: center;
             margin-bottom: 30px;
 
             &:last-child {
@@ -135,21 +134,21 @@
                 height: 22px;
                 margin-left: 12px;
                 @include transition;
-        
+
                 svg {
                     @include ImgCon;
                     @include transition;
                 }
             }
-        
+
             &:hover {
                 background: var(--hire-bg);
                 box-shadow: 0px 12px 14px rgba(25, 50, 78, 0.22);
-        
+
                 span {
                     display: block;
                     width: 22px;
-        
+
                     svg {
                         animation: trendUp 3s linear;
                         animation-delay: .1s;
@@ -258,17 +257,18 @@
 
     &_box {
         display: flex;
-        margin: 0 -20px;
+        max-width: 1150px;
+        margin: 0 auto;
     }
 
     &_item {
-        margin: 0 20px;
-        width: calc(33.33% - 120px);
+        margin: 0 15px;
+        padding: 30px 25px;
+        width: calc(33.33% - 80px);
         box-shadow: 20px 35px 70px rgba(0, 0, 0, 0.04);
         border-radius: 20px;
         background: var(--bg-section);
         @include transition;
-        padding: 40px;
 
         &:hover {
             background: var(--red);
@@ -304,21 +304,21 @@
             text-transform: capitalize;
             color: var(--hero-text-color);
             text-align: center;
-            margin: 15px 0;
+            margin: 7px 0;
             @include transition;
         }
 
         &-txt {
             position: relative;
-            padding-bottom: 40px;
-            margin-bottom: 40px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             text-align: center;
             border-bottom: 1px solid #F0F0F0;
 
             font-style: normal;
             font-weight: 500;
-            font-size: 50px;
-            line-height: 40px;
+            font-size: 26px;
+            line-height: 1.4;
             text-transform: capitalize;
             color: var(--red);
             @include transition;
@@ -326,7 +326,7 @@
             span {
                 font-weight: 400;
                 font-size: 12px;
-                line-height: 90px;
+                line-height: 1.4;
                 letter-spacing: 0.02em;
                 text-transform: capitalize;
                 color: var(--hero-text-color);
@@ -346,7 +346,6 @@
                 width: 20px;
                 height: 20px;
                 margin-right: 12px;
-                margin-top: 10px;
 
                 svg {
                     @include ImgCon;
@@ -360,12 +359,13 @@
 
             p {
                 font-weight: 400;
-                font-size: 16px;
-                line-height: 40px;
+                font-size: 14px;
+                line-height: 1.5;
                 letter-spacing: 0.02em;
                 text-transform: capitalize;
                 color: var(--hero-text-color);
                 @include transition;
+                width: calc(100% - 32px);
             }
         }
     }
@@ -431,6 +431,7 @@
             color: var(--hero-title-color);
             position: relative;
             cursor: pointer;
+            padding-right: 40px;
 
             &::before {
                 content: '';
@@ -440,10 +441,10 @@
                 -webkit-transform: translateY(-50%) rotate(270deg);
                 -o-transform: translateY(-50%) rotate(270deg);
                 -moz-transform: translateY(-50%) rotate(270deg);
-                right: 20px;
+                right: 0px;
                 width: 20px;
                 height: 20px;
-                background: url("../images/drop-arrow.svg") no-repeat center;
+                background: url("../images/svg/drop-arrow.svg") no-repeat center;
                 background-size: contain;
             }
 
@@ -460,10 +461,10 @@
         &-group {
             max-height: 0;
             overflow: hidden;
-            transition: .4s linear;
-            -ms-transition: .4s linear;
-            -moz-transition: .4s linear;
-            -webkit-transition: .4s linear;
+            transition: .7s linear;
+            -ms-transition: .7s linear;
+            -moz-transition: .7s linear;
+            -webkit-transition: .7s linear;
         }
 
         &-txt {

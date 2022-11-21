@@ -81,6 +81,7 @@
 
         &_input {
             margin: 15px;
+            width: calc(50% - 34px);
 
             .select {
                 &-selected {

@@ -99,7 +99,7 @@ p {
 
 .auto_container {
     position: relative;
-    max-width: 1250px;
+    max-width: 1150px;
     padding: 0px 60px;
     margin: 0 auto;
 }
@@ -118,21 +118,22 @@ li {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #fff;
-    border: 1px solid #DFDFDF;
+    background: var(--bg-body);
+    border: 1px solid var(--bg-body);
     border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #DFDFDF;
+    background: var(--red);
     border-radius: 10px;
+
+    &:hover {
+        background: red;
+    }
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #DFDFDF;
-}
 
 input[type=date]::-webkit-calendar-picker-indicator {
     cursor: pointer;

@@ -1,7 +1,7 @@
 // Hero ====================================
 
 .hero {
-    padding: 60px 0 75px;
+    padding: 80px 0 75px;
     position: relative;
     overflow: hidden;
 
@@ -27,9 +27,12 @@
         }
     }
 
+    .hire_dev {
+        margin-top: 20px;
+    }
+
     &_box {
         display: flex;
-        align-items: center;
         position: relative;
     }
 
@@ -37,13 +40,14 @@
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        width: 65%;
+        // width: 65%;
+        width: calc(100% - 560px);
         z-index: 3;
 
         &-title {
             font-weight: 700;
-            font-size: 54px;
-            line-height: 80px;
+            font-size: 40px;
+            line-height: 45px;
             color: var(--hero-title-color);
 
             span {
@@ -100,14 +104,14 @@
     }
 
     .group_title {
-        margin-bottom: 80px;
+        margin-bottom: 20px;
     }
 
     &_svg {
-        position: absolute;
-        top: 35%;
-        @include transformY;
-        right: 0;
+        // position: absolute;
+        // top: 35%;
+        // @include transformY;
+        // right: 0;
         width: 630px;
         height: 460px;
 
@@ -119,11 +123,11 @@
     }
 
     .rec_svg {
-        position: absolute;
-        top: 65%;
-        @include transformY;
-        right: 0;
-        width: 580px;
+        // position: absolute;
+        // top: 65%;
+        // @include transformY;
+        // right: 0;
+        width: 560px;
         height: 380px;
 
         img,
@@ -231,7 +235,7 @@
     &::before {
         content: '';
         position: absolute;
-        bottom: -25px;
+        bottom: -30px;
         left: 10%;
         width: 140px;
         height: 50px;
@@ -242,8 +246,8 @@
 
 .main_title {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 80px;
+    font-size: 30px;
+    line-height: 1.5;
     color: var(--hero-title-color);
     text-align: center;
     position: relative;
@@ -260,7 +264,7 @@
 
 // Remote ====================================
 .remote {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &_subtitle {
         margin: 10px 0 60px;
@@ -323,7 +327,7 @@
 
 // Advantage ====================================
 .advantage {
-    padding: 70px 0;
+    padding: 60px 0;
     margin-top: var(--section-margin-top);
     background-color: var(--bg-section);
 
@@ -340,7 +344,7 @@
     &_box {
         display: flex;
         max-width: 980px;
-        margin: 60px auto 0;
+        margin: 30px auto 0;
     }
 
     &_item {
@@ -406,7 +410,7 @@
 
 // Meet Developers ====================================
 .meet {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &_box {
         display: flex;
@@ -418,11 +422,11 @@
 
         &-title {
             font-weight: 700;
-            font-size: 40px;
-            line-height: 80px;
+            font-size: 34px;
+            line-height: 1.4;
             text-transform: capitalize;
             color: var(--hero-title-color);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
 
             span {
                 color: var(--red);
@@ -498,11 +502,11 @@
 
 // Plans ====================================
 .plans {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &_table {
-        max-width: 1000px;
-        margin: 60px auto 0 auto;
+        max-width: 900px;
+        margin: 30px auto 0 auto;
 
         &-link {
             background: var(--red);
@@ -559,10 +563,10 @@
 
             thead {
                 th {
-                    padding: 40px 5px 20px;
+                    padding: 15px 5px 15px;
                     font-weight: 600;
-                    font-size: 18px;
-                    line-height: 30px;
+                    font-size: 16px;
+                    line-height: 1.4;
                     letter-spacing: 0.02em;
                     color: var(--hero-title-color);
                     border-bottom: 1px solid #F0F0F0;
@@ -581,8 +585,8 @@
                 td {
                     padding: 10px 5px;
                     font-weight: 400;
-                    font-size: 18px;
-                    line-height: 60px;
+                    font-size: 16px;
+                    line-height: 1.5;
                     letter-spacing: 0.02em;
                     color: var(--hero-text-color);
                     border-bottom: 1px solid #F0F0F0;
@@ -608,6 +612,10 @@
                     }
                 }
             }
+
+            .role_tabs-link {
+                margin-top: 40px;
+            }
         }
     }
 }
@@ -620,6 +628,8 @@
     display: block;
 
     &-slider {
+        display: flex;
+
         .slick {
             &-track {
                 padding: 60px 0;
@@ -666,11 +676,16 @@
 
     &-item {
         padding: 30px;
+        margin: 0 20px;
+        width: calc(33.33% - 100px);
         background: var(--bg-section);
         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        margin: 0 25px;
         @include transition;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &:hover {
             background: var(--red);
@@ -779,8 +794,9 @@
 
 // Banner ====================================
 .banner {
-    padding: 70px 0;
+    padding: 80px 0;
     overflow: hidden;
+    background: var(--banner-bg);
 
     &_box {
         position: relative;
@@ -792,7 +808,7 @@
             flex-direction: column;
             align-items: center;
             background: var(--banner-bg);
-            border-radius: 20px 129px 20px 20px;
+            // border-radius: 20px 129px 20px 20px;
             padding: 60px 0 40px;
 
             &::before {
