@@ -1988,6 +1988,7 @@ a:hover ~ .project_bg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 40px;
 }
 .about_block-slider .slick-track {
   padding: 60px 0;
