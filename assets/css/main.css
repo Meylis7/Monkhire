@@ -6624,6 +6624,9 @@ a:hover ~ .project_bg {
     width: calc(50% - 100px);
     margin-bottom: 30px;
   }
+  .about_block-item:last-child {
+    display: none;
+  }
 
   .process {
     padding: 40px 0;
@@ -8067,6 +8070,9 @@ a:hover ~ .project_bg {
   .about_block-item {
     width: calc(100% - 60px);
     margin: 0 0 20px;
+  }
+  .about_block-item:nth-child(2) {
+    display: none;
   }
 
   .about_detail {
