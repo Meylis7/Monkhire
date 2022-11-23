@@ -2356,7 +2356,7 @@ a:hover ~ .project_bg {
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   color: var(--hero-title-color);
 }
 .form_input input::-webkit-input-placeholder {
