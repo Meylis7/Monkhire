@@ -43,13 +43,13 @@ $senderName = 'MonkHire Team';
 $recipient = 'connect@monkhire.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-// $usernameSmtp = 'AKIA2YHORIZUVKN3E77U';
-$usernameSmtp = 'AKIA2YHORIZU5OTOQQUZ';
+$usernameSmtp = 'AKIA2YHORIZUVKN3E77U';
+// $usernameSmtp = 'AKIA2YHORIZU5OTOQQUZ';
 
 
 // Replace smtp_password with your Amazon SES SMTP password.
-// $passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
-$passwordSmtp = 'BMLMiF+93mvKTwK6l5XifDncxJ2ONdsTqaPYhqNz19ft';
+$passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
+// $passwordSmtp = 'BMLMiF+93mvKTwK6l5XifDncxJ2ONdsTqaPYhqNz19ft';
 
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment or remove the next line.
