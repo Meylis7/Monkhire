@@ -43,12 +43,12 @@ $senderName = 'MonkHire Team';
 $recipient = 'connect@monkhire.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-$usernameSmtp = 'Soni@1995';
+$usernameSmtp = 'connect@monkhire.com';
 // $usernameSmtp = 'AKIA2YHORIZU5OTOQQUZ';
 
 
 // Replace smtp_password with your Amazon SES SMTP password.
-$passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
+$passwordSmtp = 'Soni@1995';
 // $passwordSmtp = 'BMLMiF+93mvKTwK6l5XifDncxJ2ONdsTqaPYhqNz19ft';
 
 // Specify a configuration set. If you do not want to use a configuration
@@ -59,7 +59,7 @@ $passwordSmtp = 'BCOqKpqZXYin/mUNPHbi6W5L5EOl1oGhigSAu891nylv';
 // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
 // endpoint in the appropriate region.
 // $host = 'email-smtp.us-east-1.amazonaws.com';
-$host = 'email-smtp.ap-south-1.amazonaws.com';
+$host = 'smtp.gmail.com';
 $port = 587;   
 
 // The subject line of the email
