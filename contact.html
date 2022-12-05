@@ -215,7 +215,7 @@
                                 <input type="hidden" class="hiddenRecaptcha" name="ct_hiddenRecaptcha"
                                     id="ct_hiddenRecaptcha" required>
                                 <span class="hide captchaerror_ct" style="color: red;"></span>
-                                <button class="form_submit disabled-btn recaptcha-form" type="submit" disabled>
+                                <button class="form_submit disabled-btn recaptcha-form" type="submit" disabled onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
                                     Submit
                                 </button>
 
