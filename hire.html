@@ -503,7 +503,7 @@
                                 <!-- <div class="g-recaptcha" 
                                     data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
                                 </div> -->
-                                <button class="form_next disabled-btn hire_form_submit" disabled type="submit">
+                                <button class="form_next disabled-btn hire_form_submit" disabled type="submit" onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
                                     Submit
                                 </button>
                             </div>
@@ -1177,7 +1177,7 @@
                         required>
                     <span class="hide captchaerror_qt" style="color: red;"></span>
 
-                    <button class="form_next disabled-btn apply-for-job" disabled type="submit">
+                    <button class="form_next disabled-btn apply-for-job" disabled type="submit" onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
                         Request Callback
                     </button>
                 </div>
