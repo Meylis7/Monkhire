@@ -804,7 +804,7 @@
                     <input type="hidden" class="hiddenRecaptcha" name="qt_hiddenRecaptcha" id="qt_hiddenRecaptcha"
                         required>
                     <span class="hide captchaerror_qt" style="color: red;"></span>
-                    <button class="form_next disabled-btn apply-for-job" disabled type="submit">
+                    <button class="form_next disabled-btn apply-for-job" disabled type="submit" onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
                         Request
                     </button>
                 </div>
