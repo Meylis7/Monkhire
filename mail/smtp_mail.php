@@ -1,25 +1,34 @@
 <?php
 
-if(isset($_GET) && !empty($_GET)){
-    $_POST = $_GET; 
+if (isset($_GET) && !empty($_GET)) {
+    $_POST = $_GET;
 }
 
 // print_r($_POST); exit();
-$contact_us = ''; 
+$contact_us = '';
 $body_data = '';
 $email_data = '';
 
-if(isset($_POST['form_name']) && $_POST['form_name']!=''){
-    if($_POST['form_name']=='apply-for-job'){
-        $contact_us = ucfirst(str_replace('-',' ',$_POST['form_name']));
-    }else{
-        $contact_us = ucfirst(str_replace('_',' ',$_POST['form_name']));
+
+if (isset($_FILES) && is_array($_FILES) && !empty($_FILES)) {
+
+    $folder = "../assets/attachment/";
+    $file_name = $_FILES["file_0"]["name"];
+    move_uploaded_file($_FILES["file_0"]["tmp_name"], "../assets/attachment/" . $_FILES["file_0"]["name"]);
+}
+
+
+if (isset($_POST['form_name']) && $_POST['form_name'] != '') {
+    if ($_POST['form_name'] == 'apply-for-job') {
+        $contact_us = ucfirst(str_replace('-', ' ', $_POST['form_name']));
+    } else {
+        $contact_us = ucfirst(str_replace('_', ' ', $_POST['form_name']));
     }
 }
-if(isset($_POST['message']) && $_POST['message']!=''){
+if (isset($_POST['message']) && $_POST['message'] != '') {
     $body_data = $_POST['message'];
 }
-if(isset($_POST['email']) && $_POST['email']!=''){
+if (isset($_POST['email']) && $_POST['email'] != '') {
     $email_data = $_POST['email'];
 }
 
@@ -60,7 +69,7 @@ $passwordSmtp = 'Soni@1995';
 // endpoint in the appropriate region.
 // $host = 'email-smtp.us-east-1.amazonaws.com';
 $host = 'smtp.gmail.com';
-$port = 587;   
+$port = 587;
 
 // The subject line of the email
 $subject = $contact_us;
@@ -70,13 +79,13 @@ $bodyText =  $body_data;
 
 // The HTML-formatted body of the email
 $bodyHtml_form_data = '';
-if(isset($_POST) && !empty($_POST)){
+if (isset($_POST) && !empty($_POST)) {
     foreach ($_POST as $key => $value) {
-        if($key!='form_name'){
+        if ($key != 'form_name') {
             $bodyHtml_form_data .= '<tr>
-                <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">'.ucfirst( str_Replace( '-',' ', str_Replace( '_',' ',$key ) ) ).'
+                <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">' . ucfirst(str_Replace('-', ' ', str_Replace('_', ' ', $key))) . '
                 </td>
-                <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">'.ucfirst($value).'</td>
+                <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">' . ucfirst($value) . '</td>
             </tr>';
         }
     }
@@ -108,7 +117,7 @@ $bodyHtml = '
                 <tr>
                     <td>
                         <table style="width:100%; border: 1px solid #D6DBDF;  border-collapse: collapse; margin-top: 40px; text-align: center;">
-                            '.$bodyHtml_form_data.'
+                            ' . $bodyHtml_form_data . '
                         </table>
                     </td>
                 </tr>
@@ -135,6 +144,9 @@ try {
     $mail->Port       = $port;
     $mail->SMTPAuth   = true;
     $mail->SMTPSecure = 'tls';
+    if (isset($file_name) && $file_name != '') {
+        $mail->addAttachment($folder . $file_name);
+    }
     // $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
     // Specify the message recipients.
@@ -146,7 +158,7 @@ try {
     $mail->Subject    = $subject;
     $mail->Body       = $bodyHtml;
     $mail->AltBody    = $bodyText;
-    if($mail->Send()){
+    if ($mail->Send()) {
         $bodyHtml_thankyou = '
             <body style="background-color: rgb(211 201 201 / 21%); padding: 0px 50px 0px 50px;">
             <style type="text/css">
@@ -186,38 +198,37 @@ try {
                     </table>    
                 </div>
             </body>';
-            // Specify the SMTP settings.
-            $mail->isSMTP();
-            $mail->setFrom($sender, $senderName);
-            $mail->Username   = $usernameSmtp;
-            $mail->Password   = $passwordSmtp;
-            $mail->Host       = $host;
-            $mail->Port       = $port;
-            $mail->SMTPAuth   = true;
-            $mail->SMTPSecure = 'tls';
-            // $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
+        // Specify the SMTP settings.
+        $mail1->isSMTP();
+        $mail1->setFrom($sender, $senderName);
+        $mail1->Username   = $usernameSmtp;
+        $mail1->Password   = $passwordSmtp;
+        $mail1->Host       = $host;
+        $mail1->Port       = $port;
+        $mail1->SMTPAuth   = true;
+        $mail1->SMTPSecure = 'tls';
+        // $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
-            // Specify the message recipients.
-            $mail->addAddress($_POST['email']);
-            // You can also add CC, BCC, and additional To recipients here.
+        // Specify the message recipients.
+        $mail1->addAddress($_POST['email']);
+        // You can also add CC, BCC, and additional To recipients here.
 
-            // Specify the content of the message.
-            $mail->isHTML(true);
-            $mail->Subject    = 'Thank you for Contacting Us | MonkHire';
-            $mail->Body       = $bodyHtml_thankyou;
-            // $mail->AltBody    = $bodyText;
-            $mail->Send();
-            $data = json_encode(['status'=>1,'message'=>'send mail']);
-            echo $data , PHP_EOL;
-            exit();
+        // Specify the content of the message.
+        $mail1->isHTML(true);
+        $mail1->Subject    = 'Thank you for Contacting Us | MonkHire';
+        $mail1->Body       = $bodyHtml_thankyou;
+        // $mail->AltBody    = $bodyText;
+        $mail1->Send();
+        $data = json_encode(['status' => 1, 'message' => 'send mail']);
+        echo $data, PHP_EOL;
+        exit();
     }
-    $data = json_encode(['status'=>1,'message'=>'send mail']);
-    echo $data , PHP_EOL; exit();
+    $data = json_encode(['status' => 1, 'message' => 'send mail']);
+    echo $data, PHP_EOL;
+    exit();
     // echo "Email sent!" , PHP_EOL;
 } catch (phpmailerException $e) {
     echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
 }
-
-?>
