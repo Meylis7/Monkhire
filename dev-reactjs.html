@@ -157,6 +157,7 @@
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
                                     class="inputvalid"
                                     placeholder="Alex Martin"
                                 >
@@ -166,6 +167,7 @@
                                 <input
                                     type="text"
                                     id="name"
+                                    name="phone"
                                     class="inputvalid"
                                     placeholder="Enter Phone Number"
                                 >
@@ -176,24 +178,28 @@
                                     type="email"
                                     id="mail"
                                     class="inputvalid"
+                                    name="email"
                                     placeholder="Enter Email Address"
                                 >
                                 <span class="email_error " style="color:red"></span>
                             </div>
                             <div class="form_textarea hire-text">
                                 <label>Project Brief *</label>
-                                <textarea id="textarea" class="inputvalid" placeholder="Message"></textarea>
+                                <textarea
+                                    id="textarea"
+                                    name="message"
+                                    class="inputvalid"
+                                    placeholder="Message"
+                                ></textarea>
                                 <div class="add-file">
                                     <label for="file-1" class="attach">
                                         <span> + Add Files</span>
                                     </label>
                                     <input
                                         type="file"
-                                        name="file-1[]"
+                                        name="file-1"
                                         id="file-1"
                                         class="inputfile inputfile-1"
-                                        data-multiple-caption="{count} files selected"
-                                        multiple=""
                                     >
                                 </div>
                             </div>
@@ -2385,13 +2391,13 @@
             console.log('associated',associated);
             
 
-            var file_data = $('.developer_form').find('input[name^=file-1]');
+            var file_data = $('.developer_form').find('input[name=file-1]');
             console.log(file_data,file_data[0].files[0]);
             var formdata = new FormData();
             // formdata.append('other_data',other_data);
-            for(var i = 0;i<file_data.length;i++){
-                formdata.append("file_"+i, file_data[i].files[0]);
-            }
+            // for(var i = 0;i<file_data.length;i++){
+                formdata.append("file_0", file_data[0].files[0]);
+            // }
             var other_data = $('.developer_form').serializeArray();
             $.each(other_data,function(key,input){
                 formdata.append(input.name,input.value);

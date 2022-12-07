@@ -4,7 +4,7 @@ if (isset($_GET) && !empty($_GET)) {
     $_POST = $_GET;
 }
 
-// print_r($_POST); exit();
+
 $contact_us = '';
 $body_data = '';
 $email_data = '';
@@ -199,6 +199,7 @@ try {
                 </div>
             </body>';
         // Specify the SMTP settings.
+        $mail1 = new PHPMailer(true);
         $mail1->isSMTP();
         $mail1->setFrom($sender, $senderName);
         $mail1->Username   = $usernameSmtp;
