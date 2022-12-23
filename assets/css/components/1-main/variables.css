@@ -1,0 +1,69 @@
+/* Root ===================
+========================= */
+:root {
+  --bg-body: #fff;
+  --bg-section: #fff;
+  --pink-bg-section: #FEEEEE;
+  --logo-light: block;
+  --logo-dark: none;
+  --txt-color: #455A64;
+  --nav-bg-color: #fff;
+  --theme-bg: #e7e7e7;
+  --hire-bg: #19324E;
+  --hire-shadow: rgba(248, 80, 82, 0.22);
+  --hero-title-color: #19324E;
+  --hero-text-color: #455A64;
+  --remote-icon-bg: #F85052;
+  --advantage-txt-color: #19324E;
+  --svg-opacity: 1;
+  --section-margin-top: 0;
+  --meet-icon: #F85052;
+  --table-bg: #FEEEEE;
+  --banner-bg: #FEDCDC;
+  --tag-bg: #F0F0F0;
+  --svg: #F85052;
+  --media-svg: #19324E;
+  --svg-path: #EBEBEB;
+  --member-svg: #1F6A58;
+  --extra-padding-bottom: 70px;
+  --pink-section-txt: #F85052;
+  --ex-photo-bg: #FFF3F3;
+  --media-txt: #A3A3A3;
+  --red: #F85052;
+  --pink: #FEEEEE;
+  --white: #fff;
+  --gray: #455A64;
+  --dark-blue: #19324E;
+  --light-gray: #F0F0F0;
+}
+
+[data-theme=dark] {
+  --bg-body: #19324E;
+  --bg-section: #162B43;
+  --pink-bg-section: #162B43;
+  --txt-color: #fff;
+  --nav-bg-color: #162B43;
+  --theme-bg: #fff;
+  --hire-bg: #455A64;
+  --hire-shadow: rgba(48, 80, 82, 0.22);
+  --hero-title-color: #fff;
+  --hero-text-color: #fff;
+  --remote-icon-bg: #162B43;
+  --advantage-txt-color: #F85052;
+  --svg-opacity: .3;
+  --section-margin-top: 70px;
+  --meet-icon: #fff;
+  --table-bg: #162B43;
+  --banner-bg: #162B43;
+  --tag-bg: #162B43;
+  --svg: #19324E;
+  --media-svg: #fff;
+  --svg-path: #2C547C;
+  --member-svg: #fff;
+  --extra-padding-bottom: 130px;
+  --pink-section-txt: #F85052;
+  --ex-photo-bg: #162B43;
+  --media-txt: #fff;
+  --logo-light: none;
+  --logo-dark: block;
+}/*# sourceMappingURL=variables.css.map */

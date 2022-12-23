@@ -13,7 +13,15 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Java Developer</title>
 </head>
+<style>
+    .InlineBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
+</style>
 <body>
 
 
@@ -157,36 +165,52 @@
 
                         <div class="form_input">
                             <label for="name">First Name *</label>
-                            <input type="text" id="name" placeholder="Alex Martin">
+                            <input type="text" id="name" name="name" placeholder="Alex Martin">
                         </div>
 
                         <div class="form_input">
                             <label>Phone Number *</label>
-                            <input type="text" id="name" placeholder="Enter Phone Number">
+                            <input type="text" id="name" name="phone" placeholder="Enter Phone Number">
                         </div>
 
                         <div class="form_input">
                             <label for="mail">Email Address *</label>
-                            <input type="text" id="mail" placeholder="Enter Email Address">
+                            <input type="text" id="mail" name="email" placeholder="Enter Email Address">
                         </div>
 
                         <div class="form_textarea hire-text">
                             <label>Project Brief *</label>
 
-                            <textarea id="textarea" placeholder="Message"></textarea>
+                            <textarea id="textarea" name="message" placeholder="Message"></textarea>
 
                             <div class="add-file">
                                 <label for="file-1" class="attach">
                                     <span> + Add Files</span>
                                 </label>
-                                <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1"
-                                    data-multiple-caption="{count} files selected" multiple="">
+                                <input type="file" name="file-1" id="file-1" class="inputfile inputfile-1">
                             </div>
                         </div>
 
-                        <button class="form_next" type="button">
-                            Submit
-                        </button>
+                        <div class="InlineBtn">
+                            <div class="form_check">
+                                <div id="html_element"></div>
+    
+                                <!-- <div class="g-recaptcha" 
+                                    data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
+                                </div> -->
+                                <div class="g-recaptcha-contact" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ"
+                                    id="RecaptchaField1"></div>
+                                <input type="hidden" class="hiddenRecaptcha" name="ct_hiddenRecaptcha"
+                                    id="ct_hiddenRecaptcha" required>
+                                <span class="hide captchaerror_ct" style="color: red;"></span>
+                            </div>
+                            <button class="form_submit disabled-btn recaptcha-form"
+                                onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');"
+                                type="submit" disabled>
+                                Submit
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -1379,46 +1403,45 @@
                         <form action="#" class="form">
                             <div class="form_inner">
                                 <h4 class="form_title">
-                                    <span>Do You Have Any Questions?</span> We'd Be Delighted To Hear From You.
+                                    <span>Do You Have Any Questions?</span>
+                                    We'd Be Delighted To Hear From You.
                                 </h4>
-
                                 <div class="form_input">
                                     <label for="name">First Name *</label>
-                                    <input type="text" id="name" placeholder="Enter name">
+                                    <input type="text" id="name" placeholder="Enter name" name="name">
                                 </div>
-
                                 <div class="form_input">
                                     <label for="email">Email Address *</label>
-                                    <input type="text" id="email" placeholder="Enter Email Address">
+                                    <input type="text" id="email" placeholder="Enter Email Address" name="email">
                                 </div>
-
                                 <div class="form_input">
                                     <label for="skype-id">Skill/Technology *</label>
-                                    <input type="text" id="skype-id" placeholder="Enter Skype Id">
+                                    <input type="text" id="skype-id" placeholder="Enter Skype Id" name="skill">
                                 </div>
-
                                 <div class="form_textarea">
-                                    <textarea id="textarea" placeholder="Message"></textarea>
+                                    <textarea id="textarea" placeholder="Message" name="message"></textarea>
                                 </div>
-
                                 <div class="form_row">
                                     <div class="form_check">
-                                        <input type="checkbox" id="form-check">
-                                        <label for="form-check" class="form_check-label">Send me a copy of NDA</label>
+                                        <div id="html_element"></div>
+
+                                        <!-- <div class="g-recaptcha" 
+                                            data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
+                                        </div> -->
+                                        <div class="g-recaptcha-contact" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ"
+                                            id="RecaptchaField2"></div>
+                                        <input type="hidden" class="hiddenRecaptcha" name="ct_hiddenRecaptcha"
+                                            id="ct_hiddenRecaptcha" required>
+                                        <span class="hide captchaerror_ct" style="color: red;"></span>
                                     </div>
-
                                     <div class="form_row-box">
-                                        <div class="form_row-group">
-                                            <p>5+2 = </p>
-                                            <input type="number">
-                                        </div>
-
-                                        <button class="form_submit" type="submit" onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
+                                        
+                                        <button class="form_submit" type="submit"
+                                            onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
                                             Submit
                                         </button>
                                     </div>
                                 </div>
-
                             </div>
                         </form>
                     </div>
@@ -1789,26 +1812,147 @@
         </div>
     </div>
     <!-- Modal Hire end ====================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit"></script>
+    <script>
+
+var CaptchaCallback = function () {
+            var widgetId1;
+            var widgetId2;
+            widgetId1 = grecaptcha.render('RecaptchaField1', { 'sitekey': '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback': correctCaptcha_quote });
+            widgetId2 = grecaptcha.render('RecaptchaField2', { 'sitekey': '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback': correctCaptcha_contact });
+        };
+        var correctCaptcha_quote = function (response) {
+            $("#qt_hiddenRecaptcha").val(response);
+        };
+        var correctCaptcha_contact = function (response) {
+            $("#ct_hiddenRecaptcha").val(response);
+        };
+
+        $('.inputvalid').on('click keyup blur', function () {
+            var inputs = $('.inputvalid').length;
+            var type = $(this).attr('type');
+
+            if (type === 'email') {
+                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                var emailVal = $(this).val();
+                if (!emailReg.test(emailVal)) {
+                    $(this).parent().find('.email_error').html('Enter a valid email address.');
+                    $(this).addClass('invalid');
+                    $(this).removeClass('valid');
+                } else {
+                    $(this).parent().find('.email_error').html('');
+                    $(this).addClass('valid')
+                    $(this).removeClass('invalid');
+                }
+            } else {
+                if ($(this).val() == '') {
+                    $(this).addClass('invalid');
+                    $(this).removeClass('valid');
+                } else {
+                    $(this).addClass('valid')
+                    $(this).removeClass('invalid');
+                }
+            }
+            var inputs_valid = $(this).closest('form').find('.valid');
+            if (inputs_valid.length == inputs) {
+                $(this).closest('form').find('.form_submit').prop("disabled", false).removeClass(
+                    'disabled-btn');
+            } else {
+                $(this).closest('form').find('.form_submit').prop("disabled", true).addClass('disabled-btn');
+            }
+        })
 
 
+        // for the Contact Us  form start 
+        $('.form_submit').click(function (e) {
+
+            e.preventDefault();
+            var valid_input = $(this).closest('.form').find('.inputvalid');
+            var valid_key = $(this).closest('.form').find('.inputvalid');
+            console.log('data', valid_input);
+
+            var data = ['developer_form'];
+            var key = [];
+            for (let index = 0; index < valid_input.length; index++) {
+                key.push(valid_key.eq(index).attr('name'))
+                data.push(valid_input.eq(index).val());
+            }
+
+            key.push('message');
+            var textarea = $(this).closest('.form').find('textarea[name="message"]').val();
+            data.push(textarea);
+            var associated = key.reduce(function (previous, key01, index01) {
+                previous[key01] = data[index01];
+                return previous
+            }, {})
+
+            // console.log('associated', associated);
+
+            let formclassname = $(this).closest('form').attr('class');
+            var file_data = $('.' + formclassname).find('input[name=file-1]');
+
+            var formdata = new FormData();
+            console.log(file_data)
+            if (file_data[0] && file_data[0] != '' && file_data[0].files[0] && file_data[0].files[0] != '') {
+                // console.log(file_data,file_data[0].files[0]);
+                // formdata.append('other_data',other_data);
+                // for(var i = 0;i<file_data.length;i++){
+                formdata.append("file_0", file_data[0].files[0]);
+                // }
+            }
+            var other_data = $('.' + formclassname).serializeArray();
+            $.each(other_data, function (key, input) {
+                formdata.append(input.name, input.value);
+            });
+
+            if ($("#ct_hiddenRecaptcha").val() == '') {
+                // //  e.preventDefault();
+                $('.captchaerror_ct').removeClass('hide');
+                $('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
+
+            } else {
+                $('.captchaerror_ct').text('');
+                $.ajax({
+                    url: "./mail/smtp_mail.php",
+                    method: 'POST',
+                    data: associated,
+                    success: function (result) {
+                        $('.captchaerror_ct').text('');
+                        var data_status = JSON.parse(result);
+                        // console.log('result',data_status);
+                        if (data_status.status === 1) {
+                            window.location.href = "./thanks.html";
+                        }
+
+                        // // if(result && result == 'Email sent!'){
+                        // console.log('result',result);
+                        // $('.contact_message').html('Message Sent SuccessFully').show();
+                        // setTimeout(() => {
+                        //     $('.contact_message').html('').hide();
+                        // }, 3000);
+                        // $('.form_submit').closest('.form').find('.inputvalid').val('');
+                        // $('.form_submit').closest('.form').find('textarea').val('');
+                        // $('.form_submit').prop("disabled", true).addClass('disabled-btn');
+                    }
+                })
+
+            }
+
+        })
 
 
-
-
-
+        // for the Contact Us  form end
+    </script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/customSelect.js"></script>
     <script src="assets/js/custom-file-input.js"></script>
     <script src="assets/js/modal-close.js"></script>
-
     <script src="assets/js/main.js"></script>
-
-
-
-
-
+    <script src="assets/js/footer.js"></script>
 </body>
 
 </html>

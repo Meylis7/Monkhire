@@ -17,7 +17,6 @@ if (isset($_FILES) && is_array($_FILES) && !empty($_FILES)) {
     move_uploaded_file($_FILES["file_0"]["tmp_name"], "../assets/attachment/" . $_FILES["file_0"]["name"]);
 }
 
-
 if (isset($_POST['form_name']) && $_POST['form_name'] != '') {
     if ($_POST['form_name'] == 'apply-for-job') {
         $contact_us = ucfirst(str_replace('-', ' ', $_POST['form_name']));
