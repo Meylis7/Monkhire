@@ -17,9 +17,9 @@ if (isset($_FILES) && is_array($_FILES) && !empty($_FILES)) {
     if (!move_uploaded_file($_FILES["file_0"]["tmp_name"], "../assets/attachment/" . $_FILES["file_0"]["name"])) {
 
         $file_name = '';
-        print_r($_FILES);
-        print_r($_POST);
-        exit();
+        // print_r($_FILES);
+        // print_r($_POST);
+        // exit();
     }
 }
 
@@ -86,7 +86,7 @@ $bodyText =  $body_data;
 $bodyHtml_form_data = '';
 if (isset($_POST) && !empty($_POST)) {
     foreach ($_POST as $key => $value) {
-        if ($key != 'form_name') {
+        if ($key != 'form_name' && $key != 'g-recaptcha-response') {
             $bodyHtml_form_data .= '<tr>
                 <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">' . ucfirst(str_Replace('-', ' ', str_Replace('_', ' ', $key))) . '
                 </td>
