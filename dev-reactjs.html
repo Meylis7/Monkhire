@@ -2466,7 +2466,7 @@
             });
             
             var recaptcha_result = $(this).closest('form').attr('data-captcha');
-            // console.log('recaptcha_result',recaptcha_result);
+            console.log('recaptcha_result',recaptcha_result,$('#'+recaptcha_result).val());
             // let recaptcha_result = $(this).closest('form').find('*[name=ct_hiddenRecaptcha]');
             if ($('#'+recaptcha_result).val() == '') {
                 // //  e.preventDefault();
