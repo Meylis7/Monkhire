@@ -1811,7 +1811,7 @@
                                             <input
                                                 type="hidden"
                                                 class="hiddenRecaptcha"
-                                                name="qt_hiddenRecaptcha"
+                                                name="ct_hiddenRecaptcha"
                                                 id="qt_hiddenRecaptcha"
                                                 required
                                             >
@@ -2464,13 +2464,14 @@
                 formdata.append(input.name,input.value);
             });
             
-            if ($("#ct_hiddenRecaptcha").val() == '') {
+            let recaptcha_result = $(this).closest('form').find('*[name=ct_hiddenRecaptcha]');
+            if ($(recaptcha_result).val() == '') {
                 // //  e.preventDefault();
-                $('.captchaerror_ct').removeClass('hide');
-                $('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
+                $(this).closest('form').find('.captchaerror_ct').removeClass('hide');
+                $(this).closest('form').find('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
 
             } else {
-                $('.captchaerror_ct').text('');
+                $(this).closest('form').find('.captchaerror_ct').text('');
                 $.ajax({
                     url: "./mail/smtp_mail.php",
                     method: 'POST',
@@ -2478,7 +2479,7 @@
                     processData: false,
                     contentType: false,
                     success: function (result) {
-                        $('.captchaerror_ct').text('');
+                        $(this).closest('form').find('.captchaerror_ct').text('');
                         var data_status = JSON.parse(result);
                         // console.log('result',data_status);
                         if (data_status.status === 1) {
