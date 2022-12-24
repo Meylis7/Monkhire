@@ -14,7 +14,13 @@ if (isset($_FILES) && is_array($_FILES) && !empty($_FILES)) {
 
     $folder = "../assets/attachment/";
     $file_name = $_FILES["file_0"]["name"];
-    move_uploaded_file($_FILES["file_0"]["tmp_name"], "../assets/attachment/" . $_FILES["file_0"]["name"]);
+    if (!move_uploaded_file($_FILES["file_0"]["tmp_name"], "../assets/attachment/" . $_FILES["file_0"]["name"])) {
+
+        $file_name = '';
+        print_r($_FILES);
+        print_r($_POST);
+        exit();
+    }
 }
 
 if (isset($_POST['form_name']) && $_POST['form_name'] != '') {
