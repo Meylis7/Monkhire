@@ -11,6 +11,14 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <title>React js Developer</title>
     </head>
+    <style>
+    .InlineBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+    </style>
     <body>
         <!-- Header ============================== -->
         <header class="header">
@@ -204,14 +212,31 @@
                                     >
                                 </div>
                             </div>
-                            <button
-                                class="form_submit disabled-btn recaptcha-form"
-                                onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');"
-                                type="submit"
-                                disabled
-                            >
-                                Submit
-                            </button>
+                            <div class="InlineBtn">
+                                <div class="form_check">
+                                    <div id="html_element"></div>
+                                    <!-- <div class="g-recaptcha" 
+                                    data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ">
+                                </div> -->
+                                    <div class="g-recaptcha-contact" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ" id="RecaptchaField1"></div>
+                                    <input
+                                        type="hidden"
+                                        class="hiddenRecaptcha"
+                                        name="ct_hiddenRecaptcha"
+                                        id="ct_hiddenRecaptcha"
+                                        required
+                                    >
+                                    <span class="hide captchaerror_ct" style="color: red;"></span>
+                                </div>
+                                <button
+                                    class="form_submit disabled-btn recaptcha-form"
+                                    onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');"
+                                    type="submit"
+                                    disabled
+                                >
+                                    Submit
+                                </button>
+                            </div>
                             <!-- <button class="form_next" type="button">
                                 Submit
                             </button> -->
@@ -1782,14 +1807,17 @@
                                     </div>
                                     <div class="form_row">
                                         <div class="form_check">
-                                            <input type="checkbox" id="form-check">
-                                            <label for="form-check" class="form_check-label">Send me a copy of NDA</label>
+                                            <div class="g-recaptcha-quote" data-sitekey="6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ" id="RecaptchaField2"></div>
+                                            <input
+                                                type="hidden"
+                                                class="hiddenRecaptcha"
+                                                name="qt_hiddenRecaptcha"
+                                                id="qt_hiddenRecaptcha"
+                                                required
+                                            >
+                                            <span class="hide captchaerror_qt" style="color: red;"></span>
                                         </div>
                                         <div class="form_row-box">
-                                            <div class="form_row-group">
-                                                <p>5+2 =</p>
-                                                <input type="number">
-                                            </div>
                                             <button class="form_submit" type="submit" onClick="this.disabled=true; this.innerText='Sending…'; this.classList.add('disabled-btn');">
                                                 Submit
                                             </button>
@@ -2345,6 +2373,19 @@
         <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit"></script>
         <script>
 
+        var CaptchaCallback = function () {
+            var widgetId1;
+            var widgetId2;
+            widgetId1 = grecaptcha.render('RecaptchaField1', { 'sitekey': '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback': correctCaptcha_quote });
+            widgetId2 = grecaptcha.render('RecaptchaField2', { 'sitekey': '6Lf2z_QhAAAAAOS94644TffJ1eRKKt8LnbUrzPQQ', 'callback': correctCaptcha_contact });
+        };
+        var correctCaptcha_quote = function (response) {
+            $("#qt_hiddenRecaptcha").val(response);
+        };
+        var correctCaptcha_contact = function (response) {
+            $("#ct_hiddenRecaptcha").val(response);
+        };
+
         
         $('.inputvalid').on('click keyup blur', function () {
             var inputs = $('.inputvalid').length;
@@ -2423,6 +2464,12 @@
                 formdata.append(input.name,input.value);
             });
             
+            if ($("#ct_hiddenRecaptcha").val() == '') {
+                // //  e.preventDefault();
+                $('.captchaerror_ct').removeClass('hide');
+                $('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
+
+            } else {
                 $('.captchaerror_ct').text('');
                 $.ajax({
                     url: "./mail/smtp_mail.php",
@@ -2440,6 +2487,7 @@
 
                     }
                 })
+            }
 
         })
 
