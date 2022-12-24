@@ -155,7 +155,7 @@
                                 <li>On-time delivery</li>
                             </ul>
                         </div>
-                        <form action="#" class="developer_form">
+                        <form action="#" class="developer_form" data-captcha="ct_hiddenRecaptcha">
                             <input type="hidden" value="Dev React js" name="form_name">
                             <h4 class="developer_form-title">
                                 <span>Have any questions?</span>
@@ -1769,7 +1769,7 @@
                             </div>
                         </div>
                         <div class="comment_form">
-                            <form action="#" class="form">
+                            <form action="#" class="form" data-captcha="qt_hiddenRecaptcha">
                                 <div class="form_inner">
                                     <h4 class="form_title">
                                         <span>Do You Have Any Questions?</span>
@@ -1811,7 +1811,7 @@
                                             <input
                                                 type="hidden"
                                                 class="hiddenRecaptcha"
-                                                name="ct_hiddenRecaptcha"
+                                                name="qt_hiddenRecaptcha"
                                                 id="qt_hiddenRecaptcha"
                                                 required
                                             >
@@ -2425,12 +2425,13 @@
         // for the Contact Us  form start 
         $('.form_submit').click(function (e) {
             
+            // alert($(this).closest('form').attr('class'));
             e.preventDefault();
             var valid_input = $(this).closest('.form').find('.inputvalid');
             var valid_key = $(this).closest('.form').find('.inputvalid');
             console.log('data', valid_input);
 
-            var data = ['developer_form'];
+            var data = [];
             var key = [];
             for (let index = 0; index < valid_input.length; index++) {
                 key.push(valid_key.eq(index).attr('name'))
@@ -2464,8 +2465,10 @@
                 formdata.append(input.name,input.value);
             });
             
-            let recaptcha_result = $(this).closest('form').find('*[name=ct_hiddenRecaptcha]');
-            if ($(recaptcha_result).val() == '') {
+            var recaptcha_result = $(this).closest('form').attr('data-captcha');
+            // console.log('recaptcha_result',recaptcha_result);
+            // let recaptcha_result = $(this).closest('form').find('*[name=ct_hiddenRecaptcha]');
+            if ($('#'+recaptcha_result).val() == '') {
                 // //  e.preventDefault();
                 $(this).closest('form').find('.captchaerror_ct').removeClass('hide');
                 $(this).closest('form').find('.captchaerror_ct').text("You can't proceed! Fill the Captcha First")
