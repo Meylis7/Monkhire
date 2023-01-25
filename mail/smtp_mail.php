@@ -86,7 +86,7 @@ $bodyText =  $body_data;
 $bodyHtml_form_data = '';
 if (isset($_POST) && !empty($_POST)) {
     foreach ($_POST as $key => $value) {
-        if ($key != 'form_name' && $key != 'g-recaptcha-response') {
+        if (!in_array($key, array('form_name', 'g-recaptcha-response'))) {
             $bodyHtml_form_data .= '<tr>
                 <td style=" border: 1px solid #D6DBDF;  border-collapse: collapse; padding: 12px; font-size: 16px;">' . ucfirst(str_Replace('-', ' ', str_Replace('_', ' ', $key))) . '
                 </td>
